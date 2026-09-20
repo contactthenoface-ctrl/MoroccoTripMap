@@ -199,14 +199,25 @@
                         </div>
                     </div>
 
-                    <!-- Mini Map Placeholder (En attendant Leaflet) -->
-                    <div class="mt-6 rounded-2xl overflow-hidden h-40 bg-gray-200 relative">
-                        <!-- C'est ici que la carte Leaflet sera injectée plus tard. Pour l'instant on met une fausse carte image -->
-                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" alt="Map location" class="w-full h-full object-cover opacity-50">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="bg-sombre/80 text-white text-xs font-bold px-3 py-1.5 rounded-lg">View on Map</span>
-                        </div>
-                    </div>
+                    <!-- Mini Map Placeholder cliquable vers Google Travel/Maps -->
+<a href="https://www.google.com/travel/hotels/101%2C%20derb%20Harbil%2C%20Quartier%20Kasbah%20-%20M%C3%A9dina%20Marrakech/entity/CgsI6f7Bw5aAmdzFARAB/location?q=101%2C%20derb%20Harbil%2C%20Quartier%20Kasbah%20-%20M%C3%A9dina%20Marrakech&g2lb=4965990%2C72471280%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C121529350%2C121608706%2C121738283%2C121762713%2C121921501%2C121951222%2C122025932&hl=fr-MA&gl=ma&ssta=1&ts=CAEaSAoqEiYyJDB4ZGFmZWU0Zjc1YjlhZjJmOjB4YzViODY0MDE2ODcwN2Y2ORoAEhoSFAoHCOoPEAkYFRIHCOoPEAkYFhgBMgIQACoJCgU6A01BRBoA&rp=EOn-wcOWgJncxQE4AkAASAHAAQI&ictx=111&ved=0CAAQ5JsGahcKEwi49vHoof6WAxUAAAAAHQAAAAAQAw&utm_campaign=sharing&utm_medium=link&utm_source=htls" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="block mt-6 rounded-2xl overflow-hidden h-40 bg-gray-200 relative group cursor-pointer">
+    
+    <!-- Fausse carte image en arrière-plan avec effet de zoom au survol -->
+    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=600&q=80" 
+         alt="Map location of the Riad" 
+         class="w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-60 transition duration-500">
+    
+    <!-- Bouton d'action au centre -->
+    <div class="absolute inset-0 flex items-center justify-center">
+        <span class="bg-sombre/90 text-white text-xs font-bold px-4 py-2 rounded-xl shadow-md group-hover:bg-vert transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            View on Map
+        </span>
+    </div>
+</a>
 
                 </div>
             </div>
