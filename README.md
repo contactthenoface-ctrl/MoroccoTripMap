@@ -1,2 +1,0 @@
-# Moroccotripmap
-Moroccotripmap
