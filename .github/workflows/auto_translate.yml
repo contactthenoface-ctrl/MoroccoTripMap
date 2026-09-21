@@ -23,8 +23,8 @@ jobs:
       - name: Run translation generator
         run: |
           python -c "
-          import os
-          from bs4 import BeautifulSoup
+          import os, re, time
+          from bs4 import BeautifulSoup, Comment
           from deep_translator import GoogleTranslator
 
           LANGUAGES = {'fr': 'french', 'es': 'spanish', 'ar': 'arabic'}
@@ -43,25 +43,59 @@ jobs:
                 else if (val.includes('es') || txt.includes('es')) targetLang = 'es';
                 else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
                 var pageName = window.location.pathname.split('/').pop() || 'index.html';
-                var pathParts = window.location.pathname.split('/').filter(Boolean);
-                var currentFolder = ['fr', 'es', 'ar'].includes(pathParts[pathParts.length - 2]) ? pathParts[pathParts.length - 2] : '';
                 if (targetLang === 'en') {
-                  window.location.href = currentFolder ? '../' + pageName : pageName;
+                  window.location.href = pageName;
                 } else {
-                  window.location.href = currentFolder ? '../' + targetLang + '/' + pageName : targetLang + '/' + pageName;
+                  window.location.href = targetLang + '/' + pageName;
                 }
               });
             });
           });
           </script>'''
 
-          for lang_code in LANGUAGES.keys():
-              os.makedirs(lang_code, exist_ok=True)
-              translator = GoogleTranslator(source='en', target=lang_code)
-
-              for file_name in html_files:
+          def get_all_unique_strings(files):
+              unique_texts = set()
+              for file_name in files:
                   with open(file_name, 'r', encoding='utf-8') as f:
                       soup = BeautifulSoup(f.read(), 'html.parser')
+                      for string_node in soup.find_all(string=True):
+                          if isinstance(string_node, Comment): continue
+                          parent = string_node.parent
+                          if not parent or parent.name in ['script', 'style', 'title', 'meta', 'head', 'noscript', 'code', 'svg', 'path']: continue
+                          if parent.name == 'select' or parent.find_parent('select') or parent.find_parent(class_=re.compile('notranslate')): continue
+                          text = str(string_node).strip()
+                          if text and len(text) > 1 and not text.isdigit():
+                              if not (text.startswith('http://') or text.startswith('https://') or text.startswith('data:')):
+                                  unique_texts.add(text)
+                      for inp in soup.find_all(['input', 'textarea']):
+                          if inp.get('placeholder'):
+                              p_text = inp['placeholder'].strip()
+                              if p_text and len(p_text) > 1: unique_texts.add(p_text)
+              return list(unique_texts)
+
+          def build_mapping(texts_list, lang_code):
+              translator = GoogleTranslator(source='en', target=lang_code)
+              mapping = {}
+              chunk_size = 20
+              for i in range(0, len(texts_list), chunk_size):
+                  chunk = texts_list[i:i+chunk_size]
+                  try:
+                      translated_chunk = translator.translate_batch(chunk)
+                      for orig, trans in zip(chunk, translated_chunk): mapping[orig] = trans
+                  except Exception:
+                      for item in chunk:
+                          try: mapping[item] = translator.translate(item); time.sleep(0.1)
+                          except Exception: mapping[item] = item
+              return mapping
+
+          unique_texts = get_all_unique_strings(html_files)
+
+          for lang_code in LANGUAGES.keys():
+              os.makedirs(lang_code, exist_ok=True)
+              mapping = build_mapping(unique_texts, lang_code)
+
+              for file_name in html_files:
+                  with open(file_name, 'r', encoding='utf-8') as f: soup = BeautifulSoup(f.read(), 'html.parser')
 
                   head = soup.find('head')
                   if head:
@@ -69,8 +103,7 @@ jobs:
                       if not base_tag:
                           new_base = soup.new_tag('base', href='../')
                           head.insert(0, new_base)
-                      else:
-                          base_tag['href'] = '../'
+                      else: base_tag['href'] = '../'
 
                   html_tag = soup.find('html')
                   if html_tag:
@@ -78,27 +111,25 @@ jobs:
                       html_tag['dir'] = 'rtl' if lang_code == 'ar' else 'ltr'
 
                   for script in soup.find_all('script'):
-                      if script.string and ('googleTranslate' in script.string or 'lang.js' in str(script)):
-                          script.decompose()
+                      if script.string and ('googleTranslate' in script.string or 'lang.js' in str(script) or 'targetLang' in str(script)): script.decompose()
 
-                  tags = soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a', 'span', 'button', 'li', 'td', 'th'])
-                  for tag in tags:
-                      if tag.find_parent('select') or tag.name in ['script', 'style']:
-                          continue
-                      if len(tag.find_all()) == 0 and tag.string and tag.string.strip():
-                          text = tag.string.strip()
-                          if len(text) > 1 and not text.isdigit():
-                              try:
-                                  tag.string.replace_with(translator.translate(text))
-                              except Exception:
-                                  pass
+                  for string_node in soup.find_all(string=True):
+                      if isinstance(string_node, Comment): continue
+                      parent = string_node.parent
+                      if not parent or parent.name in ['script', 'style', 'title', 'meta', 'head', 'noscript', 'code', 'svg', 'path']: continue
+                      if parent.name == 'select' or parent.find_parent('select') or parent.find_parent(class_=re.compile('notranslate')): continue
+                      raw_text = str(string_node)
+                      text = raw_text.strip()
+                      if text in mapping:
+                          translated_text = mapping[text]
+                          leading_ws = raw_text[:len(raw_text) - len(raw_text.lstrip())]
+                          trailing_ws = raw_text[len(raw_text.rstrip()):]
+                          string_node.replace_with(f'{leading_ws}{translated_text}{trailing_ws}')
 
                   for inp in soup.find_all(['input', 'textarea']):
                       if inp.get('placeholder'):
-                          try:
-                              inp['placeholder'] = translator.translate(inp['placeholder'])
-                          except Exception:
-                              pass
+                          p_text = inp['placeholder'].strip()
+                          if p_text in mapping: inp['placeholder'] = mapping[p_text]
 
                   body = soup.find('body')
                   if body:
@@ -106,8 +137,7 @@ jobs:
                       body.append(nav_soup)
 
                   output_path = os.path.join(lang_code, file_name)
-                  with open(output_path, 'w', encoding='utf-8') as f:
-                      f.write(str(soup))
+                  with open(output_path, 'w', encoding='utf-8') as f: f.write(str(soup))
           "
 
       - name: Commit and Push changes
@@ -115,5 +145,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add fr/ es/ ar/
-          git commit -m "Auto-generated clean translations for new pages" || exit 0
+          git commit -m "Correction de la redirection du sélecteur de langue" || exit 0
           git push

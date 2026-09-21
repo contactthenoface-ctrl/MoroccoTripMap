@@ -254,13 +254,11 @@ document.addEventListener('DOMContentLoaded', function() {
       else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
 
       var pageName = window.location.pathname.split('/').pop() || 'index.html';
-      var pathParts = window.location.pathname.split('/').filter(Boolean);
-      var currentFolder = ['fr', 'es', 'ar'].includes(pathParts[pathParts.length - 2]) ? pathParts[pathParts.length - 2] : '';
 
       if (targetLang === 'en') {
-        window.location.href = currentFolder ? '../' + pageName : pageName;
+        window.location.href = pageName;
       } else {
-        window.location.href = currentFolder ? '../' + targetLang + '/' + pageName : targetLang + '/' + pageName;
+        window.location.href = targetLang + '/' + pageName;
       }
     });
   });
