@@ -1,4 +1,4 @@
-/* Dictionnaire de traduction complet pour MoroccoTripMap */
+/* Dictionnaire de traduction complet et sans conflit */
 const dictionary = {
   fr: {
     "OFFICIAL TOURISM PORTAL": "PORTAIL TOURISTIQUE OFFICIEL",
@@ -77,7 +77,15 @@ const dictionary = {
   }
 };
 
+// Effacer complètement le cookie parasite de Google Translate
+function clearGoogleCookie() {
+  var host = window.location.hostname;
+  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + host + ";";
+}
+
 function translatePage(lang) {
+  clearGoogleCookie();
   localStorage.setItem('site_lang', lang);
 
   if (lang === 'ar') {
@@ -112,7 +120,6 @@ function translatePage(lang) {
         el.placeholder = dict[orig];
       }
     } else {
-      // Ignorer les conteneurs qui ont des enfants complexes
       if (el.children.length > 0 && !el.querySelector('span')) return;
 
       const trimmedText = el.innerHTML.trim();
@@ -128,6 +135,7 @@ function translatePage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  clearGoogleCookie();
   const savedLang = localStorage.getItem('site_lang') || 'en';
 
   document.querySelectorAll('select').forEach(select => {
