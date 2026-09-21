@@ -88,6 +88,14 @@
                 <p class="text-creme/80 max-w-2xl text-sm sm:text-base">
                     From vibrant imperial medinas and blue mountain villages to Atlantic coastal gems and golden desert dunes, find your next Moroccan escape.
                 </p>
+
+                <!-- Search Bar Added for Destinations Page -->
+                <div class="mt-8 max-w-md">
+                    <input type="text" 
+                           id="searchInput" 
+                           placeholder="Search destinations (e.g. Marrakech, Desert, Blue)..." 
+                           class="w-full px-4 py-3 rounded-xl bg-white text-sombre placeholder-gray-400 outline-none shadow-sm text-sm border border-sable/20 focus:border-sable transition">
+                </div>
             </div>
         </div>
 
@@ -97,7 +105,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Marrakech -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&fit=crop&w=600&q=80" 
                          alt="Historic Koutoubia mosque and streets in Marrakech, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -110,7 +118,7 @@
                 </div>
 
                 <!-- Chefchaouen -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Traditional blue painted streets in Chefchaouen, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -123,7 +131,7 @@
                 </div>
 
                 <!-- Fes -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1555169048-ee590a06ab39?q=80&w=1188&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Panoramic view of ancient medina in Fes, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -136,7 +144,7 @@
                 </div>
 
                 <!-- Casablanca -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1740602550091-0943d7cfb720?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="The largest city in Morocco and the country's economic and business centre, Casablanca, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -149,7 +157,7 @@
                 </div>
 
                 <!-- Essaouira -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Historic blue boats and ramparts in Essaouira, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -162,7 +170,7 @@
                 </div>
 
                 <!-- Agadir -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1630172006681-a0b1d335c9e3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Golden beach and coastal resort view in Agadir, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -175,7 +183,7 @@
                 </div>
 
                 <!-- Tangier -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1711971725727-aa6e812eb45d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Stunning view of the strait and white buildings in Tangier, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -188,7 +196,7 @@
                 </div>
 
                 <!-- Ouarzazate -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1737927427538-9f9b4ea4ab02?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Ancient kasbah and desert landscape in Ouarzazate, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -201,7 +209,7 @@
                 </div>
 
                 <!-- Rabat -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1588609715324-78072fc77cee?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dauto=format&fit=crop&w=600&q=80" 
                          alt="Historic Hassan Tower and gardens in Rabat, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -214,7 +222,7 @@
                 </div>
 
                 <!-- Meknes -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.trvl-media.com/place/6115304/f7679f0c-62db-486c-a2a2-90a4e979f378.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Monumental gate and ancient architecture in Meknes, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -227,7 +235,7 @@
                 </div>
 
                 <!-- Tetouan -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/45f66ad6b9473a56e7dbb23a7f2b5ab2f5b9f9c9f9297019d4b9a7c27b77bce6.png?auto=format&fit=crop&w=600&q=80" 
                          alt="White whitewashed Andalusian architecture and streets in Tetouan, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -240,7 +248,7 @@
                 </div>
 
                 <!-- Ifrane -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Neige_ifrane.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Alpine architecture and mountain scenery in Ifrane, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -253,7 +261,7 @@
                 </div>
 
                 <!-- El Jadida -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://maroc-diplomatique.net/wp-content/uploads/2018/06/eljadida.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Portuguese fortification and coastal view in El Jadida, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -266,7 +274,7 @@
                 </div>
 
                 <!-- Taroudant -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ab/37/7b.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Massive red mudbrick ramparts and vibrant souks in Taroudant, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -279,7 +287,7 @@
                 </div>
 
                 <!-- Dakhla -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1643240260139-d27d5a899d13?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Stunning lagoon and desert meeting the ocean in Dakhla, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -292,7 +300,7 @@
                 </div>
 
                 <!-- Al Hoceima -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://observatoirevivreensemble.org/sites/default/files/styles/obs_huge_pano/public/al_hoceima_3.jpg?itok=hTZASghu&c=7d2e212944070782e3cd4e593ad7a587?auto=format&fit=crop&w=600&q=80" 
                          alt="Stunning turquoise waters and cliff views in Al Hoceima, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -305,7 +313,7 @@
                 </div>
 
                 <!-- Nador -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://static.lematin.ma/files/lematin/images/articles/2021/08/552a3f4d1fc34431d8a6c8da7425f741.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Scenic lagoon and coastal landscape in Nador, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -318,7 +326,7 @@
                 </div>
 
                 <!-- Zagora -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://www.infostourismemaroc.com/uploads/images/gallery/5ecb9f046e93f_que-faire-zagora-lieux-voir-activites-zagora-sud-marocain.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Palm groves and desert dunes in Zagora, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -331,7 +339,7 @@
                 </div>
 
                 <!-- Safi -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://khirbledi.ma/wp-content/uploads/2023/05/safi-pottery-stalls.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Coastal view and pottery heritage in Safi, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -344,7 +352,7 @@
                 </div>
 
                <!-- Laayoune -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://tourismenews.ma/wp-content/uploads/peuple-arabe-caravane-chameaux-1536x1024.jpg?auto=format&fit=crop&w=600&q=80" 
                          alt="Saharan landscape and coastal culture in Laayoune, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -357,7 +365,7 @@
                 </div> 
                 
                 <!-- Merzouga -->
-                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                <div class="city-card group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
                     <img src="https://images.unsplash.com/photo-1613169620329-6785c004d900?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" 
                          alt="Golden sand dunes in Erg Chebbi desert, Merzouga, Morocco" 
                          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
@@ -411,5 +419,27 @@
         </div>
     </footer>
 
+    <!-- Script de recherche instantanée -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const cityCards = document.querySelectorAll('.city-card');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function (e) {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+
+                    cityCards.forEach(card => {
+                        const textContent = card.innerText.toLowerCase();
+                        if (textContent.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
