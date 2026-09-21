@@ -276,7 +276,6 @@ html
 </div>
 </footer>
 <script src="./lang.js"></script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('select').forEach(function(select) {
@@ -292,13 +291,35 @@ document.addEventListener('DOMContentLoaded', function() {
       else if (val.includes('es') || txt.includes('es')) targetLang = 'es';
       else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
 
-      var pageName = window.location.pathname.split('/').pop() || 'index.html';
-
-      if (targetLang === 'en') {
-        window.location.href = pageName;
-      } else {
-        window.location.href = targetLang + '/' + pageName;
+      var path = window.location.pathname;
+      var langs = ['fr', 'es', 'ar'];
+      var segments = path.split('/').filter(Boolean);
+      
+      var filename = 'index.html';
+      if (segments.length > 0) {
+        var last = segments[segments.length - 1];
+        if (last.endsWith('.html')) {
+          filename = last;
+          segments.pop();
+        }
       }
+      
+      if (segments.length > 0 && langs.includes(segments[segments.length - 1])) {
+        segments.pop();
+      }
+      
+      var basePath = '/' + segments.join('/');
+      if (basePath === '/') basePath = '';
+      
+      var newUrl = '';
+      if (targetLang === 'en') {
+        newUrl = basePath + '/' + filename;
+      } else {
+        newUrl = basePath + '/' + targetLang + '/' + filename;
+      }
+      
+      newUrl = newUrl.replace(/\/\//g, '/');
+      window.location.href = newUrl;
     });
   });
 });

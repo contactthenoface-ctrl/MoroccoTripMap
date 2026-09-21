@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth">
+
+<html class="scroll-smooth" dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Metadata -->
-    <title>All Destinations in Morocco | MoroccoTripMap</title>
-    <meta name="description" content="Explore all destinations in Morocco. From the imperial cities of Marrakech and Fes to the blue pearl Chefchaouen and the Sahara desert of Merzouga.">
-    <link rel="canonical" href="https://moroccotripmap.com/destinations.html">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO & Metadata -->
+<title>All Destinations in Morocco | MoroccoTripMap</title>
+<meta content="Explore all destinations in Morocco. From the imperial cities of Marrakech and Fes to the blue pearl Chefchaouen and the Sahara desert of Merzouga." name="description"/>
+<link href="https://moroccotripmap.com/destinations.html" rel="canonical"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -30,406 +29,326 @@
             }
         }
     </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
         body { font-family: 'Outfit', sans-serif; }
     </style>
 </head>
 <body class="bg-creme text-sombre antialiased flex flex-col min-h-screen">
-
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                <img src="images/logo.webp" alt="MoroccoTripMap Logo" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=100&q=80';">
-                <div class="hidden sm:flex flex-col">
-                    <span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
-                </div>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
-                <a href="destinations.html" class="text-vert font-bold transition">Destinations</a>
-                <a href="stays.html" class="hover:text-vert transition">Stays</a>
-                <a href="index.html#restaurants" class="hover:text-vert transition">Restaurants</a>
-                <a href="index.html#experiences" class="hover:text-vert transition">Experiences</a>
-            </nav>
-
-            <div class="flex items-center gap-2 sm:gap-4">
-                <div class="relative inline-block text-left">
-                    <select translate="no" onchange="location = this.value;" class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition">
-                        <option value="/destinations.html" selected>🇬🇧 EN</option>
-                        <option value="/fr/destinations.html">🇫🇷 FR</option>
-                        <option value="/es/destinations.html">🇪🇸 ES</option>
-                        <option value="/ar/destinations.html">🇲🇦 AR</option>
-                    </select>
-                </div>
-                <button type="button" class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-grow">
-        
-        <!-- Page Header -->
-        <div class="bg-vert text-creme py-12 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex items-center gap-2 text-xs font-semibold text-sable mb-4 uppercase tracking-wider">
-                    <a href="index.html" class="hover:text-white transition">Home</a>
-                    <span>/</span>
-                    <span class="text-white">Destinations</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Explore All Destinations</h1>
-                <p class="text-creme/80 max-w-2xl text-sm sm:text-base">
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<a class="flex items-center gap-3 group shrink-0" href="index.html">
+<img alt="MoroccoTripMap Logo" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=100&amp;q=80';" src="images/logo.webp"/>
+<div class="hidden sm:flex flex-col">
+<span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
+</div>
+</a>
+<nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
+<a class="text-vert font-bold transition" href="destinations.html">Destinations</a>
+<a class="hover:text-vert transition" href="stays.html">Stays</a>
+<a class="hover:text-vert transition" href="index.html#restaurants">Restaurants</a>
+<a class="hover:text-vert transition" href="index.html#experiences">Experiences</a>
+</nav>
+<div class="flex items-center gap-2 sm:gap-4">
+<div class="relative inline-block text-left">
+<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" onchange="location = this.value;" translate="no">
+<option selected="" value="/destinations.html">🇬🇧 EN</option>
+<option value="/fr/destinations.html">🇫🇷 FR</option>
+<option value="/es/destinations.html">🇪🇸 ES</option>
+<option value="/ar/destinations.html">🇲🇦 AR</option>
+</select>
+</div>
+<button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Page Header -->
+<div class="bg-vert text-creme py-12 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-xs font-semibold text-sable mb-4 uppercase tracking-wider">
+<a class="hover:text-white transition" href="index.html">Home</a>
+<span>/</span>
+<span class="text-white">Destinations</span>
+</div>
+<h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Explore All Destinations</h1>
+<p class="text-creme/80 max-w-2xl text-sm sm:text-base">
                     From vibrant imperial medinas and blue mountain villages to Atlantic coastal gems and golden desert dunes, find your next Moroccan escape.
                 </p>
-
-                <!-- Search Bar with Predictive Dropdown -->
-                <div class="mt-8 max-w-md relative">
-                    <div class="relative">
-                        <input type="text" 
-                               id="searchInput" 
-                               placeholder="Search destinations (e.g. Marrakech, Desert, Blue)..." 
-                               class="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-sombre placeholder-gray-400 outline-none shadow-sm text-sm border border-sable/20 focus:border-sable transition"
-                               autocomplete="off">
-                        <svg class="w-5 h-5 text-sable absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    </div>
-                    <!-- Dropdown des résultats prédictifs -->
-                    <div id="searchResults" class="absolute top-full left-0 w-full mt-2 bg-white rounded-xl shadow-xl overflow-hidden hidden z-50 text-sombre text-sm border border-gray-100"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Destinations Grid Section -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Marrakech -->
-                <a href="marrakech.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&fit=crop&w=600&q=80" 
-                         alt="Historic Koutoubia mosque and streets in Marrakech, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial City</span>
-                        <h3 class="text-xl font-bold">Marrakech</h3>
-                        <p class="text-xs text-white/80 mt-1">Medina, Palaces & Desert Gateways</p>
-                    </div>
-                </a>
-
-                <!-- Chefchaouen -->
-                <a href="chefchaouen.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?auto=format&fit=crop&w=600&q=80" 
-                         alt="Traditional blue painted streets in Chefchaouen, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Rif Mountains</span>
-                        <h3 class="text-xl font-bold">Chefchaouen</h3>
-                        <p class="text-xs text-white/80 mt-1">The Iconic Blue Pearl of Morocco</p>
-                    </div>
-                </a>
-
-                <!-- Fes -->
-                <a href="fes.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1555169048-ee590a06ab39?auto=format&fit=crop&w=600&q=80" 
-                         alt="Panoramic view of ancient medina in Fes, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Cultural Capital</span>
-                        <h3 class="text-xl font-bold">Fes</h3>
-                        <p class="text-xs text-white/80 mt-1">Ancient Medina & Spiritual Heritage</p>
-                    </div>
-                </a>
-
-                <!-- Casablanca -->
-                <a href="casablanca.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1740602550091-0943d7cfb720?auto=format&fit=crop&w=600&q=80" 
-                         alt="The largest city in Morocco and the country's economic centre, Casablanca, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Economic Heart</span>
-                        <h3 class="text-xl font-bold">Casablanca</h3>
-                        <p class="text-xs text-white/80 mt-1">The largest city in Morocco</p>
-                    </div>
-                </a>
-
-                <!-- Essaouira -->
-                <a href="essaouira.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?auto=format&fit=crop&w=600&q=80" 
-                         alt="Historic blue boats and ramparts in Essaouira, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
-                        <h3 class="text-xl font-bold">Essaouira</h3>
-                        <p class="text-xs text-white/80 mt-1">Windy City, Ramparts & Fresh Seafood</p>
-                    </div>
-                </a>
-
-                <!-- Agadir -->
-                <a href="agadir.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1630172006681-a0b1d335c9e3?auto=format&fit=crop&w=600&q=80" 
-                         alt="Golden beach and coastal resort view in Agadir, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Sun & Beach</span>
-                        <h3 class="text-xl font-bold">Agadir</h3>
-                        <p class="text-xs text-white/80 mt-1">Golden Beaches & Modern Resorts</p>
-                    </div>
-                </a>
-
-                <!-- Tangier -->
-                <a href="tanger.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1711971725727-aa6e812eb45d?auto=format&fit=crop&w=600&q=80" 
-                         alt="Stunning view of the strait and white buildings in Tangier, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Strait of Gibraltar</span>
-                        <h3 class="text-xl font-bold">Tangier</h3>
-                        <p class="text-xs text-white/80 mt-1">The Gateway Between Europe and Africa</p>
-                    </div>
-                </a>
-
-                <!-- Ouarzazate -->
-                <a href="ouarzazate.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1737927427538-9f9b4ea4ab02?auto=format&fit=crop&w=600&q=80" 
-                         alt="Ancient kasbah and desert landscape in Ouarzazate, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Desert Gateway</span>
-                        <h3 class="text-xl font-bold">Ouarzazate</h3>
-                        <p class="text-xs text-white/80 mt-1">Cinematic Landscapes & Ancient Kasbahs</p>
-                    </div>
-                </a>
-
-                <!-- Rabat -->
-                <a href="rabat.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1588609715324-78072fc77cee?auto=format&fit=crop&w=600&q=80" 
-                         alt="Historic Hassan Tower and gardens in Rabat, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial Capital</span>
-                        <h3 class="text-xl font-bold">Rabat</h3>
-                        <p class="text-xs text-white/80 mt-1">Historic Gardens & Atlantic Breezes</p>
-                    </div>
-                </a>
-
-                <!-- Meknes -->
-                <a href="meknes.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.trvl-media.com/place/6115304/f7679f0c-62db-486c-a2a2-90a4e979f378.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Monumental gate and ancient architecture in Meknes, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial City</span>
-                        <h3 class="text-xl font-bold">Meknes</h3>
-                        <p class="text-xs text-white/80 mt-1">Monumental Gates & Roman Ruins</p>
-                    </div>
-                </a>
-
-                <!-- Tetouan -->
-                <a href="tetouan.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/45f66ad6b9473a56e7dbb23a7f2b5ab2f5b9f9c9f9297019d4b9a7c27b77bce6.png?auto=format&fit=crop&w=600&q=80" 
-                         alt="White whitewashed Andalusian architecture and streets in Tetouan, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Coast</span>
-                        <h3 class="text-xl font-bold">Tetouan</h3>
-                        <p class="text-xs text-white/80 mt-1">Andalusian Heritage & Rif Mountains</p>
-                    </div>
-                </a>
-
-                <!-- Ifrane -->
-                <a href="ifrane.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Neige_ifrane.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Alpine architecture and mountain scenery in Ifrane, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Middle Atlas</span>
-                        <h3 class="text-xl font-bold">Ifrane</h3>
-                        <p class="text-xs text-white/80 mt-1">Alpine Architecture & Cedar Forests</p>
-                    </div>
-                </a>
-
-                <!-- El Jadida -->
-                <a href="el-jadida.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://maroc-diplomatique.net/wp-content/uploads/2018/06/eljadida.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Portuguese fortification and coastal view in El Jadida, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
-                        <h3 class="text-xl font-bold">El Jadida</h3>
-                        <p class="text-xs text-white/80 mt-1">Portuguese Cistern & Ocean Forts</p>
-                    </div>
-                </a>
-
-                <!-- Taroudant -->
-                <a href="taroudant.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ab/37/7b.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Massive red mudbrick ramparts and vibrant souks in Taroudant, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Souss Valley</span>
-                        <h3 class="text-xl font-bold">Taroudant</h3>
-                        <p class="text-xs text-white/80 mt-1">Massive Ramparts & Authentic Souks</p>
-                    </div>
-                </a>
-
-                <!-- Dakhla -->
-                <a href="dakhla.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1643240260139-d27d5a899d13?auto=format&fit=crop&w=600&q=80" 
-                         alt="Stunning lagoon and desert meeting the ocean in Dakhla, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Deep South</span>
-                        <h3 class="text-xl font-bold">Dakhla</h3>
-                        <p class="text-xs text-white/80 mt-1">Stunning Lagoons & Kitesurf Paradise</p>
-                    </div>
-                </a>
-
-                <!-- Al Hoceima -->
-                <a href="al-hoceima.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://observatoirevivreensemble.org/sites/default/files/styles/obs_huge_pano/public/al_hoceima_3.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Stunning turquoise waters and cliff views in Al Hoceima, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Coast</span>
-                        <h3 class="text-xl font-bold">Al Hoceima</h3>
-                        <p class="text-xs text-white/80 mt-1">Turquoise Waters & Rif Cliffs</p>
-                    </div>
-                </a>
-
-                <!-- Nador -->
-                <a href="nador.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://static.lematin.ma/files/lematin/images/articles/2021/08/552a3f4d1fc34431d8a6c8da7425f741.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Scenic lagoon and coastal landscape in Nador, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Lagoon</span>
-                        <h3 class="text-xl font-bold">Nador</h3>
-                        <p class="text-xs text-white/80 mt-1">Mar Chica Lagoon & Coastal Breezes</p>
-                    </div>
-                </a>
-
-                <!-- Zagora -->
-                <a href="zagora.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://www.infostourismemaroc.com/uploads/images/gallery/5ecb9f046e93f_que-faire-zagora-lieux-voir-activites-zagora-sud-marocain.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Palm groves and desert dunes in Zagora, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Drâa Valley</span>
-                        <h3 class="text-xl font-bold">Zagora</h3>
-                        <p class="text-xs text-white/80 mt-1">Lush Palm Groves & Sahara Doors</p>
-                    </div>
-                </a>
-
-                <!-- Safi -->
-                <a href="safi.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://khirbledi.ma/wp-content/uploads/2023/05/safi-pottery-stalls.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Coastal view and pottery heritage in Safi, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
-                        <h3 class="text-xl font-bold">Safi</h3>
-                        <p class="text-xs text-white/80 mt-1">Pottery Capital & Sea Fortress</p>
-                    </div>
-                </a>
-
-               <!-- Laayoune -->
-                <a href="laayoune.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://tourismenews.ma/wp-content/uploads/peuple-arabe-caravane-chameaux-1536x1024.jpg?auto=format&fit=crop&w=600&q=80" 
-                         alt="Saharan landscape and coastal culture in Laayoune, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Sahara Gateway</span>
-                        <h3 class="text-xl font-bold">Laayoune</h3>
-                        <p class="text-xs text-white/80 mt-1">Sahrawi Culture & Atlantic Horizon</p>
-                    </div>
-                </a> 
-                
-                <!-- Merzouga -->
-                <a href="merzouga.html" class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1613169620329-6785c004d900?auto=format&fit=crop&w=600&q=80" 
-                         alt="Golden sand dunes in Erg Chebbi desert, Merzouga, Morocco" 
-                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-5 left-5 right-5 text-white">
-                        <span class="text-xs text-sable font-bold uppercase tracking-wider">Sahara Desert</span>
-                        <h3 class="text-xl font-bold">Merzouga</h3>
-                        <p class="text-xs text-white/80 mt-1">Erg Chebbi Dunes & Desert Camps</p>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-vert text-creme pt-12 pb-8 px-4 sm:px-6 lg:px-8 mt-16 rounded-t-3xl">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-                <h3 class="text-xl font-bold mb-3 text-white">Morocco<span class="text-sable">TripMap</span></h3>
-                <p class="text-xs text-creme/80 leading-relaxed">
-                    Discover. Plan. Experience Morocco.<br>
+<!-- Search Bar with Predictive Dropdown -->
+<div class="mt-8 max-w-md relative">
+<div class="relative">
+<input autocomplete="off" class="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-sombre placeholder-gray-400 outline-none shadow-sm text-sm border border-sable/20 focus:border-sable transition" id="searchInput" placeholder="Search destinations (e.g. Marrakech, Desert, Blue)..." type="text"/>
+<svg class="w-5 h-5 text-sable absolute left-3 top-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<!-- Dropdown des résultats prédictifs -->
+<div class="absolute top-full left-0 w-full mt-2 bg-white rounded-xl shadow-xl overflow-hidden hidden z-50 text-sombre text-sm border border-gray-100" id="searchResults"></div>
+</div>
+</div>
+</div>
+<!-- Destinations Grid Section -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Marrakech -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="marrakech.html">
+<img alt="Historic Koutoubia mosque and streets in Marrakech, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial City</span>
+<h3 class="text-xl font-bold">Marrakech</h3>
+<p class="text-xs text-white/80 mt-1">Medina, Palaces &amp; Desert Gateways</p>
+</div>
+</a>
+<!-- Chefchaouen -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="chefchaouen.html">
+<img alt="Traditional blue painted streets in Chefchaouen, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Rif Mountains</span>
+<h3 class="text-xl font-bold">Chefchaouen</h3>
+<p class="text-xs text-white/80 mt-1">The Iconic Blue Pearl of Morocco</p>
+</div>
+</a>
+<!-- Fes -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="fes.html">
+<img alt="Panoramic view of ancient medina in Fes, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1555169048-ee590a06ab39?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Cultural Capital</span>
+<h3 class="text-xl font-bold">Fes</h3>
+<p class="text-xs text-white/80 mt-1">Ancient Medina &amp; Spiritual Heritage</p>
+</div>
+</a>
+<!-- Casablanca -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="casablanca.html">
+<img alt="The largest city in Morocco and the country's economic centre, Casablanca, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1740602550091-0943d7cfb720?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Economic Heart</span>
+<h3 class="text-xl font-bold">Casablanca</h3>
+<p class="text-xs text-white/80 mt-1">The largest city in Morocco</p>
+</div>
+</a>
+<!-- Essaouira -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="essaouira.html">
+<img alt="Historic blue boats and ramparts in Essaouira, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
+<h3 class="text-xl font-bold">Essaouira</h3>
+<p class="text-xs text-white/80 mt-1">Windy City, Ramparts &amp; Fresh Seafood</p>
+</div>
+</a>
+<!-- Agadir -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="agadir.html">
+<img alt="Golden beach and coastal resort view in Agadir, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1630172006681-a0b1d335c9e3?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Sun &amp; Beach</span>
+<h3 class="text-xl font-bold">Agadir</h3>
+<p class="text-xs text-white/80 mt-1">Golden Beaches &amp; Modern Resorts</p>
+</div>
+</a>
+<!-- Tangier -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="tanger.html">
+<img alt="Stunning view of the strait and white buildings in Tangier, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1711971725727-aa6e812eb45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Strait of Gibraltar</span>
+<h3 class="text-xl font-bold">Tangier</h3>
+<p class="text-xs text-white/80 mt-1">The Gateway Between Europe and Africa</p>
+</div>
+</a>
+<!-- Ouarzazate -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="ouarzazate.html">
+<img alt="Ancient kasbah and desert landscape in Ouarzazate, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1737927427538-9f9b4ea4ab02?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Desert Gateway</span>
+<h3 class="text-xl font-bold">Ouarzazate</h3>
+<p class="text-xs text-white/80 mt-1">Cinematic Landscapes &amp; Ancient Kasbahs</p>
+</div>
+</a>
+<!-- Rabat -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="rabat.html">
+<img alt="Historic Hassan Tower and gardens in Rabat, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1588609715324-78072fc77cee?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial Capital</span>
+<h3 class="text-xl font-bold">Rabat</h3>
+<p class="text-xs text-white/80 mt-1">Historic Gardens &amp; Atlantic Breezes</p>
+</div>
+</a>
+<!-- Meknes -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="meknes.html">
+<img alt="Monumental gate and ancient architecture in Meknes, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.trvl-media.com/place/6115304/f7679f0c-62db-486c-a2a2-90a4e979f378.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Imperial City</span>
+<h3 class="text-xl font-bold">Meknes</h3>
+<p class="text-xs text-white/80 mt-1">Monumental Gates &amp; Roman Ruins</p>
+</div>
+</a>
+<!-- Tetouan -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="tetouan.html">
+<img alt="White whitewashed Andalusian architecture and streets in Tetouan, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/45f66ad6b9473a56e7dbb23a7f2b5ab2f5b9f9c9f9297019d4b9a7c27b77bce6.png?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Coast</span>
+<h3 class="text-xl font-bold">Tetouan</h3>
+<p class="text-xs text-white/80 mt-1">Andalusian Heritage &amp; Rif Mountains</p>
+</div>
+</a>
+<!-- Ifrane -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="ifrane.html">
+<img alt="Alpine architecture and mountain scenery in Ifrane, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Neige_ifrane.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Middle Atlas</span>
+<h3 class="text-xl font-bold">Ifrane</h3>
+<p class="text-xs text-white/80 mt-1">Alpine Architecture &amp; Cedar Forests</p>
+</div>
+</a>
+<!-- El Jadida -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="el-jadida.html">
+<img alt="Portuguese fortification and coastal view in El Jadida, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://maroc-diplomatique.net/wp-content/uploads/2018/06/eljadida.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
+<h3 class="text-xl font-bold">El Jadida</h3>
+<p class="text-xs text-white/80 mt-1">Portuguese Cistern &amp; Ocean Forts</p>
+</div>
+</a>
+<!-- Taroudant -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="taroudant.html">
+<img alt="Massive red mudbrick ramparts and vibrant souks in Taroudant, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ab/37/7b.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Souss Valley</span>
+<h3 class="text-xl font-bold">Taroudant</h3>
+<p class="text-xs text-white/80 mt-1">Massive Ramparts &amp; Authentic Souks</p>
+</div>
+</a>
+<!-- Dakhla -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="dakhla.html">
+<img alt="Stunning lagoon and desert meeting the ocean in Dakhla, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1643240260139-d27d5a899d13?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Deep South</span>
+<h3 class="text-xl font-bold">Dakhla</h3>
+<p class="text-xs text-white/80 mt-1">Stunning Lagoons &amp; Kitesurf Paradise</p>
+</div>
+</a>
+<!-- Al Hoceima -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="al-hoceima.html">
+<img alt="Stunning turquoise waters and cliff views in Al Hoceima, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://observatoirevivreensemble.org/sites/default/files/styles/obs_huge_pano/public/al_hoceima_3.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Coast</span>
+<h3 class="text-xl font-bold">Al Hoceima</h3>
+<p class="text-xs text-white/80 mt-1">Turquoise Waters &amp; Rif Cliffs</p>
+</div>
+</a>
+<!-- Nador -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="nador.html">
+<img alt="Scenic lagoon and coastal landscape in Nador, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://static.lematin.ma/files/lematin/images/articles/2021/08/552a3f4d1fc34431d8a6c8da7425f741.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Mediterranean Lagoon</span>
+<h3 class="text-xl font-bold">Nador</h3>
+<p class="text-xs text-white/80 mt-1">Mar Chica Lagoon &amp; Coastal Breezes</p>
+</div>
+</a>
+<!-- Zagora -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="zagora.html">
+<img alt="Palm groves and desert dunes in Zagora, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://www.infostourismemaroc.com/uploads/images/gallery/5ecb9f046e93f_que-faire-zagora-lieux-voir-activites-zagora-sud-marocain.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Drâa Valley</span>
+<h3 class="text-xl font-bold">Zagora</h3>
+<p class="text-xs text-white/80 mt-1">Lush Palm Groves &amp; Sahara Doors</p>
+</div>
+</a>
+<!-- Safi -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="safi.html">
+<img alt="Coastal view and pottery heritage in Safi, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://khirbledi.ma/wp-content/uploads/2023/05/safi-pottery-stalls.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Atlantic Coast</span>
+<h3 class="text-xl font-bold">Safi</h3>
+<p class="text-xs text-white/80 mt-1">Pottery Capital &amp; Sea Fortress</p>
+</div>
+</a>
+<!-- Laayoune -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="laayoune.html">
+<img alt="Saharan landscape and coastal culture in Laayoune, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://tourismenews.ma/wp-content/uploads/peuple-arabe-caravane-chameaux-1536x1024.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Sahara Gateway</span>
+<h3 class="text-xl font-bold">Laayoune</h3>
+<p class="text-xs text-white/80 mt-1">Sahrawi Culture &amp; Atlantic Horizon</p>
+</div>
+</a>
+<!-- Merzouga -->
+<a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="merzouga.html">
+<img alt="Golden sand dunes in Erg Chebbi desert, Merzouga, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613169620329-6785c004d900?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5 text-white">
+<span class="text-xs text-sable font-bold uppercase tracking-wider">Sahara Desert</span>
+<h3 class="text-xl font-bold">Merzouga</h3>
+<p class="text-xs text-white/80 mt-1">Erg Chebbi Dunes &amp; Desert Camps</p>
+</div>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-vert text-creme pt-12 pb-8 px-4 sm:px-6 lg:px-8 mt-16 rounded-t-3xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-bold mb-3 text-white">Morocco<span class="text-sable">TripMap</span></h3>
+<p class="text-xs text-creme/80 leading-relaxed">
+                    Discover. Plan. Experience Morocco.<br/>
                     The premier tourism directory and cultural travel guide for visitors exploring Morocco.
                 </p>
-            </div>
-            <div>
-                <h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Destinations</h4>
-                <ul class="text-xs space-y-2 text-creme/80">
-                    <li><a href="marrakech.html" class="hover:text-white transition">Marrakech Travel Guide</a></li>
-                    <li><a href="destinations.html" class="text-white font-bold transition">All Destinations</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Categories</h4>
-                <ul class="text-xs space-y-2 text-creme/80">
-                    <li><a href="stays.html" class="hover:text-white transition">Authentic Riads & Hotels</a></li>
-                    <li><a href="index.html#restaurants" class="hover:text-white transition">Moroccan Restaurants</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Connect</h4>
-                <p class="text-xs text-creme/80 mb-3">Follow our YouTube channel for video travel guides:</p>
-                <a href="https://youtube.com/@moroccotripmap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-semibold px-3 py-2 rounded-xl hover:bg-red-700 transition">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Destinations</h4>
+<ul class="text-xs space-y-2 text-creme/80">
+<li><a class="hover:text-white transition" href="marrakech.html">Marrakech Travel Guide</a></li>
+<li><a class="text-white font-bold transition" href="destinations.html">All Destinations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Categories</h4>
+<ul class="text-xs space-y-2 text-creme/80">
+<li><a class="hover:text-white transition" href="stays.html">Authentic Riads &amp; Hotels</a></li>
+<li><a class="hover:text-white transition" href="index.html#restaurants">Moroccan Restaurants</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Connect</h4>
+<p class="text-xs text-creme/80 mb-3">Follow our YouTube channel for video travel guides:</p>
+<a class="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-semibold px-3 py-2 rounded-xl hover:bg-red-700 transition" href="https://youtube.com/@moroccotripmap" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
                     @moroccotripmap
                 </a>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto border-t border-creme/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-creme/70">
-            <p>© MoroccoTripMap. All rights reserved.</p>
-            <p>Created by <a href="https://kamliseo.com" target="_blank" rel="noopener noreferrer" class="text-sable underline font-semibold hover:text-white transition">Kamliseo</a></p>
-        </div>
-    </footer>
-
-    <!-- Script de recherche prédictive et filtrage instantané -->
-    <script>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-creme/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-creme/70">
+<p>© MoroccoTripMap. All rights reserved.</p>
+<p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
+</div>
+</footer>
+<!-- Script de recherche prédictive et filtrage instantané -->
+<script>
         const destinationsData = [
             { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "medina", "palaces", "desert", "imperial", "riad"] },
             { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "blue pearl", "rif", "mountains", "bleu"] },
@@ -510,19 +429,55 @@
             });
         });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="./lang.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('select').forEach(function(select) {
+    select.classList.add('notranslate');
+    select.setAttribute('translate', 'no');
+    
+    select.addEventListener('change', function(e) {
+      var val = e.target.value.toLowerCase();
+      var txt = e.target.options[e.target.selectedIndex].text.toLowerCase();
+      var targetLang = 'en';
+
+      if (val.includes('fr') || txt.includes('fr')) targetLang = 'fr';
+      else if (val.includes('es') || txt.includes('es')) targetLang = 'es';
+      else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
+
+      var path = window.location.pathname;
+      var langs = ['fr', 'es', 'ar'];
+      var segments = path.split('/').filter(Boolean);
+      
+      var filename = 'index.html';
+      if (segments.length > 0) {
+        var last = segments[segments.length - 1];
+        if (last.endsWith('.html')) {
+          filename = last;
+          segments.pop();
+        }
+      }
+      
+      if (segments.length > 0 && langs.includes(segments[segments.length - 1])) {
+        segments.pop();
+      }
+      
+      var basePath = '/' + segments.join('/');
+      if (basePath === '/') basePath = '';
+      
+      var newUrl = '';
+      if (targetLang === 'en') {
+        newUrl = basePath + '/' + filename;
+      } else {
+        newUrl = basePath + '/' + targetLang + '/' + filename;
+      }
+      
+      newUrl = newUrl.replace(/\/\//g, '/');
+      window.location.href = newUrl;
+    });
+  });
+});
+</script>
 </body>
 </html>
