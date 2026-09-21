@@ -4,52 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoroccoTripMap - Accueil</title>
-    <style>
-        /* Styles de base */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
-        header { background: #d35400; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-        header h1 { margin: 0; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; }
-        
-        /* Barre de recherche avec autocomplétion */
-        .search-container { position: relative; width: 300px; }
-        .search-container input { width: 100%; padding: 10px; border-radius: 20px; border: none; outline: none; box-sizing: border-box; }
-        .search-results { 
-            position: absolute; top: 40px; left: 0; width: 100%; background: white; border-radius: 8px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: none; overflow: hidden; z-index: 1000;
-        }
-        .search-results a { 
-            display: block; padding: 10px 15px; color: #333; text-decoration: none; border-bottom: 1px solid #eee; 
-        }
-        .search-results a:hover { background: #f0f0f0; color: #d35400; }
-
-        /* Section Héro */
-        .hero { text-align: center; padding: 60px 20px; background: white; }
-        
-        /* Grille des destinations */
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        
-        /* Cartes cliquables */
-        .card-link { text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
-        .card-link:hover { transform: translateY(-5px); }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card h3 { margin: 15px; color: #d35400; text-align: center; }
-    </style>
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
         <h1>MoroccoTripMap</h1>
-        
-        <!-- Barre de recherche -->
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Rechercher une ville, un lieu (ex: bleu, désert)..." onkeyup="searchDestinations()">
-            <!-- Les résultats apparaîtront ici -->
+            <input type="text" id="searchInput" placeholder="Rechercher une ville..." onkeyup="searchDestinations()">
             <div id="searchResults" class="search-results"></div>
         </div>
-
         <nav>
             <a href="index.html">Accueil</a>
             <a href="destinations.html">Destinations</a>
@@ -64,80 +29,28 @@
     <div class="container">
         <h2 style="text-align: center; margin-bottom: 30px;">Villes à la une</h2>
         <div class="grid">
-            <!-- Carte Marrakech -->
             <a href="marrakech.html" class="card-link">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1597212720188-75782787fc20" alt="Médina de Marrakech">
                     <h3>Marrakech</h3>
                 </div>
             </a>
-            
-            <!-- Carte Fès -->
             <a href="fes.html" class="card-link">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1552086382-749e79435bda" alt="Artisanat à Fès">
                     <h3>Fès</h3>
                 </div>
             </a>
-
-            <!-- Carte Chefchaouen -->
             <a href="chefchaouen.html" class="card-link">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1571210214813-f661c92b2382" alt="Ruelles bleues de Chefchaouen">
+                    <img src="https://images.unsplash.com/photo-1571210214813-f661c92b2382" alt="Ruelles bleues">
                     <h3>Chefchaouen</h3>
                 </div>
             </a>
         </div>
     </div>
 
-    <!-- Script de recherche prédictive -->
-    <script>
-        // Base de données de tes villes et des mots-clés associés
-        const destinations = [
-            { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "rouge", "sud", "jamaa el fna", "palmeraie"] },
-            { name: "Fès", url: "fes.html", tags: ["fes", "fès", "medina", "culture", "artisanat", "nord"] },
-            { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "bleu", "montagne", "rif"] },
-            { name: "Tanger", url: "tanger.html", tags: ["tanger", "mer", "detroit", "nord"] }
-        ];
-
-        function searchDestinations() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const resultsContainer = document.getElementById('searchResults');
-            
-            // On vide les résultats précédents
-            resultsContainer.innerHTML = '';
-
-            if (input.length < 1) {
-                resultsContainer.style.display = 'none';
-                return;
-            }
-
-            // On filtre les destinations qui correspondent à la saisie (nom ou tag)
-            const filtered = destinations.filter(dest => 
-                dest.name.toLowerCase().includes(input) || 
-                dest.tags.some(tag => tag.includes(input))
-            );
-
-            // On affiche les résultats sous forme de liens cliquables
-            if (filtered.length > 0) {
-                filtered.forEach(dest => {
-                    const link = document.createElement('a');
-                    link.href = dest.url;
-                    link.textContent = dest.name + " 🔗";
-                    resultsContainer.appendChild(link);
-                });
-                resultsContainer.style.display = 'block';
-            } else {
-                resultsContainer.style.display = 'none';
-            }
-        }
-
-        // Fermer la liste déroulante si on clique en dehors
-        document.addEventListener('click', function(e) {
-            if (!document.getElementById('searchInput').contains(e.target)) {
-                document.getElementById('searchResults').style.display = 'none';
-            }
-        });
-    </script>
+    <!-- Lien vers ton fichier Javascript juste avant la fin du body -->
+    <script src="js/search.js"></script>
 </body>
 </html>
