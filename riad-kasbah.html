@@ -239,51 +239,6 @@
 <p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
 </div>
 </footer>
-<script src="./lang.js"></script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('select').forEach(function(select) {
-    select.classList.add('notranslate');
-    select.setAttribute('translate', 'no');
-    
-    select.addEventListener('change', function(e) {
-      var val = e.target.value.toLowerCase();
-      var txt = e.target.options[e.target.selectedIndex].text.toLowerCase();
-      var targetLang = 'en';
-
-      if (val.includes('fr') || txt.includes('fr')) targetLang = 'fr';
-      else if (val.includes('es') || txt.includes('es')) targetLang = 'es';
-      else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
-
-      var path = window.location.pathname;
-      var langs = ['fr', 'es', 'ar'];
-      var segments = path.split('/').filter(Boolean);
-      
-      var filename = 'index.html';
-      if (segments.length > 0) {
-        var last = segments[segments.length - 1];
-        if (last.endsWith('.html')) {
-          filename = last;
-          segments.pop();
-        }
-      }
-      
-      if (segments.length > 0 && langs.includes(segments[segments.length - 1])) {
-        segments.pop();
-      }
-      
-      var basePath = '/' + segments.join('/');
-      if (basePath === '/') basePath = '';
-      
-      var newUrl = targetLang === 'en' ? (basePath + '/' + filename) : (basePath + '/' + targetLang + '/' + filename);
-      window.location.href = newUrl.replace(/\/\//g, '/');
-    });
-  });
-});
-</script>
-  <script src="i18n.js"></script>
-  <script src="js/i18n.js"></script>
+<script src="js/translate.js"></script>
 </body>
 </html>
