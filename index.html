@@ -4,21 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoroccoTripMap - Accueil</title>
-    <!-- Lien vers ton fichier CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styles Généraux */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; }
+
+        /* Header Adapté Mobile */
+        header { 
+            background: #d35400; 
+            color: white; 
+            padding: 15px 20px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            align-items: center; 
+            gap: 15px;
+        }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        nav a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+        /* Barre de recherche intelligente */
+        .search-container { position: relative; width: 100%; max-width: 300px; }
+        .search-container input { 
+            width: 100%; 
+            padding: 10px 15px; 
+            border-radius: 20px; 
+            border: none; 
+            outline: none; 
+            box-sizing: border-box; 
+        }
+        .search-results { 
+            position: absolute; top: 45px; left: 0; width: 100%; background: white; border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15); display: none; overflow: hidden; z-index: 1000;
+        }
+        .search-results a { display: block; padding: 10px 15px; color: #333; text-decoration: none; border-bottom: 1px solid #eee; }
+        .search-results a:hover { background: #f0f0f0; color: #d35400; }
+
+        /* Grille & Cartes Cliquables */
+        .hero { text-align: center; padding: 40px 20px; background: white; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        .card-link { text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
+        .card-link:hover { transform: translateY(-5px); }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .card h3 { margin: 15px; color: #d35400; text-align: center; }
+
+        /* Réorganisation auto pour smartphone */
+        @media (max-width: 600px) {
+            header { justify-content: center; text-align: center; }
+            .search-container { order: 3; max-width: 100%; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <h1>MoroccoTripMap</h1>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Rechercher une ville..." onkeyup="searchDestinations()">
-            <div id="searchResults" class="search-results"></div>
-        </div>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="destinations.html">Destinations</a>
         </nav>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Rechercher une ville..." onkeyup="searchDestinations()">
+            <div id="searchResults" class="search-results"></div>
+        </div>
     </header>
 
     <div class="hero">
@@ -31,26 +81,66 @@
         <div class="grid">
             <a href="marrakech.html" class="card-link">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1597212720188-75782787fc20" alt="Médina de Marrakech">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Morocco_Africa_Jemaa_el-Fnaa.jpg/640px-Morocco_Africa_Jemaa_el-Fnaa.jpg" alt="Marrakech">
                     <h3>Marrakech</h3>
                 </div>
             </a>
             <a href="fes.html" class="card-link">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1552086382-749e79435bda" alt="Artisanat à Fès">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Chouara_Tannery%2C_Fez%2C_Morocco.jpg/640px-Chouara_Tannery%2C_Fez%2C_Morocco.jpg" alt="Fès">
                     <h3>Fès</h3>
                 </div>
             </a>
             <a href="chefchaouen.html" class="card-link">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1571210214813-f661c92b2382" alt="Ruelles bleues">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Chefchaouen_Street_View.jpg/640px-Chefchaouen_Street_View.jpg" alt="Chefchaouen">
                     <h3>Chefchaouen</h3>
                 </div>
             </a>
         </div>
     </div>
 
-    <!-- Lien vers ton fichier Javascript juste avant la fin du body -->
-    <script src="js/search.js"></script>
+    <script>
+        const destinations = [
+            { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "rouge", "sud", "jamaa el fna", "palmeraie"] },
+            { name: "Fès", url: "fes.html", tags: ["fes", "fès", "medina", "culture", "artisanat", "nord"] },
+            { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "bleu", "montagne", "rif"] },
+            { name: "Tanger", url: "tanger.html", tags: ["tanger", "mer", "detroit", "nord"] }
+        ];
+
+        function searchDestinations() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('searchResults');
+            resultsContainer.innerHTML = '';
+
+            if (input.length < 1) {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            const filtered = destinations.filter(dest => 
+                dest.name.toLowerCase().includes(input) || 
+                dest.tags.some(tag => tag.includes(input))
+            );
+
+            if (filtered.length > 0) {
+                filtered.forEach(dest => {
+                    const link = document.createElement('a');
+                    link.href = dest.url;
+                    link.textContent = dest.name + " 🔗";
+                    resultsContainer.appendChild(link);
+                });
+                resultsContainer.style.display = 'block';
+            } else {
+                resultsContainer.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!document.getElementById('searchInput').contains(e.target)) {
+                document.getElementById('searchResults').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
