@@ -10,7 +10,6 @@
         if (currentLang !== 'en') {
           applyLanguage(currentLang);
         }
-        attachEvents();
       })
       .catch(function(err) {
         console.error('Erreur de chargement de translations.json:', err);
@@ -84,20 +83,31 @@
     if (window.origTitle) document.title = window.origTitle;
   }
 
-  function attachEvents() {
-    // Intercepte les changements de langue sur tous les éléments <select> ou liens du site
-    document.querySelectorAll('select, a').forEach(function(el) {
-      if (el.tagName === 'SELECT') {
-        el.addEventListener('change', function(e) {
-          var val = e.target.value.toLowerCase();
-          if (['en', 'fr', 'es', 'ar'].includes(val)) {
-            e.preventDefault();
-            applyLanguage(val);
-          }
-        });
+  // Intercepte les clics sur les liens de menu et sélecteurs de langue
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+
+    var href = link.getAttribute('href') || '';
+    var lang = link.getAttribute('data-lang');
+
+    if (!lang) {
+      var match = href.match(/(?:^|\/)(fr|es|ar|en)(?:\/|\.html|$)/i);
+      if (match) {
+        lang = match[1].toLowerCase();
+      } else {
+        var text = link.textContent.trim().toLowerCase();
+        if (['fr', 'es', 'ar', 'en'].includes(text)) {
+          lang = text;
+        }
       }
-    });
-  }
+    }
+
+    if (lang && ['fr', 'es', 'ar', 'en'].includes(lang)) {
+      e.preventDefault();
+      applyLanguage(lang);
+    }
+  });
 
   document.addEventListener('DOMContentLoaded', fetchTranslations);
 })();
