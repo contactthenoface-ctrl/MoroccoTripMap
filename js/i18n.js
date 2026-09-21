@@ -91,35 +91,6 @@
     if (window.origTitle) document.title = window.origTitle;
   }
 
-  // INTERCEPTION PRIORITAIRE EN PHASE DE CAPTURE (true)
-  document.addEventListener('click', function(e) {
-    var el = e.target.closest('a, button, [data-lang], option, li, div');
-    if (!el) return;
-
-    var lang = el.getAttribute('data-lang');
-    var href = el.getAttribute('href') || '';
-    var text = (el.textContent || '').trim().toLowerCase();
-
-    if (!lang) {
-      var match = href.match(/(?:^|\/)(fr|es|ar|en)(?:\/|\.html|$)/i);
-      if (match) {
-        lang = match[1].toLowerCase();
-      } else if (['fr', 'es', 'ar', 'en', 'français', 'español', 'العربية', 'english'].includes(text)) {
-        if (text === 'français' || text === 'fr') lang = 'fr';
-        else if (text === 'español' || text === 'es') lang = 'es';
-        else if (text === 'العربية' || text === 'ar') lang = 'ar';
-        else if (text === 'english' || text === 'en') lang = 'en';
-      }
-    }
-
-    if (lang && ['fr', 'es', 'ar', 'en'].includes(lang)) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.setLanguage(lang);
-      return false;
-    }
-  }, true);
-
   document.addEventListener('DOMContentLoaded', function() {
     fetchTranslations(function() {
       if (currentLang !== 'en') {
