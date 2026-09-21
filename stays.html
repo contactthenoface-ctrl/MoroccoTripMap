@@ -58,9 +58,11 @@
 <!-- Menu Mobile & Language Selector -->
 <div class="flex items-center gap-2 sm:gap-4">
 <div class="relative inline-block text-left">
-<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" translate="no">
-<option selected="" value="en">🇬🇧 EN</option>
+<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" onchange="setLanguage(this.value)" translate="no">
+<option value="en">🇬🇧 EN</option>
 <option value="fr">🇫🇷 FR</option>
+<option value="es">🇪🇸 ES</option>
+<option value="ar">🇲🇦 AR</option>
 </select>
 </div>
 <button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" type="button">
@@ -144,10 +146,11 @@
 <!-- Results Bar -->
 <div class="flex justify-between items-center mb-6">
 <p class="text-sm text-sombre/70 font-medium"><span class="font-bold text-sombre">124</span> properties found</p>
-<select class="notranslate bg-transparent text-sm font-semibold text-sombre outline-none cursor-pointer" translate="no">
-<option>Recommended</option>
-<option>Top Rated</option>
-<option>Price: Low to High</option>
+<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" onchange="setLanguage(this.value)" translate="no">
+<option value="en">🇬🇧 EN</option>
+<option value="fr">🇫🇷 FR</option>
+<option value="es">🇪🇸 ES</option>
+<option value="ar">🇲🇦 AR</option>
 </select>
 </div>
 <!-- Listings Grid -->
