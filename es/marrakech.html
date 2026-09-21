@@ -443,15 +443,8 @@ document.addEventListener('DOMContentLoaded', function() {
       var basePath = '/' + segments.join('/');
       if (basePath === '/') basePath = '';
       
-      var newUrl = '';
-      if (targetLang === 'en') {
-        newUrl = basePath + '/' + filename;
-      } else {
-        newUrl = basePath + '/' + targetLang + '/' + filename;
-      }
-      
-      newUrl = newUrl.replace(/\/\//g, '/');
-      window.location.href = newUrl;
+      var newUrl = targetLang === 'en' ? (basePath + '/' + filename) : (basePath + '/' + targetLang + '/' + filename);
+      window.location.href = newUrl.replace(/\/\//g, '/');
     });
   });
 });
