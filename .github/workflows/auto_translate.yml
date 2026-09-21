@@ -1,0 +1,119 @@
+name: Auto Translate New Pages
+
+on:
+  push:
+    paths:
+      - '*.html'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install deep-translator beautifulsoup4
+
+      - name: Run translation generator
+        run: |
+          python -c "
+          import os
+          from bs4 import BeautifulSoup
+          from deep_translator import GoogleTranslator
+
+          LANGUAGES = {'fr': 'french', 'es': 'spanish', 'ar': 'arabic'}
+          html_files = [f for f in os.listdir('.') if f.endswith('.html') and os.path.isfile(f)]
+
+          NAV_JS = '''<script>
+          document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('select').forEach(function(select) {
+              select.classList.add('notranslate');
+              select.setAttribute('translate', 'no');
+              select.addEventListener('change', function(e) {
+                var val = e.target.value.toLowerCase();
+                var txt = e.target.options[e.target.selectedIndex].text.toLowerCase();
+                var targetLang = 'en';
+                if (val.includes('fr') || txt.includes('fr')) targetLang = 'fr';
+                else if (val.includes('es') || txt.includes('es')) targetLang = 'es';
+                else if (val.includes('ar') || txt.includes('ar')) targetLang = 'ar';
+                var pageName = window.location.pathname.split('/').pop() || 'index.html';
+                var pathParts = window.location.pathname.split('/').filter(Boolean);
+                var currentFolder = ['fr', 'es', 'ar'].includes(pathParts[pathParts.length - 2]) ? pathParts[pathParts.length - 2] : '';
+                if (targetLang === 'en') {
+                  window.location.href = currentFolder ? '../' + pageName : pageName;
+                } else {
+                  window.location.href = currentFolder ? '../' + targetLang + '/' + pageName : targetLang + '/' + pageName;
+                }
+              });
+            });
+          });
+          </script>'''
+
+          for lang_code in LANGUAGES.keys():
+              os.makedirs(lang_code, exist_ok=True)
+              translator = GoogleTranslator(source='en', target=lang_code)
+
+              for file_name in html_files:
+                  with open(file_name, 'r', encoding='utf-8') as f:
+                      soup = BeautifulSoup(f.read(), 'html.parser')
+
+                  head = soup.find('head')
+                  if head:
+                      base_tag = soup.find('base')
+                      if not base_tag:
+                          new_base = soup.new_tag('base', href='../')
+                          head.insert(0, new_base)
+                      else:
+                          base_tag['href'] = '../'
+
+                  html_tag = soup.find('html')
+                  if html_tag:
+                      html_tag['lang'] = lang_code
+                      html_tag['dir'] = 'rtl' if lang_code == 'ar' else 'ltr'
+
+                  for script in soup.find_all('script'):
+                      if script.string and ('googleTranslate' in script.string or 'lang.js' in str(script)):
+                          script.decompose()
+
+                  tags = soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'a', 'span', 'button', 'li', 'td', 'th'])
+                  for tag in tags:
+                      if tag.find_parent('select') or tag.name in ['script', 'style']:
+                          continue
+                      if len(tag.find_all()) == 0 and tag.string and tag.string.strip():
+                          text = tag.string.strip()
+                          if len(text) > 1 and not text.isdigit():
+                              try:
+                                  tag.string.replace_with(translator.translate(text))
+                              except Exception:
+                                  pass
+
+                  for inp in soup.find_all(['input', 'textarea']):
+                      if inp.get('placeholder'):
+                          try:
+                              inp['placeholder'] = translator.translate(inp['placeholder'])
+                          except Exception:
+                              pass
+
+                  body = soup.find('body')
+                  if body:
+                      nav_soup = BeautifulSoup(NAV_JS, 'html.parser')
+                      body.append(nav_soup)
+
+                  output_path = os.path.join(lang_code, file_name)
+                  with open(output_path, 'w', encoding='utf-8') as f:
+                      f.write(str(soup))
+          "
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add fr/ es/ ar/
+          git commit -m "Auto-generated clean translations for new pages" || exit 0
+          git push
