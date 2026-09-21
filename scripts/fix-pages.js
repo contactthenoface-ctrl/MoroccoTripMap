@@ -21,7 +21,12 @@ files.forEach(file => {
   content = content.replace(/<script src="i18n\.js"><\/script>\s*/g, '');
   content = content.replace(/<script src="js\/i18n\.js"><\/script>\s*/g, '');
 
-  // Ajoute translate.js s'il n'est pas déjà présent
+  // Empêche le bandeau natif de traduction de Chrome
+  if (!content.includes('name="google" content="notranslate"')) {
+    content = content.replace('<head>', '<head>\n<meta name="google" content="notranslate">');
+  }
+
+ // Ajoute translate.js s'il n'est pas déjà présent
   if (!content.includes('js/translate.js')) {
     content = content.replace('</body>', '  <script src="js/translate.js"></script>\n</body>');
   }
