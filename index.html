@@ -71,9 +71,66 @@
 <!-- Header Navigation -->
 <header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
   
-<!-- Remplacer tout le header par ceci -->
-<div id="header-placeholder"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center gap-3 group shrink-0" href="index.html">
+<img alt="MoroccoTripMap Logo - Travel Guide Morocco" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=100&amp;q=80';" src="images/logo.webp"/>
+<div class="hidden sm:flex flex-col">
+<span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
+</div>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
+<a class="hover:text-vert transition" href="#destinations">Destinations</a>
+<a class="hover:text-vert transition" href="stays.html">Stays</a>
+<a class="hover:text-vert transition" href="#restaurants">Restaurants</a>
+<a class="hover:text-vert transition" href="#experiences">Experiences</a>
+<a class="hover:text-vert transition" href="#guides">Guides</a>
+</nav>
+<!-- Menu Mobile & Language Selector -->
+<div class="flex items-center gap-2 sm:gap-4">
+<!-- SÉLECTEUR DE LANGUE SUR MESURE (AVEC SVG) -->
+<div class="relative inline-block text-left" id="lang-menu-container">
+    <button id="lang-menu-button" class="flex items-center gap-2 bg-white border border-sable/20 text-sm font-semibold rounded-xl px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition">
+        <!-- SVG Drapeau UK -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+        EN
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    
+    <div id="lang-menu-dropdown" class="hidden absolute right-0 mt-2 w-28 bg-white border border-sable/20 rounded-xl shadow-lg z-50 overflow-hidden">
+        <a href="/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau UK -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t2"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t2)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+            EN
+        </a>
+        <a href="/fr/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau France -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>
+            FR
+        </a>
+        <a href="/es/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau Espagne -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>
+            ES
+        </a>
+        <a href="/ar/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau Maroc -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>
+            AR
+        </a>
+    </div>
+</div>
 
+<button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<a class="hidden md:inline-flex items-center gap-2 bg-vert text-creme text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-vert/90 transition shadow-sm" href="#map">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Interactive Map
+                </a>
+</div>
+</div>
 </header>
 <!-- Main Content -->
 <main class="flex-grow">
