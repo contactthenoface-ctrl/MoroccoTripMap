@@ -86,15 +86,15 @@
     </div>
 
     <!-- Menu Mobile Button -->
-    <button aria-label="Toggle mobile menu" class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition" id="mobile-menu-button" type="button">
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Toggle mobile menu" class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" id="mobile-menu-button" type="button">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
     </button>
 </div>
 
 </div>
+
 <!-- Mobile Menu Drawer -->
 <div class="hidden md:hidden absolute top-20 left-0 w-full bg-creme/95 backdrop-blur-md border-b border-sable/15 shadow-xl px-6 py-6 transition-all max-h-[80vh] overflow-y-auto z-50" id="mobile-menu">
-    
     <!-- Sélecteur de langue rapide pour Mobile -->
     <div class="flex items-center justify-between pb-4 mb-4 border-b border-sable/20">
         <span class="text-xs font-bold text-sable uppercase tracking-wider" data-i18n="mobile_menu.language_title">Language / Langue</span>
@@ -108,19 +108,18 @@
 
     <!-- Navigation Mobile Principale -->
     <nav class="flex flex-col gap-3 text-base font-medium text-sombre/90">
-        
         <!-- 1. Cities -->
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold" href="destinations.html">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-vert shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a2 2 0 012-2h2a2 2 0 012 2v5m-6 0h6"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a2 2 0 012-2h2a2 2 0 012 v5m-6 0h6"></path>
                 </svg>
                 <span data-i18n="nav.cities">Cities & Destinations</span>
             </div>
             <span class="text-xs text-gray-400">→</span>
         </a>
 
-        <!-- 2. Categories (Menu Déroulant / Accordéon) -->
+        <!-- 2. Categories (Menu Déroulant) -->
         <div>
             <button onclick="toggleMobileCategories()" class="w-full flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold text-left">
                 <div class="flex items-center gap-3">
@@ -183,10 +182,8 @@
             </div>
             <span class="text-xs text-gray-400">→</span>
         </a>
-
     </nav>
 </div>
-
 </header>
 <!-- Main Content -->
 <main class="flex-grow">
@@ -197,7 +194,7 @@
 <span>/</span>
 <a class="hover:text-vert transition" href="stays.html" data-i18n="breadcrumb.stays">Stays</a>
 <span>/</span>
-<a class="hover:text-vert transition" href="#" data-i18n="destinations.marrakech.name">Marrakech</a>
+<a class="hover:text-vert transition" href="marrakech.html" data-i18n="destinations.marrakech.name">Marrakech</a>
 <span>/</span>
 <span class="text-vert" data-i18n="riad_kasbah_page.title_name">Riad Kasbah</span>
 </div>
@@ -369,7 +366,19 @@
 
 <!-- Script Complet : Menu Langues, Menu Mobile & Traduction -->
 <script>
-    // --- 1. Gestion du menu déroulant de langues ---
+    // --- 1. Fonction pour le sous-menu catégories mobile ---
+    function toggleMobileCategories() {
+        const dropdown = document.getElementById('mobile-categories-dropdown');
+        const arrow = document.getElementById('categories-arrow');
+        if (dropdown) {
+            dropdown.classList.toggle('hidden');
+            if (arrow) {
+                arrow.classList.toggle('rotate-180');
+            }
+        }
+    }
+
+    // --- 2. Gestion du menu déroulant de langues ---
     document.addEventListener('DOMContentLoaded', function () {
         const langButton = document.getElementById('lang-menu-button');
         const langDropdown = document.getElementById('lang-menu-dropdown');
@@ -392,11 +401,10 @@
         changeLanguage(savedLang);
     });
 
-        // --- Fonction de Traduction Globale & Mise à jour du Drapeau ---
+    // --- 3. Fonction de Traduction Globale & Mise à jour du Drapeau ---
     function changeLanguage(lang) {
         localStorage.setItem('preferred_lang', lang);
 
-        // 1. Mettre à jour le libellé et le drapeau du bouton actif
         const langLabel = document.getElementById('current-lang-label');
         const langButton = document.getElementById('lang-menu-button');
         
@@ -404,7 +412,6 @@
             langLabel.textContent = lang.toUpperCase();
         }
 
-        // Dictionnaires des SVGs de drapeaux
         const flags = {
             en: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
             fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>',
@@ -413,20 +420,17 @@
         };
 
         if (langButton && flags[lang]) {
-            // Remplace le premier enfant SVG du bouton par le bon drapeau
             const svgElement = langButton.querySelector('svg');
             if (svgElement) {
                 svgElement.outerHTML = flags[lang];
             }
         }
 
-        // Fermer le menu déroulant
         const langDropdown = document.getElementById('lang-menu-dropdown');
         if (langDropdown) {
             langDropdown.classList.add('hidden');
         }
 
-        // 2. Charger les traductions JSON et appliquer
         fetch('data/translations.json')
             .then(response => response.json())
             .then(translations => {
@@ -467,18 +471,9 @@
             })
             .catch(error => console.error('Erreur lors du chargement des traductions :', error));
     }
-
-    // --- 3. Gestion du Menu Mobile ---
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    });
 </script>
+
+<!-- Fichier de recherche centralisé multilingue -->
+<script src="js/search.js"></script>
 </body>
 </html>
