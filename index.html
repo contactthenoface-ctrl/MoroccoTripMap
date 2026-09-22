@@ -68,13 +68,75 @@
     </script>
 </head>
 <body class="bg-creme text-sombre antialiased flex flex-col min-h-screen">
-<div id="header-placeholder"></div>
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
+  
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center gap-3 group shrink-0" href="index.html">
+<img alt="MoroccoTripMap Logo - Travel Guide Morocco" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=100&amp;q=80';" src="images/logo.webp"/>
+<div class="hidden sm:flex flex-col">
+<span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
+</div>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
+<a class="hover:text-vert transition" href="#destinations">Destinations</a>
+<a class="hover:text-vert transition" href="stays.html">Stays</a>
+<a class="hover:text-vert transition" href="#restaurants">Restaurants</a>
+<a class="hover:text-vert transition" href="#experiences">Experiences</a>
+<a class="hover:text-vert transition" href="#guides">Guides</a>
+</nav>
+<!-- Menu Mobile & Language Selector -->
+<div class="flex items-center gap-2 sm:gap-4">
+<!-- SÉLECTEUR DE LANGUE SUR MESURE (AVEC SVG) -->
+<div class="relative inline-block text-left" id="lang-menu-container">
+    <button id="lang-menu-button" class="flex items-center gap-2 bg-white border border-sable/20 text-sm font-semibold rounded-xl px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition">
+        <!-- SVG Drapeau UK -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+        EN
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    
+    <div id="lang-menu-dropdown" class="hidden absolute right-0 mt-2 w-28 bg-white border border-sable/20 rounded-xl shadow-lg z-50 overflow-hidden">
+        <a href="/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau UK -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t2"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t2)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+            EN
+        </a>
+        <a href="/fr/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau France -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>
+            FR
+        </a>
+        <a href="/es/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau Espagne -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>
+            ES
+        </a>
+        <a href="/ar/" class="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition">
+            <!-- SVG Drapeau Maroc -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>
+            AR
+        </a>
+    </div>
+</div>
+
+<button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" type="button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<a class="hidden md:inline-flex items-center gap-2 bg-vert text-creme text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-vert/90 transition shadow-sm" href="#map">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Interactive Map
+                </a>
+</div>
+</div>
+</header>
 <!-- Main Content -->
 <main class="flex-grow">
-<!-- Hero Section (Retrait de overflow-hidden pour permettre l'affichage complet du menu déroulant) -->
+<!-- Hero Section -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
 <div class="relative h-[65vh] min-h-[480px] rounded-3xl shadow-xl">
-<!-- Image nettoyée pour ne plus être bloquée par Brave -->
 <img alt="Sahara desert sand dunes in Merzouga, Morocco" class="absolute inset-0 w-full h-full object-cover rounded-3xl" src="https://images.unsplash.com/photo-1550697318-929498858774?auto=format&amp;fit=crop&amp;w=1600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/90 via-sombre/30 to-transparent rounded-3xl"></div>
 <div class="absolute bottom-0 left-0 w-full p-6 sm:p-10 lg:p-12 text-white max-w-3xl">
@@ -85,7 +147,7 @@
 <p class="text-sm sm:text-base text-white/90 mb-6 font-light max-w-xl">
                         Your authentic directory and guide to hotels, riads, restaurants, desert adventures, and hidden gems across the Kingdom of Morocco.
                     </p>
-<!-- Barre de recherche avec autocomplétion ajoutée -->
+<!-- Barre de recherche -->
 <div class="relative w-full">
 <div class="bg-white p-2 rounded-2xl shadow-2xl flex flex-col sm:flex-row items-center gap-2 border border-white/20">
 <div class="flex items-center gap-3 w-full px-3 py-2">
@@ -102,43 +164,55 @@
 </div>
 </div>
 </section>
-<!-- Categories Grid -->
+<!-- Categories Grid avec SVG -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 <h2 class="text-xs font-bold uppercase tracking-widest text-sable mb-6">Explore by Category</h2>
 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="stays.html">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🛏️</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 11h16M4 15h16M4 11V7a2 2 0 012-2h12a2 2 0 012 2v4M4 11v8m16-8v8"></path></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Stays &amp; Riads</span>
 <span class="text-[11px] text-gray-400 mt-1">Hotels &amp; Riads</span>
 </a>
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="#restaurants">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🍽️</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 2v5.5m0 0C8 9.433 9.343 11 11 11v11m-3-11c-1.657 0-3-1.567-3-3.5V2m0 5.5h6m5-5v20M18 2c-2.5 0-3 2.5-3 5v4h3v11"></path></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Gastronomy</span>
 <span class="text-[11px] text-gray-400 mt-1">Restaurants &amp; Cafes</span>
 </a>
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="#experiences">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🐪</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M5 21l7-12 4 6 3-3 3 9"></path><circle cx="16" cy="7" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Experiences</span>
 <span class="text-[11px] text-gray-400 mt-1">Excursions &amp; Tours</span>
 </a>
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="#attractions">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🕌</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 21v-8a4 4 0 018 0v8M4 21h16M5 13V5a2 2 0 012-2h10a2 2 0 012 2v8"></path></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Attractions</span>
 <span class="text-[11px] text-gray-400 mt-1">Monuments &amp; Museums</span>
 </a>
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="#transport">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🚖</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11m-14 0h14v6a2 2 0 01-2 2h-1m-10 0H5a2 2 0 01-2-2v-6z"></path><circle cx="7.5" cy="15.5" r="1.5" fill="currentColor"></circle><circle cx="16.5" cy="15.5" r="1.5" fill="currentColor"></circle></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Transport</span>
 <span class="text-[11px] text-gray-400 mt-1">Transfers &amp; Rental</span>
 </a>
 <a class="bg-white p-5 rounded-2xl border border-sable/10 shadow-sm hover:shadow-md transition text-center group flex flex-col items-center" href="#guides">
-<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition">🗺️</div>
+<div class="w-12 h-12 bg-creme rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition">
+    <svg class="w-6 h-6 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+</div>
 <span class="text-sm font-semibold text-sombre group-hover:text-vert">Itineraries</span>
 <span class="text-[11px] text-gray-400 mt-1">Travel Guides</span>
 </a>
 </div>
 </section>
-<!-- Featured Destinations (Images nettoyées et cartes 100% cliquables) -->
+<!-- Featured Destinations -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="destinations">
 <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-8 gap-3">
 <div>
@@ -252,9 +326,69 @@
 </section>
 </main>
 <!-- Footer -->
-<div id="footer-placeholder"></div>
-<!-- Script combiné pour le menu déroulant ET le filtre des images -->
+<footer class="bg-vert text-creme pt-12 pb-8 px-4 sm:px-6 lg:px-8 mt-16 rounded-t-3xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-bold mb-3 text-white">Morocco<span class="text-sable">TripMap</span></h3>
+<p class="text-xs text-creme/80 leading-relaxed">
+                    Discover. Plan. Experience Morocco.<br/>
+                    The premier tourism directory and cultural travel guide for visitors exploring Morocco.
+                </p>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Destinations</h4>
+<ul class="text-xs space-y-2 text-creme/80">
+<li><a class="hover:text-white transition" href="marrakech.html">Marrakech Travel Guide</a></li>
+<li><a class="hover:text-white transition" href="chefchaouen.html">Chefchaouen Highlights</a></li>
+<li><a class="hover:text-white transition" href="fes.html">Fès Medina Guide</a></li>
+<li><a class="hover:text-white transition" href="merzouga.html">Merzouga Desert Trips</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Categories</h4>
+<ul class="text-xs space-y-2 text-creme/80">
+<li><a class="hover:text-white transition" href="stays.html">Authentic Riads &amp; Hotels</a></li>
+<li><a class="hover:text-white transition" href="#restaurants">Moroccan Restaurants</a></li>
+<li><a class="hover:text-white transition" href="#experiences">Desert &amp; Cultural Experiences</a></li>
+<li><a class="hover:text-white transition" href="#transport">Transport &amp; Private Drivers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Connect</h4>
+<p class="text-xs text-creme/80 mb-3">Follow our YouTube channel for video travel guides:</p>
+<a class="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-semibold px-3 py-2 rounded-xl hover:bg-red-700 transition" href="https://youtube.com/@moroccotripmap" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                    @moroccotripmap
+                </a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-creme/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-creme/70">
+<p>© MoroccoTripMap. All rights reserved.</p>
+<p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
+</div>
+</footer>
+<!-- Script pour Barre de Recherche & Menu Langues -->
 <script>
+        // --- 1. Gestion du menu de langues ---
+        document.addEventListener('DOMContentLoaded', function () {
+            const langButton = document.getElementById('lang-menu-button');
+            const langDropdown = document.getElementById('lang-menu-dropdown');
+
+            if (langButton && langDropdown) {
+                langButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('hidden');
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!langButton.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.add('hidden');
+                    }
+                });
+            }
+        });
+
+        // --- 2. Gestion de la barre de recherche ---
         const destinationsData = [
             { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "medina", "palaces", "desert", "imperial", "riad"] },
             { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "blue pearl", "rif", "mountains", "bleu"] },
@@ -277,17 +411,14 @@
                 searchInput.addEventListener('input', function (e) {
                     const input = e.target.value.toLowerCase().trim();
                     
-                    // Vider les résultats précédents
                     resultsContainer.innerHTML = '';
                     
-                    // Si la barre est vide, on cache le menu et on réaffiche toutes les images
                     if (input.length < 1) {
                         resultsContainer.style.display = 'none';
                         cityCards.forEach(card => card.style.display = 'block');
                         return;
                     }
 
-                    // 1. Gérer le menu déroulant prédictif
                     const filtered = destinationsData.filter(dest => 
                         dest.name.toLowerCase().includes(input) || 
                         dest.tags.some(tag => tag.includes(input))
@@ -306,7 +437,6 @@
                         resultsContainer.style.display = 'none';
                     }
 
-                    // 2. Filtrer aussi les images en bas (Bonus)
                     cityCards.forEach(card => {
                         const textContent = card.innerText.toLowerCase();
                         if (textContent.includes(input)) {
@@ -318,7 +448,6 @@
                 });
             }
 
-            // Fermer le menu déroulant si on clique ailleurs sur la page
             document.addEventListener('click', function(e) {
                 if (searchInput && resultsContainer && !searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
                     resultsContainer.style.display = 'none';
@@ -326,13 +455,5 @@
             });
         });
     </script>
-
-
-
-
-  
-  <script src="js/translate.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/footer.js"></script>
 </body>
 </html>
