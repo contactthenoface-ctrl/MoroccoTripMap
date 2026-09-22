@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- SEO & Metadata -->
-<title>Stays &amp; Riads in Morocco | MoroccoTripMap</title>
+<title data-i18n="stays_page.seo.title">Stays &amp; Riads in Morocco | MoroccoTripMap</title>
 <meta content="Find the best places to stay in Morocco. Explore authentic riads in Marrakech, desert camps in the Sahara, and boutique hotels in Fes and Chefchaouen." name="description"/>
 <link href="https://moroccotripmap.com/stays.html" rel="canonical"/>
 <!-- Tailwind CSS CDN -->
@@ -49,10 +49,10 @@
 </a>
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
-<a class="hover:text-vert transition" href="index.html#destinations">Destinations</a>
-<a class="text-vert font-bold transition" href="stays.html">Stays</a>
-<a class="hover:text-vert transition" href="index.html#restaurants">Restaurants</a>
-<a class="hover:text-vert transition" href="index.html#experiences">Experiences</a>
+<a class="hover:text-vert transition" href="index.html#destinations" data-i18n="nav.destinations">Destinations</a>
+<a class="text-vert font-bold transition" href="stays.html" data-i18n="nav.stays">Stays</a>
+<a class="hover:text-vert transition" href="index.html#restaurants" data-i18n="nav.restaurants">Restaurants</a>
+<a class="hover:text-vert transition" href="index.html#experiences" data-i18n="nav.experiences">Experiences</a>
 </nav>
 <!-- Menu Mobile Button -->
 <div class="flex items-center gap-2">
@@ -64,10 +64,10 @@
 <!-- Mobile Menu Drawer -->
 <div class="hidden md:hidden absolute top-20 left-0 w-full bg-creme/95 backdrop-blur-md border-b border-sable/15 shadow-lg px-6 py-6 transition-all" id="mobile-menu">
 <nav class="flex flex-col gap-4 text-base font-medium text-sombre/80">
-<a class="hover:text-vert transition py-1" href="index.html#destinations">Destinations</a>
-<a class="text-vert font-bold transition py-1" href="stays.html">Stays</a>
-<a class="hover:text-vert transition py-1" href="index.html#restaurants">Restaurants</a>
-<a class="hover:text-vert transition py-1" href="index.html#experiences">Experiences</a>
+<a class="hover:text-vert transition py-1" href="index.html#destinations" data-i18n="nav.destinations">Destinations</a>
+<a class="text-vert font-bold transition py-1" href="stays.html" data-i18n="nav.stays">Stays</a>
+<a class="hover:text-vert transition py-1" href="index.html#restaurants" data-i18n="nav.restaurants">Restaurants</a>
+<a class="hover:text-vert transition py-1" href="index.html#experiences" data-i18n="nav.experiences">Experiences</a>
 </nav>
 </div>
 </header>
@@ -77,12 +77,12 @@
 <div class="bg-vert text-creme py-12 px-4 sm:px-6 lg:px-8">
 <div class="max-w-7xl mx-auto">
 <div class="flex items-center gap-2 text-xs font-semibold text-sable mb-4 uppercase tracking-wider">
-<a class="hover:text-white transition" href="index.html">Home</a>
+<a class="hover:text-white transition" href="index.html" data-i18n="breadcrumb.home">Home</a>
 <span>/</span>
-<span class="text-white">Stays</span>
+<span class="text-white" data-i18n="breadcrumb.stays">Stays</span>
 </div>
-<h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Exceptional Stays in Morocco</h1>
-<p class="text-creme/80 max-w-2xl text-sm sm:text-base">
+<h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4" data-i18n="stays_page.title">Exceptional Stays in Morocco</h1>
+<p class="text-creme/80 max-w-2xl text-sm sm:text-base" data-i18n="stays_page.description">
                     Discover authentic riads hidden in ancient medinas, luxury desert camps under the Saharan stars, and boutique hotels by the Atlantic ocean.
                 </p>
 </div>
@@ -93,50 +93,50 @@
 <aside class="w-full lg:w-1/4 flex-shrink-0">
 <div class="bg-white p-6 rounded-2xl border border-sable/10 shadow-sm sticky top-28">
 <div class="flex justify-between items-center mb-6">
-<h2 class="text-lg font-bold text-sombre">Filters</h2>
-<span class="text-xs text-sable cursor-pointer hover:text-vert font-medium">Clear all</span>
+<h2 class="text-lg font-bold text-sombre" data-i18n="stays_page.filters.title">Filters</h2>
+<span class="text-xs text-sable cursor-pointer hover:text-vert font-medium" data-i18n="stays_page.filters.clear">Clear all</span>
 </div>
 <!-- Destination Filter -->
 <div class="mb-6">
-<h3 class="text-sm font-semibold mb-3 text-sombre">Destination</h3>
+<h3 class="text-sm font-semibold mb-3 text-sombre" data-i18n="stays_page.filters.destination_title">Destination</h3>
 <div class="space-y-2 text-sm text-sombre/80">
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Marrakech</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.dest_marrakech">Marrakech</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Fès</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.dest_fes">Fès</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Chefchaouen</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.dest_chefchaouen">Chefchaouen</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Sahara Desert</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.dest_sahara">Sahara Desert</span>
 </label>
 </div>
 </div>
 <!-- Property Type Filter -->
 <div class="mb-6">
-<h3 class="text-sm font-semibold mb-3 text-sombre">Property Type</h3>
+<h3 class="text-sm font-semibold mb-3 text-sombre" data-i18n="stays_page.filters.type_title">Property Type</h3>
 <div class="space-y-2 text-sm text-sombre/80">
 <label class="flex items-center gap-2 cursor-pointer group">
 <input checked="" class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Riad</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.type_riad">Riad</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Hotel</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.type_hotel">Hotel</span>
 </label>
 <label class="flex items-center gap-2 cursor-pointer group">
 <input class="accent-vert w-4 h-4 rounded border-gray-300" type="checkbox"/>
-<span class="group-hover:text-vert transition">Desert Camp</span>
+<span class="group-hover:text-vert transition" data-i18n="stays_page.filters.type_camp">Desert Camp</span>
 </label>
 </div>
 </div>
-<button class="w-full bg-vert text-creme py-3 rounded-xl font-semibold text-sm hover:bg-vert/90 transition">
+<button class="w-full bg-vert text-creme py-3 rounded-xl font-semibold text-sm hover:bg-vert/90 transition" data-i18n="stays_page.filters.apply_btn">
                         Apply Filters
                     </button>
 </div>
@@ -145,7 +145,7 @@
 <div class="w-full lg:w-3/4">
 <!-- Results Bar -->
 <div class="flex justify-between items-center mb-6">
-<p class="text-sm text-sombre/70 font-medium"><span class="font-bold text-sombre">124</span> properties found</p>
+<p class="text-sm text-sombre/70 font-medium"><span class="font-bold text-sombre">124</span> <span data-i18n="stays_page.results_found">properties found</span></p>
 </div>
 <!-- Listings Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -155,32 +155,32 @@
 <img alt="Courtyard of a traditional riad with pool in Marrakech" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1541336032412-2048a678540d?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
 <!-- Badges -->
 <div class="absolute top-3 left-3 flex gap-2">
-<span class="bg-sable text-sombre text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider">Premium</span>
+<span class="bg-sable text-sombre text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider" data-i18n="stays_page.card1.badge">Premium</span>
 </div>
-<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-sombre hover:text-red-500 transition shadow-sm">
+<button aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-sombre hover:text-red-500 transition shadow-sm">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 </div>
 <div class="p-5 flex-grow flex flex-col justify-between">
 <div>
 <div class="flex items-start justify-between mb-2">
-<h3 class="text-lg font-bold text-sombre leading-tight">Riad Al Kasbah</h3>
+<h3 class="text-lg font-bold text-sombre leading-tight" data-i18n="stays_page.card1.title">Riad Al Kasbah</h3>
 </div>
-<div class="flex items-center gap-1 text-sm text-sombre/70 mb-3">
+<div class="flex items-center gap-1 text-sm text-sombre/70 mb-3" data-i18n="stays_page.card1.location">
 <svg class="w-4 h-4 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                                     Medina, Marrakech
                                 </div>
-<p class="text-sm text-sombre/80 line-clamp-2 mb-4">
+<p class="text-sm text-sombre/80 line-clamp-2 mb-4" data-i18n="stays_page.card1.desc">
                                     Experience the magic of an authentic 18th-century riad located in the heart of the bustling Marrakech medina, featuring a serene courtyard pool.
                                 </p>
 </div>
 <div>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre">Pool</span>
-<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre">Rooftop</span>
-<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre">Breakfast</span>
+<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre" data-i18n="stays_page.card1.tag1">Pool</span>
+<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre" data-i18n="stays_page.card1.tag2">Rooftop</span>
+<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre" data-i18n="stays_page.card1.tag3">Breakfast</span>
 </div>
-<a class="block text-center w-full bg-creme border border-sable/30 text-sombre py-2.5 rounded-xl text-sm font-semibold hover:bg-vert hover:text-creme hover:border-transparent transition" href="riad-kasbah.html">View Details</a>
+<a class="block text-center w-full bg-creme border border-sable/30 text-sombre py-2.5 rounded-xl text-sm font-semibold hover:bg-vert hover:text-creme hover:border-transparent transition" href="riad-kasbah.html" data-i18n="stays_page.view_details_btn">View Details</a>
 </div>
 </div>
 </div>
@@ -190,31 +190,31 @@
 <img alt="Luxury desert tents in Merzouga dunes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
 <!-- Badges -->
 <div class="absolute top-3 left-3 flex gap-2">
-<span class="bg-vert text-creme text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider">Featured</span>
+<span class="bg-vert text-creme text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider" data-i18n="stays_page.card2.badge">Featured</span>
 </div>
-<button class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-sombre hover:text-red-500 transition shadow-sm">
+<button aria-label="Save to favorites" class="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-sombre hover:text-red-500 transition shadow-sm">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 </div>
 <div class="p-5 flex-grow flex flex-col justify-between">
 <div>
 <div class="flex items-start justify-between mb-2">
-<h3 class="text-lg font-bold text-sombre leading-tight">Sahara Dunes Camp</h3>
+<h3 class="text-lg font-bold text-sombre leading-tight" data-i18n="stays_page.card2.title">Sahara Dunes Camp</h3>
 </div>
-<div class="flex items-center gap-1 text-sm text-sombre/70 mb-3">
+<div class="flex items-center gap-1 text-sm text-sombre/70 mb-3" data-i18n="stays_page.card2.location">
 <svg class="w-4 h-4 text-vert" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
                                     Erg Chebbi, Merzouga
                                 </div>
-<p class="text-sm text-sombre/80 line-clamp-2 mb-4">
+<p class="text-sm text-sombre/80 line-clamp-2 mb-4" data-i18n="stays_page.card2.desc">
                                     Sleep under the stars in a luxury tent deep within the golden dunes of Erg Chebbi. Includes camel trekking and traditional dinner.
                                 </p>
 </div>
 <div>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre">Private Bath</span>
-<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre">Camel Ride</span>
+<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre" data-i18n="stays_page.card2.tag1">Private Bath</span>
+<span class="text-[11px] bg-creme border border-sable/20 px-2 py-1 rounded-md text-sombre" data-i18n="stays_page.card2.tag2">Camel Ride</span>
 </div>
-<a class="block text-center w-full bg-creme border border-sable/30 text-sombre py-2.5 rounded-xl text-sm font-semibold hover:bg-vert hover:text-creme hover:border-transparent transition" href="#">View Details</a>
+<a class="block text-center w-full bg-creme border border-sable/30 text-sombre py-2.5 rounded-xl text-sm font-semibold hover:bg-vert hover:text-creme hover:border-transparent transition" href="#" data-i18n="stays_page.view_details_btn">View Details</a>
 </div>
 </div>
 </div>
@@ -235,32 +235,32 @@
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
 <div>
 <h3 class="text-xl font-bold mb-3 text-white">Morocco<span class="text-sable">TripMap</span></h3>
-<p class="text-xs text-creme/80 leading-relaxed">
+<p class="text-xs text-creme/80 leading-relaxed" data-i18n="footer.about_text">
                     Discover. Plan. Experience Morocco.<br/>
                     The premier tourism directory and cultural travel guide for visitors exploring Morocco.
                 </p>
 </div>
 <div>
-<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Destinations</h4>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider" data-i18n="footer.destinations_title">Destinations</h4>
 <ul class="text-xs space-y-2 text-creme/80">
-<li><a class="hover:text-white transition" href="index.html#destinations">Marrakech Travel Guide</a></li>
-<li><a class="hover:text-white transition" href="#">Chefchaouen Highlights</a></li>
-<li><a class="hover:text-white transition" href="#">Fès Medina Guide</a></li>
-<li><a class="hover:text-white transition" href="#">Merzouga Desert Trips</a></li>
+<li><a class="hover:text-white transition" href="index.html#destinations" data-i18n="footer.link_marrakech">Marrakech Travel Guide</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_chefchaouen">Chefchaouen Highlights</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_fes">Fès Medina Guide</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_merzouga">Merzouga Desert Trips</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Categories</h4>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider" data-i18n="footer.categories_title">Categories</h4>
 <ul class="text-xs space-y-2 text-creme/80">
-<li><a class="text-white transition" href="stays.html">Authentic Riads &amp; Hotels</a></li>
-<li><a class="hover:text-white transition" href="#">Moroccan Restaurants</a></li>
-<li><a class="hover:text-white transition" href="#">Desert &amp; Cultural Experiences</a></li>
-<li><a class="hover:text-white transition" href="#">Transport &amp; Private Drivers</a></li>
+<li><a class="text-white transition" href="stays.html" data-i18n="footer.link_stays">Authentic Riads &amp; Hotels</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_restaurants">Moroccan Restaurants</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_experiences">Desert &amp; Cultural Experiences</a></li>
+<li><a class="hover:text-white transition" href="#" data-i18n="footer.link_transport">Transport &amp; Private Drivers</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider">Connect</h4>
-<p class="text-xs text-creme/80 mb-3">Follow our YouTube channel for video travel guides:</p>
+<h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider" data-i18n="footer.connect_title">Connect</h4>
+<p class="text-xs text-creme/80 mb-3" data-i18n="footer.youtube_text">Follow our YouTube channel for video travel guides:</p>
 <a class="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-semibold px-3 py-2 rounded-xl hover:bg-red-700 transition" href="https://youtube.com/@moroccotripmap" rel="noopener noreferrer" target="_blank">
 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
                     @moroccotripmap
@@ -269,7 +269,7 @@
 </div>
 <!-- Copyright & Credit line -->
 <div class="max-w-7xl mx-auto border-t border-creme/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-creme/70">
-<p>© MoroccoTripMap. All rights reserved.</p>
+<p data-i18n="footer.copyright">© MoroccoTripMap. All rights reserved.</p>
 <p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
 </div>
 </footer>
