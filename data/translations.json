@@ -9,7 +9,27 @@
       "restaurants": "Restaurants",
       "experiences": "Experiences",
       "guides": "Guides",
-      "interactive_map": "Interactive Map"
+      "interactive_map": "Interactive Map",
+      "cities": "Cities & Destinations",
+      "categories": "Categories",
+      "cat_stays": "Stays & Riads",
+      "cat_hotels": "Hotels & Riads",
+      "cat_gastronomy": "Gastronomy",
+      "cat_restaurants": "Restaurants & Cafes",
+      "cat_experiences": "Experiences",
+      "cat_tours": "Excursions & Tours",
+      "cat_attractions": "Attractions",
+      "cat_museums": "Monuments & Museums",
+      "cat_transport": "Transport",
+      "cat_rental": "Transfers & Rental",
+      "cat_itineraries": "Itineraries",
+      "cat_guides": "Travel Guides",
+      "history": "History of Morocco",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "mobile_menu": {
+      "language_title": "Language / Langue"
     },
     "breadcrumb": {
       "home": "Home",
@@ -247,7 +267,27 @@
       "restaurants": "Restaurants",
       "experiences": "Expériences",
       "guides": "Guides",
-      "interactive_map": "Carte Interactive"
+      "interactive_map": "Carte Interactive",
+      "cities": "Villes & Destinations",
+      "categories": "Catégories",
+      "cat_stays": "Hébergements & Riads",
+      "cat_hotels": "Hôtels & Riads",
+      "cat_gastronomy": "Gastronomie",
+      "cat_restaurants": "Restaurants & Cafés",
+      "cat_experiences": "Expériences",
+      "cat_tours": "Excursions & Circuits",
+      "cat_attractions": "Attractions",
+      "cat_museums": "Monuments & Musées",
+      "cat_transport": "Transport",
+      "cat_rental": "Transferts & Location",
+      "cat_itineraries": "Itinéraires",
+      "cat_guides": "Guides de Voyage",
+      "history": "Histoire du Maroc",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "mobile_menu": {
+      "language_title": "Langue / Language"
     },
     "breadcrumb": {
       "home": "Accueil",
@@ -485,7 +525,27 @@
       "restaurants": "Restaurantes",
       "experiences": "Experiencias",
       "guides": "Guías",
-      "interactive_map": "Mapa Interactivo"
+      "interactive_map": "Mapa Interactivo",
+      "cities": "Ciudades y Destinos",
+      "categories": "Categorías",
+      "cat_stays": "Alojamientos y Riads",
+      "cat_hotels": "Hoteles y Riads",
+      "cat_gastronomy": "Gastronomía",
+      "cat_restaurants": "Restaurantes y Cafés",
+      "cat_experiences": "Experiencias",
+      "cat_tours": "Excursiones y Tours",
+      "cat_attractions": "Atracciones",
+      "cat_museums": "Monumentos y Museos",
+      "cat_transport": "Transporte",
+      "cat_rental": "Traslados y Alquiler",
+      "cat_itineraries": "Itinerarios",
+      "cat_guides": "Guías de Viaje",
+      "history": "Historia de Marruecos",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "mobile_menu": {
+      "language_title": "Idioma / Language"
     },
     "breadcrumb": {
       "home": "Inicio",
@@ -723,7 +783,27 @@
       "restaurants": "المطاعم",
       "experiences": "التجارب",
       "guides": "الأدلة",
-      "interactive_map": "خريطة تفاعلية"
+      "interactive_map": "خريطة تفاعلية",
+      "cities": "المدن والوجهات",
+      "categories": "الفئات",
+      "cat_stays": "الإقامة والرياض",
+      "cat_hotels": "الفنادق والرياض",
+      "cat_gastronomy": "المطبخ والطهي",
+      "cat_restaurants": "المطاعم والمقاهي",
+      "cat_experiences": "التجارب والأنشطة",
+      "cat_tours": "الرحلات والجولات",
+      "cat_attractions": "المعالم السياحية",
+      "cat_museums": "المآثر والمتاحف",
+      "cat_transport": "المواصلات",
+      "cat_rental": "التنقل وتأجير السيارات",
+      "cat_itineraries": "مسارات السفر",
+      "cat_guides": "أدلة السفر",
+      "history": "تاريخ المغرب",
+      "blog": "المدونة",
+      "contact": "اتصل بنا"
+    },
+    "mobile_menu": {
+      "language_title": "اللغة / Language"
     },
     "breadcrumb": {
       "home": "الرئيسية",
