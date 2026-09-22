@@ -68,45 +68,7 @@
     </script>
 </head>
 <body class="bg-creme text-sombre antialiased flex flex-col min-h-screen">
-<!-- Header Navigation -->
-<header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
-  
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-<!-- Logo -->
-<a class="flex items-center gap-3 group shrink-0" href="index.html">
-<img alt="MoroccoTripMap Logo - Travel Guide Morocco" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=100&amp;q=80';" src="images/logo.webp"/>
-<div class="hidden sm:flex flex-col">
-<span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
-</div>
-</a>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
-<a class="hover:text-vert transition" href="#destinations">Destinations</a>
-<a class="hover:text-vert transition" href="stays.html">Stays</a>
-<a class="hover:text-vert transition" href="#restaurants">Restaurants</a>
-<a class="hover:text-vert transition" href="#experiences">Experiences</a>
-<a class="hover:text-vert transition" href="#guides">Guides</a>
-</nav>
-<!-- Menu Mobile & Language Selector -->
-<div class="flex items-center gap-2 sm:gap-4">
-<div class="relative inline-block text-left">
-<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" onchange="setLanguage(this.value)" translate="no">
-<option value="en">🇬🇧 EN</option>
-<option value="fr">🇫🇷 FR</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ar">🇲🇦 AR</option>
-</select>
-</div>
-<button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<a class="hidden md:inline-flex items-center gap-2 bg-vert text-creme text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-vert/90 transition shadow-sm" href="#map">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    Interactive Map
-                </a>
-</div>
-</div>
-</header>
+<div id="header-placeholder"></div>
 <!-- Main Content -->
 <main class="flex-grow">
 <!-- Hero Section (Retrait de overflow-hidden pour permettre l'affichage complet du menu déroulant) -->
@@ -410,5 +372,6 @@
 
   
   <script src="js/translate.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

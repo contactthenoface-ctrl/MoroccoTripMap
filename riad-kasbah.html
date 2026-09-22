@@ -38,40 +38,7 @@
     </style>
 </head>
 <body class="bg-creme text-sombre antialiased flex flex-col min-h-screen">
-<!-- Header Navigation -->
-<header class="sticky top-0 z-50 bg-creme/90 backdrop-blur-md border-b border-sable/10 transition-all">
-  
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-<!-- Logo -->
-<a class="flex items-center gap-3 group shrink-0" href="index.html">
-<img alt="MoroccoTripMap Logo" class="h-12 sm:h-14 w-auto object-contain" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&amp;fit=crop&amp;w=100&amp;q=80';" src="images/logo.webp"/>
-<div class="hidden sm:flex flex-col">
-<span class="text-2xl font-bold tracking-tight text-sombre leading-none group-hover:text-vert transition">Morocco<span class="text-vert">TripMap</span></span>
-</div>
-</a>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center gap-8 text-base font-medium text-sombre/80">
-<a class="hover:text-vert transition" href="index.html#destinations">Destinations</a>
-<a class="text-vert font-bold transition" href="stays.html">Stays</a>
-<a class="hover:text-vert transition" href="index.html#restaurants">Restaurants</a>
-<a class="hover:text-vert transition" href="index.html#experiences">Experiences</a>
-</nav>
-<!-- Menu Mobile & Language Selector -->
-<div class="flex items-center gap-2 sm:gap-4">
-<div class="relative inline-block text-left">
-<select class="notranslate bg-white border border-sable/20 text-sm font-semibold rounded-xl px-2 sm:px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition" onchange="setLanguage(this.value)" translate="no">
-<option value="en">🇬🇧 EN</option>
-<option value="fr">🇫🇷 FR</option>
-<option value="es">🇪🇸 ES</option>
-<option value="ar">🇲🇦 AR</option>
-</select>
-</div>
-<button class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-</header>
+<div id="header-placeholder"></div>
 <!-- Main Content -->
 <main class="flex-grow">
 <!-- Breadcrumbs -->
@@ -241,5 +208,6 @@
 </div>
 </footer>
 <script src="js/translate.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

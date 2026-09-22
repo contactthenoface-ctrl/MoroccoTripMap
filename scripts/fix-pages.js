@@ -26,6 +26,14 @@ files.forEach(file => {
     content = content.replace('<head>', '<head>\n<meta name="google" content="notranslate">');
   }
 
+// Bloque la traduction via l'attribut HTML universel (plus respecté que le meta seul)
+  if (content.includes('<html class="scroll-smooth" dir="ltr" lang="en">') && !content.includes('translate="no">')) {
+    content = content.replace(
+      '<html class="scroll-smooth" dir="ltr" lang="en">',
+      '<html class="scroll-smooth" dir="ltr" lang="en" translate="no">'
+    );
+  }
+
  // Ajoute translate.js s'il n'est pas déjà présent
   if (!content.includes('js/translate.js')) {
     content = content.replace('</body>', '  <script src="js/translate.js"></script>\n</body>');
