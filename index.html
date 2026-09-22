@@ -477,16 +477,16 @@ Search
 
     // --- 3. Gestion de la barre de recherche ---
     const destinationsData = [
-        { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "medina", "palaces", "desert", "imperial", "riad"] },
-        { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "blue pearl", "rif", "mountains", "bleu"] },
-        { name: "Fes", url: "fes.html", tags: ["fes", "fès", "medina", "cultural", "spiritual", "artisanat"] },
-        { name: "Casablanca", url: "casablanca.html", tags: ["casablanca", "economic", "largest city", "mosque"] },
-        { name: "Essaouira", url: "essaouira.html", tags: ["essaouira", "coast", "windy", "seafood", "beach"] },
-        { name: "Agadir", url: "agadir.html", tags: ["agadir", "beach", "resort", "sun", "ocean"] },
-        { name: "Tangier", url: "tanger.html", tags: ["tangier", "tanger", "strait", "gateway", "north"] },
-        { name: "Ouarzazate", url: "ouarzazate.html", tags: ["ouarzazate", "desert", "kasbah", "cinematic", "sahara"] },
-        { name: "Rabat", url: "rabat.html", tags: ["rabat", "capital", "imperial", "gardens"] },
-        { name: "Merzouga", url: "merzouga.html", tags: ["merzouga", "desert", "dunes", "sahara", "erg chebbi", "camp"] }
+        { name: "Marrakech", arabicName: "مراكش", url: "marrakech.html", tags: ["marrakech", "medina", "palaces", "desert", "imperial", "riad", "مراكش", "مدينة"] },
+        { name: "Chefchaouen", arabicName: "شفشاون", url: "chefchaouen.html", tags: ["chefchaouen", "blue pearl", "rif", "mountains", "bleu", "شفشاون", "المدينة الزرقاء"] },
+        { name: "Fes", arabicName: "فاس", url: "fes.html", tags: ["fes", "fès", "medina", "cultural", "spiritual", "artisanat", "فاس"] },
+        { name: "Casablanca", arabicName: "الدار البيضاء", url: "casablanca.html", tags: ["casablanca", "economic", "largest city", "mosque", "الدار البيضاء", "كازا"] },
+        { name: "Essaouira", arabicName: "الصويرة", url: "essaouira.html", tags: ["essaouira", "coast", "windy", "seafood", "beach", "الصويرة"] },
+        { name: "Agadir", arabicName: "أكادير", url: "agadir.html", tags: ["agadir", "beach", "resort", "sun", "ocean", "أكادير"] },
+        { name: "Tangier", arabicName: "طنجة", url: "tanger.html", tags: ["tangier", "tanger", "strait", "gateway", "north", "طنجة"] },
+        { name: "Ouarzazate", arabicName: "ورزازات", url: "ouarzazate.html", tags: ["ouarzazate", "desert", "kasbah", "cinematic", "sahara", "ورزازات"] },
+        { name: "Rabat", arabicName: "الرباط", url: "rabat.html", tags: ["rabat", "capital", "imperial", "gardens", "الرباط"] },
+        { name: "Merzouga", arabicName: "مرزوقة", url: "merzouga.html", tags: ["merzouga", "desert", "dunes", "sahara", "erg chebbi", "camp", "مرزوقة"] }
     ];
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -505,9 +505,11 @@ Search
                     return;
                 }
 
+                // Filtrage prenant en compte le nom, le nom arabe et les tags
                 const filtered = destinationsData.filter(dest => 
                     dest.name.toLowerCase().includes(input) || 
-                    dest.tags.some(tag => tag.includes(input))
+                    (dest.arabicName && dest.arabicName.includes(input)) ||
+                    dest.tags.some(tag => tag.toLowerCase().includes(input))
                 );
 
                 if (filtered.length > 0) {
