@@ -1,0 +1,434 @@
+{
+  "en": {
+    "seo": {
+      "title": "MoroccoTripMap | Discover. Plan. Experience Morocco."
+    },
+    "nav": {
+      "destinations": "Destinations",
+      "stays": "Stays",
+      "restaurants": "Restaurants",
+      "experiences": "Experiences",
+      "guides": "Guides",
+      "interactive_map": "Interactive Map"
+    },
+    "hero": {
+      "badge": "Official Tourism Portal",
+      "title_line1": "Discover. Plan.",
+      "title_line2": "Experience Morocco.",
+      "description": "Your authentic directory and guide to hotels, riads, restaurants, desert adventures, and hidden gems across the Kingdom of Morocco.",
+      "search_placeholder": "Where do you want to go? (e.g. Marrakech, Riad, Desert)",
+      "search_button": "Search"
+    },
+    "categories": {
+      "section_title": "Explore by Category",
+      "stays_title": "Stays & Riads",
+      "stays_subtitle": "Hotels & Riads",
+      "gastronomy_title": "Gastronomy",
+      "gastronomy_subtitle": "Restaurants & Cafes",
+      "experiences_title": "Experiences",
+      "experiences_subtitle": "Excursions & Tours",
+      "attractions_title": "Attractions",
+      "attractions_subtitle": "Monuments & Museums",
+      "transport_title": "Transport",
+      "transport_subtitle": "Transfers & Rental",
+      "itineraries_title": "Itineraries",
+      "itineraries_subtitle": "Travel Guides"
+    },
+    "destinations": {
+      "badge": "Top Destinations",
+      "title": "Explore Iconic Cities",
+      "view_all": "View All Destinations →",
+      "view_all_btn": "View All Destinations",
+      "marrakech": {
+        "tag": "Imperial City",
+        "name": "Marrakech",
+        "desc": "Medina, Palaces & Desert Gateways"
+      },
+      "chefchaouen": {
+        "tag": "Rif Mountains",
+        "name": "Chefchaouen",
+        "desc": "The Iconic Blue Pearl of Morocco"
+      },
+      "fes": {
+        "tag": "Cultural Capital",
+        "name": "Fes",
+        "desc": "Ancient Medina & Spiritual Heritage"
+      },
+      "casablanca": {
+        "tag": "Economic Heart",
+        "name": "Casablanca",
+        "desc": "The largest city in Morocco"
+      },
+      "essaouira": {
+        "tag": "Atlantic Coast",
+        "name": "Essaouira",
+        "desc": "Windy City, Ramparts & Fresh Seafood"
+      },
+      "agadir": {
+        "tag": "Sun & Beach",
+        "name": "Agadir",
+        "desc": "Golden Beaches & Modern Resorts"
+      },
+      "tangier": {
+        "tag": "Strait of Gibraltar",
+        "name": "Tangier",
+        "desc": "The Gateway Between Europe and Africa"
+      },
+      "ouarzazate": {
+        "tag": "Desert Gateway",
+        "name": "Ouarzazate",
+        "desc": "Cinematic Landscapes & Ancient Kasbahs"
+      },
+      "rabat": {
+        "tag": "Imperial Capital",
+        "name": "Rabat",
+        "desc": "Historic Gardens & Atlantic Breezes"
+      },
+      "merzouga": {
+        "tag": "Sahara Desert",
+        "name": "Merzouga",
+        "desc": "Erg Chebbi Dunes & Desert Camps"
+      }
+    },
+    "footer": {
+      "about_text": "Discover. Plan. Experience Morocco.\nThe premier tourism directory and cultural travel guide for visitors exploring Morocco.",
+      "destinations_title": "Destinations",
+      "link_marrakech": "Marrakech Travel Guide",
+      "link_chefchaouen": "Chefchaouen Highlights",
+      "link_fes": "Fès Medina Guide",
+      "link_merzouga": "Merzouga Desert Trips",
+      "categories_title": "Categories",
+      "link_stays": "Authentic Riads & Hotels",
+      "link_restaurants": "Moroccan Restaurants",
+      "link_experiences": "Desert & Cultural Experiences",
+      "link_transport": "Transport & Private Drivers",
+      "connect_title": "Connect",
+      "youtube_text": "Follow our YouTube channel for video travel guides:",
+      "copyright": "© MoroccoTripMap. All rights reserved."
+    }
+  },
+  "fr": {
+    "seo": {
+      "title": "MoroccoTripMap | Découvrez. Planifiez. Vivez le Maroc."
+    },
+    "nav": {
+      "destinations": "Destinations",
+      "stays": "Hébergements",
+      "restaurants": "Restaurants",
+      "experiences": "Expériences",
+      "guides": "Guides",
+      "interactive_map": "Carte Interactive"
+    },
+    "hero": {
+      "badge": "Portail Touristique Officiel",
+      "title_line1": "Découvrez. Planifiez.",
+      "title_line2": "Vivez le Maroc.",
+      "description": "Votre annuaire et guide authentique des hôtels, riads, restaurants, aventures dans le désert et joyaux cachés à travers le Royaume du Maroc.",
+      "search_placeholder": "Où voulez-vous aller ? (ex. Marrakech, Riad, Désert)",
+      "search_button": "Rechercher"
+    },
+    "categories": {
+      "section_title": "Explorer par Catégorie",
+      "stays_title": "Hébergements & Riads",
+      "stays_subtitle": "Hôtels & Riads",
+      "gastronomy_title": "Gastronomie",
+      "gastronomy_subtitle": "Restaurants & Cafés",
+      "experiences_title": "Expériences",
+      "experiences_subtitle": "Excursions & Circuits",
+      "attractions_title": "Attractions",
+      "attractions_subtitle": "Monuments & Musées",
+      "transport_title": "Transport",
+      "transport_subtitle": "Transferts & Location",
+      "itineraries_title": "Itinéraires",
+      "itineraries_subtitle": "Guides de Voyage"
+    },
+    "destinations": {
+      "badge": "Meilleures Destinations",
+      "title": "Explorez des Villes Emblématiques",
+      "view_all": "Voir toutes les destinations →",
+      "view_all_btn": "Voir toutes les destinations",
+      "marrakech": {
+        "tag": "Ville Impériale",
+        "name": "Marrakech",
+        "desc": "Médina, Palais & Portes du Désert"
+      },
+      "chefchaouen": {
+        "tag": "Montagnes du Rif",
+        "name": "Chefchaouen",
+        "desc": "L'Emblématique Perle Bleue du Maroc"
+      },
+      "fes": {
+        "tag": "Capitale Culturelle",
+        "name": "Fès",
+        "desc": "Médina Antique & Héritage Spirituel"
+      },
+      "casablanca": {
+        "tag": "Cœur Économique",
+        "name": "Casablanca",
+        "desc": "La plus grande ville du Maroc"
+      },
+      "essaouira": {
+        "tag": "Côte Atlantique",
+        "name": "Essaouira",
+        "desc": "Cité des Alizés, Remparts & Fruits de mer"
+      },
+      "agadir": {
+        "tag": "Soleil & Plage",
+        "name": "Agadir",
+        "desc": "Plages Dorées & Stations Balnéaires"
+      },
+      "tangier": {
+        "tag": "Détroit de Gibraltar",
+        "name": "Tanger",
+        "desc": "La Porte entre l'Europe et l'Afrique"
+      },
+      "ouarzazate": {
+        "tag": "Porte du Désert",
+        "name": "Ouarzazate",
+        "desc": "Décors Cinématographiques & Kasbahs"
+      },
+      "rabat": {
+        "tag": "Capitale Impériale",
+        "name": "Rabat",
+        "desc": "Jardins Historiques & Brise Atlantique"
+      },
+      "merzouga": {
+        "tag": "Désert du Sahara",
+        "name": "Merzouga",
+        "desc": "Dunes d'Erg Chebbi & Bivouacs"
+      }
+    },
+    "footer": {
+      "about_text": "Découvrez. Planifiez. Vivez le Maroc.\nLe premier annuaire touristique et guide de voyage culturel pour les visiteurs explorant le Maroc.",
+      "destinations_title": "Destinations",
+      "link_marrakech": "Guide de Voyage Marrakech",
+      "link_chefchaouen": "Incontournables de Chefchaouen",
+      "link_fes": "Guide de la Médina de Fès",
+      "link_merzouga": "Excursions Désert Merzouga",
+      "categories_title": "Catégories",
+      "link_stays": "Riads & Hôtels Authentiques",
+      "link_restaurants": "Restaurants Marocains",
+      "link_experiences": "Aventures & Expériences Culturelles",
+      "link_transport": "Transport & Chauffeurs Privés",
+      "connect_title": "Suivez-nous",
+      "youtube_text": "Suivez notre chaîne YouTube pour nos guides vidéo :",
+      "copyright": "© MoroccoTripMap. Tous droits réservés."
+    }
+  },
+  "es": {
+    "seo": {
+      "title": "MoroccoTripMap | Descubre. Planifica. Vive Marruecos."
+    },
+    "nav": {
+      "destinations": "Destinos",
+      "stays": "Alojamientos",
+      "restaurants": "Restaurantes",
+      "experiences": "Experiencias",
+      "guides": "Guías",
+      "interactive_map": "Mapa Interactivo"
+    },
+    "hero": {
+      "badge": "Portal Turístico Oficial",
+      "title_line1": "Descubre. Planifica.",
+      "title_line2": "Vive Marruecos.",
+      "description": "Tu directorio y guía auténtica de hoteles, riads, restaurantes, aventuras en el desierto y joyas ocultas en el Reino de Marruecos.",
+      "search_placeholder": "¿A dónde quieres ir? (ej. Marrakech, Riad, Desierto)",
+      "search_button": "Buscar"
+    },
+    "categories": {
+      "section_title": "Explorar por Categoría",
+      "stays_title": "Estancias y Riads",
+      "stays_subtitle": "Hoteles y Riads",
+      "gastronomy_title": "Gastronomía",
+      "gastronomy_subtitle": "Restaurantes y Cafés",
+      "experiences_title": "Experiencias",
+      "experiences_subtitle": "Excursiones y Tours",
+      "attractions_title": "Atracciones",
+      "attractions_subtitle": "Monumentos y Museos",
+      "transport_title": "Transporte",
+      "transport_subtitle": "Traslados y Alquiler",
+      "itineraries_title": "Itinerarios",
+      "itineraries_subtitle": "Guías de Viaje"
+    },
+    "destinations": {
+      "badge": "Mejores Destinos",
+      "title": "Explora Ciudades Emblemáticas",
+      "view_all": "Ver todos los destinos →",
+      "view_all_btn": "Ver todos los destinos",
+      "marrakech": {
+        "tag": "Ciudad Imperial",
+        "name": "Marrakech",
+        "desc": "Medina, Palacios y Puertas del Desierto"
+      },
+      "chefchaouen": {
+        "tag": "Montañas del Rif",
+        "name": "Chefchaouen",
+        "desc": "La Emblemática Perla Azul de Marruecos"
+      },
+      "fes": {
+        "tag": "Capital Cultural",
+        "name": "Fez",
+        "desc": "Antigua Medina y Patrimonio Espiritual"
+      },
+      "casablanca": {
+        "tag": "Corazón Económico",
+        "name": "Casablanca",
+        "desc": "La ciudad más grande de Marruecos"
+      },
+      "essaouira": {
+        "tag": "Costa Atlántica",
+        "name": "Essaouira",
+        "desc": "Ciudad del Viento, Murallas y Mariscos"
+      },
+      "agadir": {
+        "tag": "Sol y Playa",
+        "name": "Agadir",
+        "desc": "Playas Doradas y Complejos Modernos"
+      },
+      "tangier": {
+        "tag": "Estrecho de Gibraltar",
+        "name": "Tánger",
+        "desc": "La Puerta entre Europa y África"
+      },
+      "ouarzazate": {
+        "tag": "Puerta del Desierto",
+        "name": "Ouarzazate",
+        "desc": "Paisajes Cinematográficos y Kasbahs"
+      },
+      "rabat": {
+        "tag": "Capital Imperial",
+        "name": "Rabat",
+        "desc": "Jardines Históricos y Brisa Atlántica"
+      },
+      "merzouga": {
+        "tag": "Desierto del Sáhara",
+        "name": "Merzouga",
+        "desc": "Dunas de Erg Chebbi y Campamentos"
+      }
+    },
+    "footer": {
+      "about_text": "Descubre. Planifica. Vive Marruecos.\nEl directorio turístico y guía cultural principal para los visitantes que exploran Marruecos.",
+      "destinations_title": "Destinos",
+      "link_marrakech": "Guía de Viaje a Marrakech",
+      "link_chefchaouen": "Lo mejor de Chefchaouen",
+      "link_fes": "Guía de la Medina de Fez",
+      "link_merzouga": "Excursiones al Desierto de Merzouga",
+      "categories_title": "Categorías",
+      "link_stays": "Riads y Hoteles Auténticos",
+      "link_restaurants": "Restaurantes Marroquíes",
+      "link_experiences": "Aventuras y Experiencias Culturales",
+      "link_transport": "Transporte y Chóferes Privados",
+      "connect_title": "Conecta",
+      "youtube_text": "Sigue nuestro canal de YouTube para guías en vídeo:",
+      "copyright": "© MoroccoTripMap. Todos los derechos reservados."
+    }
+  },
+  "ar": {
+    "seo": {
+      "title": "MoroccoTripMap | اكتشف. خطط. عِش تجربة المغرب."
+    },
+    "nav": {
+      "destinations": "الوجهات",
+      "stays": "الإقامة",
+      "restaurants": "المطاعم",
+      "experiences": "التجارب",
+      "guides": "الأدلة",
+      "interactive_map": "خريطة تفاعلية"
+    },
+    "hero": {
+      "badge": "البوابة السياحية الرسمية",
+      "title_line1": "اكتشف. خطط.",
+      "title_line2": "عِش تجربة المغرب.",
+      "description": "دليلك الأصيل للفنادق، الرياضات، المطاعم، مغامرات الصحراء والكنوز الخفية في المملكة المغربية.",
+      "search_placeholder": "إلى أين تريد الذهاب؟ (مثل: مراكش، رياض، الصحراء)",
+      "search_button": "بحث"
+    },
+    "categories": {
+      "section_title": "استكشف حسب الفئة",
+      "stays_title": "الإقامة والرياضات",
+      "stays_subtitle": "فنادق ورياضات",
+      "gastronomy_title": "فن الطبخ",
+      "gastronomy_subtitle": "مطاعم ومقاهي",
+      "experiences_title": "التجارب",
+      "experiences_subtitle": "رحلات وجولات",
+      "attractions_title": "المعالم السياحية",
+      "attractions_subtitle": "مآثر تاريخية ومتاحف",
+      "transport_title": "المواصلات",
+      "transport_subtitle": "تنقلات وتأجير السيارات",
+      "itineraries_title": "مسارات السفر",
+      "itineraries_subtitle": "أدلة السفر"
+    },
+    "destinations": {
+      "badge": "أفضل الوجهات",
+      "title": "استكشف المدن العريقة",
+      "view_all": "عرض جميع الوجهات ←",
+      "view_all_btn": "عرض جميع الوجهات",
+      "marrakech": {
+        "tag": "المدينة الإمبراطورية",
+        "name": "مراكش",
+        "desc": "المدينة القديمة، القصور وبوابة الصحراء"
+      },
+      "chefchaouen": {
+        "tag": "جبال الريف",
+        "name": "شفشاون",
+        "desc": "الجوهرة الزرقاء الشهيرة للمغرب"
+      },
+      "fes": {
+        "tag": "العاصمة الثقافية",
+        "name": "فاس",
+        "desc": "المدينة القديمة والتراث الروحي"
+      },
+      "casablanca": {
+        "tag": "القلب الاقتصادي",
+        "name": "الدار البيضاء",
+        "desc": "أكبر مدينة في المغرب"
+      },
+      "essaouira": {
+        "tag": "الساحل الأطلسي",
+        "name": "الصويرة",
+        "desc": "مدينة الرياح، الأسوار والمأكولات البحرية"
+      },
+      "agadir": {
+        "tag": "الشمس والشاطئ",
+        "name": "أكادير",
+        "desc": "الشواطئ الذهبية والمنتجعات الحديثة"
+      },
+      "tangier": {
+        "tag": "مضيق جبل طارق",
+        "name": "طنجة",
+        "desc": "البوابة بين أوروبا وإفريقيا"
+      },
+      "ouarzazate": {
+        "tag": "بوابة الصحراء",
+        "name": "ورزازات",
+        "desc": "المناظر السينمائية والقصبات التاريخية"
+      },
+      "rabat": {
+        "tag": "العاصمة الإمبراطورية",
+        "name": "الرباط",
+        "desc": "الحدائق التاريخية ونسيم الأطلسي"
+      },
+      "merzouga": {
+        "tag": "الصحراء الكبرى",
+        "name": "مرزوكة",
+        "desc": "كثبان عرق الشبي المخيمات الصحراوية"
+      }
+    },
+    "footer": {
+      "about_text": "اكتشف. خطط. عِش تجربة المغرب.\nالدليل السياحي والثقافي الأول للزوار الذين يستكشفون المغرب.",
+      "destinations_title": "الوجهات",
+      "link_marrakech": "دليل السفر إلى مراكش",
+      "link_chefchaouen": "أبرز معالم شفشاون",
+      "link_fes": "دليل مدينة فاس القديمة",
+      "link_merzouga": "رحلات صحراء مرزوكة",
+      "categories_title": "الفئات",
+      "link_stays": "رياضات وفنادق أصيلة",
+      "link_restaurants": "مطاعم مغربية",
+      "link_experiences": "مغامرات وتجارب ثقافية",
+      "link_transport": "وسائل النقل وسائقون خاصون",
+      "connect_title": "تواصل معنا",
+      "youtube_text": "تابع قناتنا على يوتيوب لمشاهدة أدلة السفر بالفيديو:",
+      "copyright": "© MoroccoTripMap. جميع الحقوق محفوظة."
+    }
+  }
+}
