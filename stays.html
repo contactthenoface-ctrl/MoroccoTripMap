@@ -54,12 +54,43 @@
 <a class="hover:text-vert transition" href="index.html#restaurants" data-i18n="nav.restaurants">Restaurants</a>
 <a class="hover:text-vert transition" href="index.html#experiences" data-i18n="nav.experiences">Experiences</a>
 </nav>
-<!-- Menu Mobile Button -->
-<div class="flex items-center gap-2">
-<button aria-label="Toggle mobile menu" class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" id="mobile-menu-button" type="button">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
+
+<!-- Lang Switcher & Mobile Toggle -->
+<div class="flex items-center gap-2 sm:gap-4">
+    <!-- SÉLECTEUR DE LANGUE SUR MESURE -->
+    <div class="relative inline-block text-left" id="lang-menu-container">
+        <button id="lang-menu-button" class="flex items-center gap-2 bg-white border border-sable/20 text-sm font-semibold rounded-xl px-3 py-2 outline-none text-sombre cursor-pointer hover:border-sable transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+            <span id="current-lang-label">EN</span>
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        
+        <div id="lang-menu-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white border border-sable/20 rounded-xl shadow-lg z-50 overflow-hidden">
+            <button onclick="changeLanguage('en')" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition text-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t2"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t2)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+                English
+            </button>
+            <button onclick="changeLanguage('fr')" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition text-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>
+                Français
+            </button>
+            <button onclick="changeLanguage('es')" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition text-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>
+                Español
+            </button>
+            <button onclick="changeLanguage('ar')" class="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-sombre hover:bg-creme transition text-left">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>
+                العربية
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile Button -->
+    <button aria-label="Toggle mobile menu" class="md:hidden bg-white p-2 rounded-xl border border-sable/20 text-sombre hover:text-vert transition flex items-center justify-center" id="mobile-menu-button" type="button">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </button>
 </div>
+
 </div>
 <!-- Mobile Menu Drawer -->
 <div class="hidden md:hidden absolute top-20 left-0 w-full bg-creme/95 backdrop-blur-md border-b border-sable/15 shadow-lg px-6 py-6 transition-all" id="mobile-menu">
@@ -273,16 +304,98 @@
 <p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
 </div>
 </footer>
-<!-- Script for Mobile Menu Toggle -->
-<script>
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+<!-- Script Complet : Menu Langues, Menu Mobile & Traduction -->
+<script>
+    // --- 1. Gestion du menu déroulant de langues ---
+    document.addEventListener('DOMContentLoaded', function () {
+        const langButton = document.getElementById('lang-menu-button');
+        const langDropdown = document.getElementById('lang-menu-dropdown');
+
+        if (langButton && langDropdown) {
+            langButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langDropdown.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!langButton.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+        }
+
+        // Charger la langue enregistrée au démarrage
+        const savedLang = localStorage.getItem('preferred_lang') || 'en';
+        changeLanguage(savedLang);
+    });
+
+    // --- 2. Fonction de Traduction Globale ---
+    function changeLanguage(lang) {
+        localStorage.setItem('preferred_lang', lang);
+
+        const langLabel = document.getElementById('current-lang-label');
+        if (langLabel) {
+            langLabel.textContent = lang.toUpperCase();
+        }
+
+        const langDropdown = document.getElementById('lang-menu-dropdown');
+        if (langDropdown) {
+            langDropdown.classList.add('hidden');
+        }
+
+        fetch('data/translations.json')
+            .then(response => response.json())
+            .then(translations => {
+                const data = translations[lang];
+                if (!data) return;
+
+                const htmlTag = document.documentElement;
+                if (lang === 'ar') {
+                    htmlTag.setAttribute('dir', 'rtl');
+                    htmlTag.setAttribute('lang', 'ar');
+                } else {
+                    htmlTag.setAttribute('dir', 'ltr');
+                    htmlTag.setAttribute('lang', lang);
+                }
+
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const keys = element.getAttribute('data-i18n').split('.');
+                    let value = data;
+                    keys.forEach(key => { if (value) value = value[key]; });
+
+                    if (value !== undefined) {
+                        if (element.innerHTML.includes('<') && typeof value === 'string') {
+                            element.innerHTML = value;
+                        } else {
+                            element.textContent = value;
+                        }
+                    }
+                });
+
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                    const keys = element.getAttribute('data-i18n-placeholder').split('.');
+                    let value = data;
+                    keys.forEach(key => { if (value) value = value[key]; });
+                    if (value !== undefined) {
+                        element.placeholder = value;
+                    }
+                });
+            })
+            .catch(error => console.error('Erreur lors du chargement des traductions :', error));
     }
+
+    // --- 3. Gestion du Menu Mobile ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
 </script>
 </body>
 </html>
