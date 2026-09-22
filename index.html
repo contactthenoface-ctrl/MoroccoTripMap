@@ -398,15 +398,33 @@ Search
         const savedLang = localStorage.getItem('preferred_lang') || 'en';
         changeLanguage(savedLang);
     });
-
-    // --- 2. Fonction de Traduction Globale ---
+  
+        // --- Fonction de Traduction Globale & Mise à jour du Drapeau ---
     function changeLanguage(lang) {
         localStorage.setItem('preferred_lang', lang);
 
-        // Mettre à jour le libellé du bouton de langue actif
+        // 1. Mettre à jour le libellé et le drapeau du bouton actif
         const langLabel = document.getElementById('current-lang-label');
+        const langButton = document.getElementById('lang-menu-button');
+        
         if (langLabel) {
             langLabel.textContent = lang.toUpperCase();
+        }
+
+        // Dictionnaires des SVGs de drapeaux
+        const flags = {
+            en: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
+            fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>',
+            es: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>',
+            ar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>'
+        };
+
+        if (langButton && flags[lang]) {
+            // Remplace le premier enfant SVG du bouton par le bon drapeau
+            const svgElement = langButton.querySelector('svg');
+            if (svgElement) {
+                svgElement.outerHTML = flags[lang];
+            }
         }
 
         // Fermer le menu déroulant
@@ -415,13 +433,13 @@ Search
             langDropdown.classList.add('hidden');
         }
 
+        // 2. Charger les traductions JSON et appliquer
         fetch('data/translations.json')
             .then(response => response.json())
             .then(translations => {
                 const data = translations[lang];
                 if (!data) return;
 
-                // Gestion du sens de lecture (RTL pour l'arabe, LTR pour les autres)
                 const htmlTag = document.documentElement;
                 if (lang === 'ar') {
                     htmlTag.setAttribute('dir', 'rtl');
@@ -431,7 +449,6 @@ Search
                     htmlTag.setAttribute('lang', lang);
                 }
 
-                // Remplacement des textes via data-i18n
                 document.querySelectorAll('[data-i18n]').forEach(element => {
                     const keys = element.getAttribute('data-i18n').split('.');
                     let value = data;
@@ -446,7 +463,6 @@ Search
                     }
                 });
 
-                // Remplacement des placeholders de recherche
                 document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
                     const keys = element.getAttribute('data-i18n-placeholder').split('.');
                     let value = data;
