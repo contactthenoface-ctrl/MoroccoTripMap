@@ -1,14 +1,14 @@
 // js/search.js
 
 const destinations = [
-    { name: "Marrakech", url: "marrakech.html", tags: ["marrakech", "rouge", "sud", "jamaa el fna", "palmeraie"] },
-    { name: "Fès", url: "fes.html", tags: ["fes", "fès", "medina", "culture", "artisanat", "nord"] },
-    { name: "Chefchaouen", url: "chefchaouen.html", tags: ["chefchaouen", "bleu", "montagne", "rif"] },
-    { name: "Tanger", url: "tanger.html", tags: ["tanger", "mer", "detroit", "nord"] }
+    { name: "Marrakech", arabicName: "مراكش", url: "marrakech.html", tags: ["marrakech", "rouge", "sud", "jamaa el fna", "palmeraie", "مراكش", "مدينة"] },
+    { name: "Fès", arabicName: "فاس", url: "fes.html", tags: ["fes", "fès", "medina", "culture", "artisanat", "nord", "فاس"] },
+    { name: "Chefchaouen", arabicName: "شفشاون", url: "chefchaouen.html", tags: ["chefchaouen", "bleu", "montagne", "rif", "شفشاون", "المدينة الزرقاء"] },
+    { name: "Tanger", arabicName: "طنجة", url: "tanger.html", tags: ["tanger", "mer", "detroit", "nord", "طنجة"] }
 ];
 
 function searchDestinations() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
+    const input = document.getElementById('searchInput').value.toLowerCase().trim();
     const resultsContainer = document.getElementById('searchResults');
     resultsContainer.innerHTML = '';
 
@@ -19,7 +19,8 @@ function searchDestinations() {
 
     const filtered = destinations.filter(dest => 
         dest.name.toLowerCase().includes(input) || 
-        dest.tags.some(tag => tag.includes(input))
+        (dest.arabicName && dest.arabicName.includes(input)) ||
+        dest.tags.some(tag => tag.toLowerCase().includes(input))
     );
 
     if (filtered.length > 0) {
@@ -36,7 +37,9 @@ function searchDestinations() {
 }
 
 document.addEventListener('click', function(e) {
-    if (!document.getElementById('searchInput').contains(e.target)) {
-        document.getElementById('searchResults').style.display = 'none';
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    if (searchInput && searchResults && !searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.style.display = 'none';
     }
 });
