@@ -37,7 +37,7 @@ if (document.readyState === 'loading') {
 async function switchLanguage(lang) {
     try {
         // Chemin mis à jour vers le dossier data/
-        const response = await fetch('data/translations.json');
+        const response = await fetch('translations.json');
         const data = await response.json();
 
         if (!data[lang]) return;
