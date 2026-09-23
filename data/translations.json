@@ -1032,21 +1032,3 @@
     }
   }
 }
-{
-  "marrakech_page": {
-    "places": {
-      "badge": "Top Sightseeing",
-      "title": "Must-Visit Places in Marrakech",
-      "subtitle": "Iconic landmarks, royal palaces, and historical gardens you cannot miss during your trip."
-    },
-    "itinerary": {
-      "badge": "Trip Planner",
-      "title": "Itinéraire Conseillé : 3 Jours Parfaits à Marrakech",
-      "subtitle": "Optimisez votre séjour grâce à ce programme jour par jour, conçu pour équilibrer les visites historiques culturelles et les moments de détente.",
-      "day1_tab": "Jour 1 : L'Histoire & Le Cœur Battant",
-      "day2_tab": "Jour 2 : L'Art & La Modernité",
-      "day3_tab": "Jour 3 : Quiétude & Saveurs locales"
-    }
-  }
-}
-
