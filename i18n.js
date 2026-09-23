@@ -1,115 +1,69 @@
-// i18n.js - Gestionnaire de traduction asynchrone depuis /assets/translations.json
+// Variable globale pour stocker les traductions chargées
+let currentTranslations = {};
 
-let translations = {};
-
-// Chargement initial du fichier JSON des traductions
-async function loadTranslations() {
-    try {
-        const response = await fetch('translations.json');
-        if (!response.ok) {
-            throw new Error('Erreur lors du chargement de translations.json');
-        }
-        translations = await response.json();
-        
-        const savedLang = localStorage.getItem('preferred_lang') || 'en';
-        
-        // Mettre à jour l'UI du sélecteur
-        const langLabel = document.getElementById('current-lang-label');
-        if (langLabel) langLabel.textContent = savedLang.toUpperCase();
-        updateFlagUI(savedLang);
-
-        // Appliquer les traductions sur toute la page
-        applyTranslations(savedLang);
-    } catch (error) {
-        console.error('Erreur i18n :', error);
-    }
+// 1. Fonction utilitaire pour lire les clés imbriquées (ex: "destinations.marrakech.title")
+function getNestedTranslation(obj, path) {
+  return path.split('.').reduce((prev, curr) => (prev ? prev[curr] : null), obj);
 }
 
-// Fonction globale pour changer de langue
-function changeLanguage(lang) {
+// 2. Fonction principale de mise à jour du DOM (Texte + Placeholders)
+function updateLanguage(langData) {
+  currentTranslations = langData;
+
+  // Traduction du texte des éléments
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = getNestedTranslation(langData, key);
+    if (translation !== null && translation !== undefined) {
+      element.textContent = translation;
+    }
+  });
+
+  // Traduction des placeholders (champs de recherche / formulaires)
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    const translation = getNestedTranslation(langData, key);
+    if (translation !== null && translation !== undefined) {
+      element.placeholder = translation;
+    }
+  });
+}
+
+// 3. Charger le fichier JSON de la langue demandée
+async function loadLanguage(lang) {
+  try {
+    // Vérifiez que le chemin correspond à l'emplacement de vos fichiers JSON
+    const response = await fetch(`translations.json`); 
+    const langData = await response.json();
+    
+    // Mettre à jour la direction d'affichage (RTL pour l'arabe, LTR pour le reste)
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+
+    // Sauvegarder la langue dans le navigateur du visiteur
     localStorage.setItem('preferred_lang', lang);
 
-    const langLabel = document.getElementById('current-lang-label');
-    if (langLabel) langLabel.textContent = lang.toUpperCase();
-
-    updateFlagUI(lang);
-
-    const langDropdown = document.getElementById('lang-menu-dropdown');
-    if (langDropdown) langDropdown.classList.add('hidden');
-
-    if (!translations[lang]) {
-        console.warn(`Traductions introuvables pour la langue : ${lang}`);
-        return;
-    }
-
-    applyTranslations(lang);
+    // Appliquer les traductions sur tout le document
+    updateLanguage(langData);
+  } catch (error) {
+    console.error(`Erreur de chargement de la langue ${lang}:`, error);
+  }
 }
 
-// Fonction pour appliquer les traductions sur toute la page
-function applyTranslations(lang) {
-    const data = translations[lang];
-    if (!data) return;
-
-    const htmlTag = document.documentElement;
-
-    // Gestion du sens d'écriture (RTL pour l'arabe, LTR pour les autres)
-    if (lang === 'ar') {
-        htmlTag.setAttribute('dir', 'rtl');
-        htmlTag.setAttribute('lang', 'ar');
-    } else {
-        htmlTag.setAttribute('dir', 'ltr');
-        htmlTag.setAttribute('lang', lang);
-    }
-
-    // Traduction des éléments avec l'attribut data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const keys = element.getAttribute('data-i18n').split('.');
-        let value = data;
-        keys.forEach(key => {
-            if (value) value = value[key];
-        });
-
-        if (value !== undefined) {
-            if (element.innerHTML.includes('<') && typeof value === 'string') {
-                element.innerHTML = value;
-            } else {
-                element.textContent = value;
-            }
-        }
-    });
-
-    // Traduction des placeholders (champs de recherche, etc.)
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-        const keys = element.getAttribute('data-i18n-placeholder').split('.');
-        let value = data;
-        keys.forEach(key => {
-            if (value) value = value[key];
-        });
-        if (value !== undefined) {
-            element.placeholder = value;
-        }
-    });
-}
-
-// Mise à jour visuelle du drapeau dans le bouton du sélecteur
-function updateFlagUI(lang) {
-    const langButton = document.getElementById('lang-menu-button');
-    const flags = {
-        en: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
-        fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>',
-        es: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>',
-        ar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>'
-    };
-
-    if (langButton && flags[lang]) {
-        const svgElement = langButton.querySelector('svg');
-        if (svgElement) {
-            svgElement.outerHTML = flags[lang];
-        }
-    }
-}
-
-// Lancement au chargement de la page
+// 4. Initialisation et association des clics du menu déroulant
 document.addEventListener('DOMContentLoaded', () => {
-    loadTranslations();
+  // Charger la langue sauvegardée ou 'fr' par défaut au démarrage
+  const savedLang = localStorage.getItem('preferred_lang') || 'fr';
+  loadLanguage(savedLang);
+
+  // Attacher l'événement de changement de langue sur les boutons du menu
+  document.querySelectorAll('[data-lang]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedLang = button.getAttribute('data-lang');
+      if (selectedLang) {
+        loadLanguage(selectedLang);
+      }
+    });
+  });
 });
