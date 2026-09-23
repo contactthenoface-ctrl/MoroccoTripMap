@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- SEO & Metadata -->
-<title>All Destinations in Morocco | MoroccoTripMap</title>
+<title data-i18n="seo.destinations_title">All Destinations in Morocco | MoroccoTripMap</title>
 <meta content="Explore all destinations in Morocco. From the imperial cities of Marrakech and Fes to the blue pearl Chefchaouen and the Sahara desert of Merzouga." name="description"/>
 <link href="https://moroccotripmap.com/destinations.html" rel="canonical"/>
 <!-- Tailwind CSS CDN -->
@@ -54,7 +54,7 @@
 <a class="hover:text-vert transition" href="index.html#experiences" data-i18n="nav.experiences">Experiences</a>
 </nav>
 <div class="flex items-center gap-2 sm:gap-4">
-<!-- Custom Language Dropdown Selector with SVG Flags -->
+<!-- Custom Language Dropdown Selector -->
 <div class="relative inline-block text-left">
   <button id="lang-menu-button" onclick="document.getElementById('lang-menu-dropdown').classList.toggle('hidden')" class="bg-white border border-sable/20 hover:border-sable text-sm font-semibold rounded-xl px-3 py-2 flex items-center gap-2 text-sombre transition shadow-sm" type="button">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
@@ -62,16 +62,16 @@
     <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
   </button>
   <div id="lang-menu-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-sable/15 py-1 z-50">
-    <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
+    <button data-lang="en" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t2"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s2)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t2)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg> English
     </button>
-    <button onclick="changeLanguage('fr')" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
+    <button data-lang="fr" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg> Français
     </button>
-    <button onclick="changeLanguage('es')" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
+    <button data-lang="es" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg> Español
     </button>
-    <button onclick="changeLanguage('ar')" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
+    <button data-lang="ar" class="w-full text-left px-4 py-2 text-sm hover:bg-creme flex items-center gap-2 font-medium text-sombre">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg> العربية
     </button>
   </div>
@@ -83,22 +83,19 @@
 </div>
 </div>
 
-<!-- Mobile Menu Drawer (Placé ici dans le header) -->
+<!-- Mobile Menu Drawer -->
 <div class="hidden md:hidden absolute top-20 left-0 w-full bg-creme/95 backdrop-blur-md border-b border-sable/15 shadow-xl px-6 py-6 transition-all max-h-[80vh] overflow-y-auto z-50" id="mobile-menu">
-    <!-- Sélecteur de langue rapide pour Mobile -->
     <div class="flex items-center justify-between pb-4 mb-4 border-b border-sable/20">
         <span class="text-xs font-bold text-sable uppercase tracking-wider" data-i18n="mobile_menu.language_title">Language / Langue</span>
         <div class="flex gap-2">
-            <button onclick="changeLanguage('en')" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">EN</button>
-            <button onclick="changeLanguage('fr')" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">FR</button>
-            <button onclick="changeLanguage('es')" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">ES</button>
-            <button onclick="changeLanguage('ar')" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">AR</button>
+            <button data-lang="en" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">EN</button>
+            <button data-lang="fr" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">FR</button>
+            <button data-lang="es" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">ES</button>
+            <button data-lang="ar" class="px-2.5 py-1 bg-white border border-sable/20 rounded-lg text-xs font-semibold hover:border-vert transition">AR</button>
         </div>
     </div>
 
-    <!-- Navigation Mobile Principale -->
     <nav class="flex flex-col gap-3 text-base font-medium text-sombre/90">
-        <!-- 1. Cities -->
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold" href="destinations.html">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-vert shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +106,6 @@
             <span class="text-xs text-gray-400">→</span>
         </a>
 
-        <!-- 2. Categories (Menu Déroulant / Accordéon) -->
         <div>
             <button onclick="toggleMobileCategories()" class="w-full flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold text-left">
                 <div class="flex items-center gap-3">
@@ -123,7 +119,6 @@
                 </svg>
             </button>
             
-            <!-- Sous-catégories -->
             <div id="mobile-categories-dropdown" class="hidden flex flex-col gap-2 pl-11 py-2 mt-1 border-l-2 border-sable/30 text-sm">
                 <a class="py-1.5 hover:text-vert transition text-sombre/80" href="stays.html" data-i18n="nav.cat_stays">Stays & Riads</a>
                 <a class="py-1.5 hover:text-vert transition text-sombre/80" href="stays.html" data-i18n="nav.cat_hotels">Hotels & Riads</a>
@@ -140,7 +135,6 @@
             </div>
         </div>
 
-        <!-- 3. History of Morocco -->
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold" href="history.html">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-vert shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +145,6 @@
             <span class="text-xs text-gray-400">→</span>
         </a>
 
-        <!-- 4. Blog -->
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold" href="blog.html">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-vert shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,7 +155,6 @@
             <span class="text-xs text-gray-400">→</span>
         </a>
 
-        <!-- 5. Contact -->
         <a class="flex items-center justify-between py-2.5 px-3 rounded-xl hover:bg-white/60 hover:text-vert transition font-semibold" href="contact.html">
             <div class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-vert shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,17 +182,17 @@
 <p class="text-creme/80 max-w-2xl text-sm sm:text-base" data-i18n="destinations_page.description">
     From vibrant imperial medinas and blue mountain villages to Atlantic coastal gems and golden desert dunes, find your next Moroccan escape.
 </p>
-<!-- Search Bar with Predictive Dropdown -->
+<!-- Search Bar -->
 <div class="mt-8 max-w-md relative">
 <div class="relative">
-<input autocomplete="off" class="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-sombre placeholder-gray-400 outline-none shadow-sm text-sm border border-sable/20 focus:border-sable transition" id="searchInput" data-i18n-placeholder="destinations_page.search_placeholder" placeholder="Search destinations (e.g. Marrakech, Desert, Blue)..." type="text"/>
+<input autocomplete="off" class="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-sombre placeholder-gray-400 outline-none shadow-sm text-sm border border-sable/20 focus:border-sable transition" id="searchInput" data-i18n="destinations_page.search_placeholder" placeholder="Search destinations (e.g. Marrakech, Desert, Blue)..." type="text"/>
 <svg class="w-5 h-5 text-sable absolute left-3 top-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
-<!-- Dropdown des résultats prédictifs -->
 <div class="absolute top-full left-0 w-full mt-2 bg-white rounded-xl shadow-xl overflow-hidden hidden z-50 text-sombre text-sm border border-gray-100" id="searchResults"></div>
 </div>
 </div>
 </div>
+
 <!-- Destinations Grid Section -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -210,207 +202,227 @@
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.marrakech.tag">Imperial City</span>
-<h3 class="text-xl font-bold">Marrakech</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.marrakech.name">Marrakech</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.marrakech.desc">Medina, Palaces &amp; Desert Gateways</p>
 </div>
 </a>
+
 <!-- Chefchaouen -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="chefchaouen.html">
 <img alt="Traditional blue painted streets in Chefchaouen, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.chefchaouen.tag">Rif Mountains</span>
-<h3 class="text-xl font-bold">Chefchaouen</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.chefchaouen.name">Chefchaouen</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.chefchaouen.desc">The Iconic Blue Pearl of Morocco</p>
 </div>
 </a>
+
 <!-- Fes -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="fes.html">
 <img alt="Panoramic view of ancient medina in Fes, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1555169048-ee590a06ab39?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.fes.tag">Cultural Capital</span>
-<h3 class="text-xl font-bold">Fes</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.fes.name">Fes</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.fes.desc">Ancient Medina &amp; Spiritual Heritage</p>
 </div>
 </a>
+
 <!-- Casablanca -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="casablanca.html">
-<img alt="The largest city in Morocco and the country's economic centre, Casablanca, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1740602550091-0943d7cfb720?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Casablanca" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1740602550091-0943d7cfb720?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.casablanca.tag">Economic Heart</span>
-<h3 class="text-xl font-bold">Casablanca</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.casablanca.name">Casablanca</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.casablanca.desc">The largest city in Morocco</p>
 </div>
 </a>
+
 <!-- Essaouira -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="essaouira.html">
-<img alt="Historic blue boats and ramparts in Essaouira, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Essaouira" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.essaouira.tag">Atlantic Coast</span>
-<h3 class="text-xl font-bold">Essaouira</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.essaouira.name">Essaouira</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.essaouira.desc">Windy City, Ramparts &amp; Fresh Seafood</p>
 </div>
 </a>
+
 <!-- Agadir -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="agadir.html">
-<img alt="Golden beach and coastal resort view in Agadir, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1630172006681-a0b1d335c9e3?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Agadir" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1630172006681-a0b1d335c9e3?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.agadir.tag">Sun &amp; Beach</span>
-<h3 class="text-xl font-bold">Agadir</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.agadir.name">Agadir</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.agadir.desc">Golden Beaches &amp; Modern Resorts</p>
 </div>
 </a>
+
 <!-- Tangier -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="tanger.html">
-<img alt="Stunning view of the strait and white buildings in Tangier, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1711971725727-aa6e812eb45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Tangier" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1711971725727-aa6e812eb45d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.tangier.tag">Strait of Gibraltar</span>
-<h3 class="text-xl font-bold">Tangier</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.tangier.name">Tangier</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.tangier.desc">The Gateway Between Europe and Africa</p>
 </div>
 </a>
+
 <!-- Ouarzazate -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="ouarzazate.html">
-<img alt="Ancient kasbah and desert landscape in Ouarzazate, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1737927427538-9f9b4ea4ab02?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Ouarzazate" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1737927427538-9f9b4ea4ab02?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.ouarzazate.tag">Desert Gateway</span>
-<h3 class="text-xl font-bold">Ouarzazate</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.ouarzazate.name">Ouarzazate</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.ouarzazate.desc">Cinematic Landscapes &amp; Ancient Kasbahs</p>
 </div>
 </a>
+
 <!-- Rabat -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="rabat.html">
-<img alt="Historic Hassan Tower and gardens in Rabat, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1588609715324-78072fc77cee?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Rabat" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1588609715324-78072fc77cee?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.rabat.tag">Imperial Capital</span>
-<h3 class="text-xl font-bold">Rabat</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.rabat.name">Rabat</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.rabat.desc">Historic Gardens &amp; Atlantic Breezes</p>
 </div>
 </a>
+
 <!-- Meknes -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="meknes.html">
-<img alt="Monumental gate and ancient architecture in Meknes, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.trvl-media.com/place/6115304/f7679f0c-62db-486c-a2a2-90a4e979f378.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Meknes" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.trvl-media.com/place/6115304/f7679f0c-62db-486c-a2a2-90a4e979f378.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.meknes.tag">Imperial City</span>
-<h3 class="text-xl font-bold">Meknes</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.meknes.name">Meknes</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.meknes.desc">Monumental Gates &amp; Roman Ruins</p>
 </div>
 </a>
+
 <!-- Tetouan -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="tetouan.html">
-<img alt="White whitewashed Andalusian architecture and streets in Tetouan, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/45f66ad6b9473a56e7dbb23a7f2b5ab2f5b9f9c9f9297019d4b9a7c27b77bce6.png?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Tetouan" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://cdn.getyourguide.com/image/format=auto%2Cfit=crop%2Cgravity=auto%2Cquality=60%2Cwidth=400%2Cheight=265%2Cdpr=2/tour_img/45f66ad6b9473a56e7dbb23a7f2b5ab2f5b9f9c9f9297019d4b9a7c27b77bce6.png?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.tetouan.tag">Mediterranean Coast</span>
-<h3 class="text-xl font-bold">Tetouan</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.tetouan.name">Tetouan</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.tetouan.desc">Andalusian Heritage &amp; Rif Mountains</p>
 </div>
 </a>
+
 <!-- Ifrane -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="ifrane.html">
-<img alt="Alpine architecture and mountain scenery in Ifrane, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Neige_ifrane.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Ifrane" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Neige_ifrane.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.ifrane.tag">Middle Atlas</span>
-<h3 class="text-xl font-bold">Ifrane</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.ifrane.name">Ifrane</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.ifrane.desc">Alpine Architecture &amp; Cedar Forests</p>
 </div>
 </a>
+
 <!-- El Jadida -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="el-jadida.html">
-<img alt="Portuguese fortification and coastal view in El Jadida, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://maroc-diplomatique.net/wp-content/uploads/2018/06/eljadida.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="El Jadida" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://maroc-diplomatique.net/wp-content/uploads/2018/06/eljadida.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.el_jadida.tag">Atlantic Coast</span>
-<h3 class="text-xl font-bold">El Jadida</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.el_jadida.name">El Jadida</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.el_jadida.desc">Portuguese Cistern &amp; Ocean Forts</p>
 </div>
 </a>
+
 <!-- Taroudant -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="taroudant.html">
-<img alt="Massive red mudbrick ramparts and vibrant souks in Taroudant, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ab/37/7b.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Taroudant" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/ab/37/7b.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.taroudant.tag">Souss Valley</span>
-<h3 class="text-xl font-bold">Taroudant</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.taroudant.name">Taroudant</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.taroudant.desc">Massive Ramparts &amp; Authentic Souks</p>
 </div>
 </a>
+
 <!-- Dakhla -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="dakhla.html">
-<img alt="Stunning lagoon and desert meeting the ocean in Dakhla, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1643240260139-d27d5a899d13?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Dakhla" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1643240260139-d27d5a899d13?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.dakhla.tag">Deep South</span>
-<h3 class="text-xl font-bold">Dakhla</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.dakhla.name">Dakhla</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.dakhla.desc">Stunning Lagoons &amp; Kitesurf Paradise</p>
 </div>
 </a>
+
 <!-- Al Hoceima -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="al-hoceima.html">
-<img alt="Stunning turquoise waters and cliff views in Al Hoceima, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://observatoirevivreensemble.org/sites/default/files/styles/obs_huge_pano/public/al_hoceima_3.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Al Hoceima" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://observatoirevivreensemble.org/sites/default/files/styles/obs_huge_pano/public/al_hoceima_3.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.al_hoceima.tag">Mediterranean Coast</span>
-<h3 class="text-xl font-bold">Al Hoceima</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.al_hoceima.name">Al Hoceima</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.al_hoceima.desc">Turquoise Waters &amp; Rif Cliffs</p>
 </div>
 </a>
+
 <!-- Nador -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="nador.html">
-<img alt="Scenic lagoon and coastal landscape in Nador, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://static.lematin.ma/files/lematin/images/articles/2021/08/552a3f4d1fc34431d8a6c8da7425f741.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Nador" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://static.lematin.ma/files/lematin/images/articles/2021/08/552a3f4d1fc34431d8a6c8da7425f741.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.nador.tag">Mediterranean Lagoon</span>
-<h3 class="text-xl font-bold">Nador</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.nador.name">Nador</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.nador.desc">Mar Chica Lagoon &amp; Coastal Breezes</p>
 </div>
 </a>
+
 <!-- Zagora -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="zagora.html">
-<img alt="Palm groves and desert dunes in Zagora, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://www.infostourismemaroc.com/uploads/images/gallery/5ecb9f046e93f_que-faire-zagora-lieux-voir-activites-zagora-sud-marocain.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Zagora" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://www.infostourismemaroc.com/uploads/images/gallery/5ecb9f046e93f_que-faire-zagora-lieux-voir-activites-zagora-sud-marocain.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.zagora.tag">Drâa Valley</span>
-<h3 class="text-xl font-bold">Zagora</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.zagora.name">Zagora</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.zagora.desc">Lush Palm Groves &amp; Sahara Doors</p>
 </div>
 </a>
+
 <!-- Safi -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="safi.html">
-<img alt="Coastal view and pottery heritage in Safi, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://khirbledi.ma/wp-content/uploads/2023/05/safi-pottery-stalls.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Safi" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://khirbledi.ma/wp-content/uploads/2023/05/safi-pottery-stalls.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.safi.tag">Atlantic Coast</span>
-<h3 class="text-xl font-bold">Safi</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.safi.name">Safi</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.safi.desc">Pottery Capital &amp; Sea Fortress</p>
 </div>
 </a>
+
 <!-- Laayoune -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="laayoune.html">
-<img alt="Saharan landscape and coastal culture in Laayoune, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://tourismenews.ma/wp-content/uploads/peuple-arabe-caravane-chameaux-1536x1024.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Laayoune" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://tourismenews.ma/wp-content/uploads/peuple-arabe-caravane-chameaux-1536x1024.jpg?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.laayoune.tag">Sahara Gateway</span>
-<h3 class="text-xl font-bold">Laayoune</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.laayoune.name">Laayoune</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.laayoune.desc">Sahrawi Culture &amp; Atlantic Horizon</p>
 </div>
 </a>
+
 <!-- Merzouga -->
 <a class="city-card block group relative h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300" href="merzouga.html">
-<img alt="Golden sand dunes in Erg Chebbi desert, Merzouga, Morocco" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613169620329-6785c004d900?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
+<img alt="Merzouga" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1613169620329-6785c004d900?auto=format&amp;fit=crop&amp;w=600&amp;q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-sombre/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-5 left-5 right-5 text-white">
 <span class="text-xs text-sable font-bold uppercase tracking-wider" data-i18n="cities.merzouga.tag">Sahara Desert</span>
-<h3 class="text-xl font-bold">Merzouga</h3>
+<h3 class="text-xl font-bold" data-i18n="cities.merzouga.name">Merzouga</h3>
 <p class="text-xs text-white/80 mt-1" data-i18n="cities.merzouga.desc">Erg Chebbi Dunes &amp; Desert Camps</p>
 </div>
 </a>
@@ -423,7 +435,7 @@
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
 <div>
 <h3 class="text-xl font-bold mb-3 text-white">Morocco<span class="text-sable">TripMap</span></h3>
-<p class="text-xs text-creme/80 leading-relaxed" data-i18n="footer.description">
+<p class="text-xs text-creme/80 leading-relaxed" data-i18n="footer.about_text">
     Discover. Plan. Experience Morocco.<br/>
     The premier tourism directory and cultural travel guide for visitors exploring Morocco.
 </p>
@@ -431,15 +443,15 @@
 <div>
 <h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider" data-i18n="footer.destinations_title">Destinations</h4>
 <ul class="text-xs space-y-2 text-creme/80">
-<li><a class="hover:text-white transition" href="marrakech.html" data-i18n="footer.marrakech_guide">Marrakech Travel Guide</a></li>
-<li><a class="text-white font-bold transition" href="destinations.html" data-i18n="footer.all_destinations">All Destinations</a></li>
+<li><a class="hover:text-white transition" href="marrakech.html" data-i18n="footer.link_marrakech">Marrakech Travel Guide</a></li>
+<li><a class="text-white font-bold transition" href="destinations.html" data-i18n="footer.link_all_destinations">All Destinations</a></li>
 </ul>
 </div>
 <div>
 <h4 class="text-sm font-semibold text-sable mb-3 uppercase tracking-wider" data-i18n="footer.categories_title">Categories</h4>
 <ul class="text-xs space-y-2 text-creme/80">
-<li><a class="hover:text-white transition" href="stays.html" data-i18n="footer.authentic_riads">Authentic Riads &amp; Hotels</a></li>
-<li><a class="hover:text-white transition" href="index.html#restaurants" data-i18n="footer.moroccan_restaurants">Moroccan Restaurants</a></li>
+<li><a class="hover:text-white transition" href="stays.html" data-i18n="footer.link_stays">Authentic Riads &amp; Hotels</a></li>
+<li><a class="hover:text-white transition" href="index.html#restaurants" data-i18n="footer.link_restaurants">Moroccan Restaurants</a></li>
 </ul>
 </div>
 <div>
@@ -452,14 +464,12 @@
 </div>
 </div>
 <div class="max-w-7xl mx-auto border-t border-creme/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-creme/70">
-<p>© MoroccoTripMap. All rights reserved.</p>
+<p data-i18n="footer.copyright">© MoroccoTripMap. All rights reserved.</p>
 <p>Created by <a class="text-sable underline font-semibold hover:text-white transition" href="https://kamliseo.com" rel="noopener noreferrer" target="_blank">Kamliseo</a></p>
 </div>
 </footer>
 
-<!-- Scripts Globaux & Traduction -->
 <script>
-    // --- Accordéon pour sous-catégories dans le menu mobile ---
     function toggleMobileCategories() {
         const dropdown = document.getElementById('mobile-categories-dropdown');
         const arrow = document.getElementById('categories-arrow');
@@ -470,84 +480,9 @@
             }
         }
     }
-
-    // --- Fonction Globale de Traduction et Changement de Drapeau ---
-    function changeLanguage(lang) {
-        localStorage.setItem('preferred_lang', lang);
-
-        const langLabel = document.getElementById('current-lang-label');
-        const langButton = document.getElementById('lang-menu-button');
-        
-        if (langLabel) {
-            langLabel.textContent = lang.toUpperCase();
-        }
-
-        const flags = {
-            en: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="15" class="rounded-sm shadow-sm"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v-15 h-30 z h-30 v-15 z v15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>',
-            fr: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="15" class="rounded-sm shadow-sm"><rect width="3" height="2" fill="#ED2939"/><rect width="2" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/></svg>',
-            es: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="20" height="15" class="rounded-sm shadow-sm"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>',
-            ar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="20" height="15" class="rounded-sm shadow-sm"><rect width="900" height="600" fill="#c1272d"/><polygon fill="none" stroke="#006233" stroke-width="15" points="450,170 361,441 593,273 307,273 639,441"/></svg>'
-        };
-
-        if (langButton && flags[lang]) {
-            const svgElement = langButton.querySelector('svg');
-            if (svgElement) {
-                svgElement.outerHTML = flags[lang];
-            }
-        }
-
-        const langDropdown = document.getElementById('lang-menu-dropdown');
-        if (langDropdown) {
-            langDropdown.classList.add('hidden');
-        }
-
-        fetch('data/translations.json')
-            .then(response => response.json())
-            .then(translations => {
-                const data = translations[lang];
-                if (!data) return;
-
-                const htmlTag = document.documentElement;
-                if (lang === 'ar') {
-                    htmlTag.setAttribute('dir', 'rtl');
-                    htmlTag.setAttribute('lang', 'ar');
-                } else {
-                    htmlTag.setAttribute('dir', 'ltr');
-                    htmlTag.setAttribute('lang', lang);
-                }
-
-                document.querySelectorAll('[data-i18n]').forEach(element => {
-                    const keys = element.getAttribute('data-i18n').split('.');
-                    let value = data;
-                    keys.forEach(key => { if (value) value = value[key]; });
-
-                    if (value !== undefined) {
-                        if (element.innerHTML.includes('<') && typeof value === 'string') {
-                            element.innerHTML = value;
-                        } else {
-                            element.textContent = value;
-                        }
-                    }
-                });
-
-                document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-                    const keys = element.getAttribute('data-i18n-placeholder').split('.');
-                    let value = data;
-                    keys.forEach(key => { if (value) value = value[key]; });
-                    if (value !== undefined) {
-                        element.placeholder = value;
-                    }
-                });
-            })
-            .catch(error => console.error('Erreur lors du chargement des traductions :', error));
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const savedLang = localStorage.getItem('preferred_lang') || 'en';
-        changeLanguage(savedLang);
-    });
 </script>
 <script src="js/search.js"></script>
 <script src="i18n.js"></script>
 </body>
 </html>
+
