@@ -33,7 +33,7 @@ function updateLanguage(langData) {
 async function loadLanguage(lang) {
   try {
     // Vérifiez que le chemin correspond à l'emplacement de vos fichiers JSON
-    const response = await fetch(`translations.json`); 
+    const response = await fetch('./translations.json'); 
     const langData = await response.json();
     
     // Mettre à jour la direction d'affichage (RTL pour l'arabe, LTR pour le reste)
