@@ -104,7 +104,191 @@ function updateFlagUI(lang) {
     }
 }
 
+// Fonction pour appliquer les traductions sur toute la page
+function applyTranslations() {
+    const lang = localStorage.getItem('preferred_lang') || 'en';
+    if (!translations[lang]) return;
+
+    const data = translations[lang];
+    const htmlTag = document.documentElement;
+
+    if (lang === 'ar') {
+        htmlTag.setAttribute('dir', 'rtl');
+        htmlTag.setAttribute('lang', 'ar');
+    } else {
+        htmlTag.setAttribute('dir', 'ltr');
+        htmlTag.setAttribute('lang', lang);
+    }
+
+    // Traduction des éléments avec l'attribut data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keys = element.getAttribute('data-i18n').split('.');
+        let value = data;
+        keys.forEach(key => {
+            if (value) value = value[key];
+        });
+
+        if (value !== undefined) {
+            if (element.innerHTML.includes('<') && typeof value === 'string') {
+                element.innerHTML = value;
+            } else {
+                element.textContent = value;
+            }
+        }
+    });
+
+    // Traduction des placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const keys = element.getAttribute('data-i18n-placeholder').split('.');
+        let value = data;
+        keys.forEach(key => {
+            if (value) value = value[key];
+        });
+        if (value !== undefined) {
+            element.placeholder = value;
+        }
+    });
+}
+
+// Modifier loadTranslations pour appeler applyTranslations proprement
+async function loadTranslations() {
+    try {
+        const response = await fetch('assets/translations.json');
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement de translations.json');
+        }
+        translations = await response.json();
+        
+        const savedLang = localStorage.getItem('preferred_lang') || 'en';
+        
+        // Mettre à jour l'UI du sélecteur
+        const langLabel = document.getElementById('current-lang-label');
+        if (langLabel) langLabel.textContent = savedLang.toUpperCase();
+        updateFlagUI(savedLang);
+
+        // Appliquer les traductions une première fois
+        applyTranslations();
+    } catch (error) {
+        console.error('Erreur i18n :', error);
+    }
+}
+
+// S'assurer que changeLanguage appelle bien applyTranslations aussi
+function changeLanguage(lang) {
+    localStorage.setItem('preferred_lang', lang);
+
+    const langLabel = document.getElementById('current-lang-label');
+    if (langLabel) langLabel.textContent = lang.toUpperCase();
+
+    updateFlagUI(lang);
+
+    const langDropdown = document.getElementById('lang-menu-dropdown');
+    if (langDropdown) langDropdown.classList.add('hidden');
+
+    if (!translations[lang]) {
+        console.warn(`Traductions introuvables pour la langue : ${lang}`);
+        return;
+    }
+
+    // Appliquer les traductions sur toute la page
+    applyTranslations();
+}
+
+// Fonction pour appliquer les traductions sur toute la page
+function applyTranslations() {
+    const lang = localStorage.getItem('preferred_lang') || 'en';
+    if (!translations[lang]) return;
+
+    const data = translations[lang];
+    const htmlTag = document.documentElement;
+
+    if (lang === 'ar') {
+        htmlTag.setAttribute('dir', 'rtl');
+        htmlTag.setAttribute('lang', 'ar');
+    } else {
+        htmlTag.setAttribute('dir', 'ltr');
+        htmlTag.setAttribute('lang', lang);
+    }
+
+    // Traduction des éléments avec l'attribut data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keys = element.getAttribute('data-i18n').split('.');
+        let value = data;
+        keys.forEach(key => {
+            if (value) value = value[key];
+        });
+
+        if (value !== undefined) {
+            if (element.innerHTML.includes('<') && typeof value === 'string') {
+                element.innerHTML = value;
+            } else {
+                element.textContent = value;
+            }
+        }
+    });
+
+    // Traduction des placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const keys = element.getAttribute('data-i18n-placeholder').split('.');
+        let value = data;
+        keys.forEach(key => {
+            if (value) value = value[key];
+        });
+        if (value !== undefined) {
+            element.placeholder = value;
+        }
+    });
+}
+
+// Modifier loadTranslations pour appeler applyTranslations proprement
+async function loadTranslations() {
+    try {
+        const response = await fetch('assets/translations.json');
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement de translations.json');
+        }
+        translations = await response.json();
+        
+        const savedLang = localStorage.getItem('preferred_lang') || 'en';
+        
+        // Mettre à jour l'UI du sélecteur
+        const langLabel = document.getElementById('current-lang-label');
+        if (langLabel) langLabel.textContent = savedLang.toUpperCase();
+        updateFlagUI(savedLang);
+
+        // Appliquer les traductions une première fois
+        applyTranslations();
+    } catch (error) {
+        console.error('Erreur i18n :', error);
+    }
+}
+
+// S'assurer que changeLanguage appelle bien applyTranslations aussi
+function changeLanguage(lang) {
+    localStorage.setItem('preferred_lang', lang);
+
+    const langLabel = document.getElementById('current-lang-label');
+    if (langLabel) langLabel.textContent = lang.toUpperCase();
+
+    updateFlagUI(lang);
+
+    const langDropdown = document.getElementById('lang-menu-dropdown');
+    if (langDropdown) langDropdown.classList.add('hidden');
+
+    if (!translations[lang]) {
+        console.warn(`Traductions introuvables pour la langue : ${lang}`);
+        return;
+    }
+
+    // Appliquer les traductions sur toute la page
+    applyTranslations();
+}
+
 // Lancement au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
     loadTranslations();
+});
+
+});
+
 });
