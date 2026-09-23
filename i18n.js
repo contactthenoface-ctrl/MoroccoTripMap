@@ -36,8 +36,18 @@ if (document.readyState === 'loading') {
 
 async function switchLanguage(lang) {
     try {
-        // Chemin mis à jour vers le dossier moroccotripmap/
-        const response = await fetch('/translations.json');
+        // Détection automatique du chemin de translations.json peu importe la profondeur de la page
+        const scriptEl = document.querySelector('script[src*="i18n.js"]');
+        let jsonPath = 'translations.json';
+        if (scriptEl) {
+            const src = scriptEl.getAttribute('src');
+            const lastSlash = src.lastIndexOf('/');
+            if (lastSlash !== -1) {
+                jsonPath = src.substring(0, lastSlash + 1) + 'translations.json';
+            }
+        }
+
+        const response = await fetch(jsonPath);
         const data = await response.json();
 
         if (!data[lang]) return;
@@ -60,18 +70,26 @@ async function switchLanguage(lang) {
             }
         });
 
-        // 2. Mettre à jour le label du bouton de langue principal (ex: EN -> FR)
+        // 2. Mettre à jour le label du texte de langue (ex: EN -> FR)
         const langLabel = document.getElementById('current-lang-label');
         if (langLabel) {
             langLabel.textContent = lang.toUpperCase();
         }
 
-        // 3. Mettre à jour le titre de la page (SEO) si défini dans le JSON
+        // 3. Mettre à jour l'image du drapeau si vous avez un élément avec l'ID "current-lang-flag"
+        const langFlag = document.getElementById('current-lang-flag');
+        if (langFlag) {
+            // Adaptez le chemin selon l'emplacement de vos images de drapeaux (ex: 'images/flag-fr.svg')
+            langFlag.src = `images/flag-${lang}.svg`; 
+            langFlag.alt = lang.toUpperCase();
+        }
+
+        // 4. Mettre à jour le titre de la page (SEO) si défini dans le JSON
         if (data[lang].seo && data[lang].seo.destinations_title) {
             document.title = data[lang].seo.destinations_title;
         }
 
-        // 4. Gérer le sens de lecture pour l'arabe (RTL / LTR)
+        // 5. Gérer le sens de lecture pour l'arabe (RTL / LTR)
         document.documentElement.lang = lang;
         document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
