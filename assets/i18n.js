@@ -6,7 +6,7 @@ let translations = {};
 async function loadTranslations() {
     try {
         // Ajustez le chemin vers votre fichier JSON selon l'emplacement de i18n.js
-        const response = await fetch('translations.json');
+        const response = await fetch('assets/translations.json');
         if (!response.ok) {
             throw new Error('Erreur lors du chargement de translations.json');
         }
