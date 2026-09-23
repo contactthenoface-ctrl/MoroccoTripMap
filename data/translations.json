@@ -26,7 +26,8 @@
       "cat_guides": "Travel Guides",
       "history": "History of Morocco",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "directory": "Directory & Database"
     },
     "mobile_menu": {
       "language_title": "Language / Langue"
@@ -38,6 +39,7 @@
     },
     "hero": {
       "badge": "Official Tourism Portal",
+      "directory_badge": "Directory & Database",
       "title_line1": "Discover. Plan.",
       "title_line2": "Experience Morocco.",
       "description": "Your authentic directory and guide to hotels, riads, restaurants, desert adventures, and hidden gems across the Kingdom of Morocco.",
@@ -129,6 +131,11 @@
         "p1": "Marrakech is an intoxicating sensory feast. Framed by the snow-capped Atlas Mountains, this imperial city effortlessly blends ancient Berber heritage with sophisticated contemporary luxury. From the bustling labyrinth of Medina souks to serene hidden patios in century-old riads, Marrakech is Morocco's ultimate cultural capital.",
         "p2": "Whether you are wandering through Yves Saint Laurent's Jardin Majorelle, watching storytellers at Jemaa el-Fnaa as dusk falls, or heading into the nearby Agafay Desert for a night under the stars, Marrakech promises an unforgettable journey."
       },
+      "itinerary": {
+        "badge": "Travel Plan",
+        "title": "Suggested 3-Day Itinerary",
+        "subtitle": "Make the most of your visit with this curated step-by-step 3-day travel plan."
+      },
       "places": {
         "badge": "Top Sightseeing",
         "title": "Must-Visit Places in Marrakech",
@@ -146,6 +153,7 @@
       "stays": {
         "badge": "Where to Stay",
         "title": "Top Riads & Hotels in Marrakech",
+        "subtitle": "Find Your Ideal Stay in Marrakech",
         "view_all": "View All Stays →",
         "mamounia": { "tag": "5-Star Luxury", "title": "La Mamounia", "desc": "World-famous legendary palace hotel." },
         "yasmine": { "tag": "Boutique Riad", "title": "Riad Yasmine", "desc": "Famous for its serene green tiled patio pool." },
@@ -288,7 +296,8 @@
       "cat_guides": "Guides de Voyage",
       "history": "Histoire du Maroc",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "directory": "Annuaire & Base de données"
     },
     "mobile_menu": {
       "language_title": "Langue / Language"
@@ -300,6 +309,7 @@
     },
     "hero": {
       "badge": "Portail Touristique Officiel",
+      "directory_badge": "Annuaire & Base de données",
       "title_line1": "Découvrez. Planifiez.",
       "title_line2": "Vivez le Maroc.",
       "description": "Votre annuaire et guide authentique des hôtels, riads, restaurants, aventures dans le désert et joyaux cachés à travers le Royaume du Maroc.",
@@ -391,6 +401,11 @@
         "p1": "Marrakech est un festin sensoriel envoûtant. Encadrée par les sommets enneigés de l'Atlas, cette ville impériale mêle avec élégance héritage berbère antique et luxe contemporain raffiné. Du labyrinthe animé des souks de la Médina aux patios paisibles des riads centenaires, Marrakech est la capitale culturelle par excellence.",
         "p2": "Que vous flâniez au Jardin Majorelle d'Yves Saint Laurent, écoutiez les conteurs sur la place Jemaa el-Fnaa au coucher du soleil ou partiez dans le désert d'Agafay pour une nuit sous les étoiles, Marrakech vous promet un voyage inoubliable."
       },
+      "itinerary": {
+        "badge": "Plan de Voyage",
+        "title": "Itinéraire suggéré de 3 jours",
+        "subtitle": "Profitez au maximum de votre séjour grâce à cet itinéraire sur mesure de 3 jours."
+      },
       "places": {
         "badge": "Incontournables",
         "title": "Lieux à Visiter Absolument à Marrakech",
@@ -408,6 +423,7 @@
       "stays": {
         "badge": "Où Dormir",
         "title": "Meilleurs Riads & Hôtels à Marrakech",
+        "subtitle": "Trouvez votre hébergement idéal à Marrakech",
         "view_all": "Voir tous les hébergements →",
         "mamounia": { "tag": "Luxe 5 Étoiles", "title": "La Mamounia", "desc": "Hôtel palace mythique de renommée mondiale." },
         "yasmine": { "tag": "Riad de Charme", "title": "Riad Yasmine", "desc": "Célèbre pour son patio intérieur avec piscine verte." },
@@ -550,7 +566,8 @@
       "cat_guides": "Guías de Viaje",
       "history": "Historia de Marruecos",
       "blog": "Blog",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "directory": "Directorio y Base de datos"
     },
     "mobile_menu": {
       "language_title": "Idioma / Language"
@@ -562,6 +579,7 @@
     },
     "hero": {
       "badge": "Portal Turístico Oficial",
+      "directory_badge": "Directorio y Base de datos",
       "title_line1": "Descubre. Planifica.",
       "title_line2": "Vive Marruecos.",
       "description": "Tu directorio y guía auténtica de hoteles, riads, restaurantes, aventuras en el desierto y joyas ocultas en el Reino de Marruecos.",
@@ -653,6 +671,11 @@
         "p1": "Marrakech es un festín sensorial cautivador. Enmarcada por las cumbres nevadas del Atlas, esta ciudad imperial combina la herencia bereber con el lujo contemporáneo. Desde los animados zocos de la Medina hasta los tranquilos patios de sus riads centenarios, es la capital cultural de Marruecos.",
         "p2": "Ya sea paseando por el Jardín Majorelle de Yves Saint Laurent, escuchando a los cuentacuentos en Jemaa el-Fnaa o acampando bajo las estrellas en el desierto de Agafay, Marrakech promete un viaje inolvidable."
       },
+      "itinerary": {
+        "badge": "Plan de Viaje",
+        "title": "Itinerario sugerido de 3 días",
+        "subtitle": "Aprovecha al máximo tu visita con este itinerario personalizado de 3 días paso a paso."
+      },
       "places": {
         "badge": "Lugares Imprescindibles",
         "title": "Atracciones Principales en Marrakech",
@@ -670,6 +693,7 @@
       "stays": {
         "badge": "Dónde Alojarse",
         "title": "Mejores Riads y Hoteles en Marrakech",
+        "subtitle": "Encuentra tu alojamiento ideal en Marrakech",
         "view_all": "Ver todos los alojamientos →",
         "mamounia": { "tag": "Lujo 5 Estrellas", "title": "La Mamounia", "desc": "Mítico hotel palacio de fama mundial." },
         "yasmine": { "tag": "Riad con Encanto", "title": "Riad Yasmine", "desc": "Famoso por su sereno patio con piscina verde." },
@@ -812,7 +836,8 @@
       "cat_guides": "أدلة السفر",
       "history": "تاريخ المغرب",
       "blog": "المدونة",
-      "contact": "اتصل بنا"
+      "contact": "اتصل بنا",
+      "directory": "الدليل وقاعدة البيانات"
     },
     "mobile_menu": {
       "language_title": "اللغة / Language"
@@ -824,6 +849,7 @@
     },
     "hero": {
       "badge": "البوابة السياحية الرسمية",
+      "directory_badge": "الدليل وقاعدة البيانات",
       "title_line1": "اكتشف. خطط.",
       "title_line2": "عِش تجربة المغرب.",
       "description": "دليلك الأصيل للفنادق، الرياضات، المطاعم، مغامرات الصحراء والكنوز الخفية في المملكة المغربية.",
@@ -915,6 +941,11 @@
         "p1": "مراكش رحلة ساحرة للحواس. تقع عند أقدام جبال الأطلس الثلجية، وتجمع بين التراث الأمازيغي العريق والفخامة الحديثة. من أسواق المدينة القديمة إلى رياضاتها الهادئة، تعد مراكش العاصمة الثقافية والسياحية الأولى للمغرب.",
         "p2": "سواء كنت تتجول في حديقة ماجوريل، أو تستمع للحكواتية في ساحة جامع الفناء عند الغروب، أو تخوض مغامرة في صحراء أجباي تحت النجوم، فإن مراكش تعدك برحلة لا تُنسى."
       },
+      "itinerary": {
+        "badge": "خطة السفر",
+        "title": "مسار مقترح لمدة 3 أيام",
+        "subtitle": "استمتع بوقتك إلى أقصى حد مع هذا المسار المخصص لمدة 3 أيام خطوة بخطوة."
+      },
       "places": {
         "badge": "أبرز المعالم",
         "title": "أماكن يجب زيارتها في مراكش",
@@ -932,6 +963,7 @@
       "stays": {
         "badge": "أين تقيم",
         "title": "أفضل الرياضات والفنادق في مراكش",
+        "subtitle": "اعثر على إقامتك المثالية في مراكش",
         "view_all": "عرض جميع أماكن الإقامة ←",
         "mamounia": { "tag": "فخامة 5 نجوم", "title": "المأمونية", "desc": "فندق القصر الأسطوري الشهير عالمياً." },
         "yasmine": { "tag": "رياض مميز", "title": "رياض ياسمين", "desc": "شهير بمسبحه الجميل في الفناء الخارجي." },
