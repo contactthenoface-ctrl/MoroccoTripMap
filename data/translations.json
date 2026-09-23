@@ -155,9 +155,13 @@
       "eat": {
         "badge": "Gastronomy",
         "title": "Best Restaurants & Rooftops",
+        "subtitle": "Handpicked culinary experiences with top guest reviews",
         "nomad": { "tag": "Modern Moroccan", "loc": "Medina Rooftop", "title": "Nomad Marrakech", "desc": "Trendy rooftop terrace overlooking the Spice Square, serving light local cuisine with a modern twist." },
         "jardin": { "tag": "Garden Dining", "loc": "Medina Oasis", "title": "Le Jardin", "desc": "A lush 16th-century courtyard filled with banana trees, offering authentic tagines and tranquil ambiance." },
-        "fassia": { "tag": "Traditional Cuisine", "loc": "Gueliz", "title": "Al Fassia", "desc": "Run entirely by women, famous for its slow-cooked shoulder of lamb and rich traditional pastilla." }
+        "fassia": { "tag": "Traditional Cuisine", "loc": "Gueliz", "title": "Al Fassia", "desc": "Run entirely by women, famous for its slow-cooked shoulder of lamb and rich traditional pastilla." },
+        "moha": { "tag": "Fine Dining", "loc": "Medina Riad", "title": "Dar Moha", "desc": "Refined Moroccan gastronomy served around a courtyard pool in Pierre Balmain's former palace." },
+        "bacha": { "tag": "Café & Pastry", "loc": "Dar El Bacha", "title": "Bacha Coffee", "desc": "Iconic 1930s coffee room offering rare Arabica coffees and French pastries in an opulent palace setting." },
+        "elfenn": { "tag": "Chic Rooftop", "loc": "Medina View", "title": "El Fenn Rooftop", "desc": "Stylish rooftop lounge featuring panoramic views of the Koutoubia, creative cocktails, and tapas." }
       },
       "exp": {
         "badge": "Day Trips & Activities",
@@ -413,9 +417,13 @@
       "eat": {
         "badge": "Gastronomie",
         "title": "Meilleurs Restaurants & Rooftops",
+        "subtitle": "Expériences culinaires sélectionnées avec les meilleures évaluations",
         "nomad": { "tag": "Marocain Moderne", "loc": "Rooftop Médina", "title": "Nomad Marrakech", "desc": "Terrasse branchée sur la Place des Épices, proposant une cuisine locale réinventée." },
         "jardin": { "tag": "Dîner au Jardin", "loc": "Oasis Médina", "title": "Le Jardin", "desc": "Patio verdoyant du XVIe siècle entouré de bananiers, idéal pour savourer un tajine." },
-        "fassia": { "tag": "Cuisine Traditionnelle", "loc": "Guéliz", "title": "Al Fassia", "desc": "Géré exclusivement par des femmes, célèbre pour son épaule d'agneau et sa pastilla." }
+        "fassia": { "tag": "Cuisine Traditionnelle", "loc": "Guéliz", "title": "Al Fassia", "desc": "Géré exclusivement par des femmes, célèbre pour son épaule d'agneau et sa pastilla." },
+        "moha": { "tag": "Haute Gastronomie", "loc": "Riad en Médina", "title": "Dar Moha", "desc": "Gastronomie marocaine raffinée servie autour de la piscine de l'ancien palais de Pierre Balmain." },
+        "bacha": { "tag": "Café & Pâtisserie", "loc": "Dar El Bacha", "title": "Bacha Coffee", "desc": "Salon de café mythique des années 1930 proposant des cafés d'exception et pâtisseries dans un palais somptueux." },
+        "elfenn": { "tag": "Rooftop Chic", "loc": "Vue Médina", "title": "El Fenn Rooftop", "desc": "Lounge élégant sur le toit offrant une vue panoramique sur la Koutoubia, cocktails créatifs et tapas." }
       },
       "exp": {
         "badge": "Excursions & Activités",
@@ -671,9 +679,13 @@
       "eat": {
         "badge": "Gastronomía",
         "title": "Mejores Restaurantes y Terrazas",
+        "subtitle": "Experiencias culinarias seleccionadas con las mejores opiniones",
         "nomad": { "tag": "Marroquí Moderno", "loc": "Terraza Medina", "title": "Nomad Marrakech", "desc": "Moderna terraza con vistas a la Plaza de las Especias y cocina local ligera." },
         "jardin": { "tag": "Cena en Jardín", "loc": "Oasis Medina", "title": "Le Jardin", "desc": "Frondoso patio del siglo XVI rodeado de plataneros, perfecto para probar tajines." },
-        "fassia": { "tag": "Cocina Tradicional", "loc": "Gueliz", "title": "Al Fassia", "desc": "Dirigido por mujeres, famoso por su cordero asado y pastilla tradicional." }
+        "fassia": { "tag": "Cocina Tradicional", "loc": "Gueliz", "title": "Al Fassia", "desc": "Dirigido por mujeres, famoso por su cordero asado y pastilla tradicional." },
+        "moha": { "tag": "Alta Gastronomía", "loc": "Riad en Medina", "title": "Dar Moha", "desc": "Gastronomía marroquí refinada servida alrededor de la piscina del antiguo palacio de Pierre Balmain." },
+        "bacha": { "tag": "Café y Pastelería", "loc": "Dar El Bacha", "title": "Bacha Coffee", "desc": "Mítico café de los años 30 que ofrece cafés de arábica raros y repostería francesa en un palacio ostentoso." },
+        "elfenn": { "tag": "Terraza Elegante", "loc": "Vistas Medina", "title": "El Fenn Rooftop", "desc": "Elegante lounge en la azotea con vistas panorámicas a la Koutoubia, cócteles creativos y tapas." }
       },
       "exp": {
         "badge": "Excursiones y Actividades",
@@ -891,7 +903,7 @@
     },
     "marrakech_page": {
       "seo": { "title": "دليل السفر إلى مراكش | أهم المعالم، الرياضات والتجارب | MoroccoTripMap" },
-      "hero_subtitle": "المدينة الحمراء، القصور العريقة، الأسواق النابضة، الحدائق الخفية وبوابة الصحراء.",
+      "hero_subtitle": "المدينة الحمراء، القصور العريقة، الأسوق النابضة، الحدائق الخفية وبوابة الصحراء.",
       "info": {
         "best_time_label": "أفضل وقت للزيارة", "best_time_val": "أكتوبر – مايو",
         "stay_label": "مدة الإقامة المثالية", "stay_val": "3 – 5 أيام",
@@ -929,9 +941,13 @@
       "eat": {
         "badge": "فن الطبخ",
         "title": "أفضل المطاعم والمقاهي المطلة",
+        "subtitle": "تجارب طهي مختارة بعناية مع أفضل تقييمات الزوار",
         "nomad": { "tag": "مغربي حديث", "loc": "سطح المدينة", "title": "نوماد مراكش", "desc": "شرفة حديثة تطل على ساحة الرحبة القديمة وتقدم أطباقاً محلية مبتكرة." },
         "jardin": { "tag": "تناول الطعام في الحديقة", "loc": "واحة المدينة", "title": "لو جاردان", "desc": "فناء خضراء يعود للقرن السادس عشر تحيط به أشجار الموز والعرائش." },
-        "fassia": { "tag": "طبخ تقليدي", "loc": "جليز", "title": "الفاسية", "desc": "مطعم تسيره النساء بالكامل، شهير بكتف الخروف المحمر والبسطيلة." }
+        "fassia": { "tag": "طبخ تقليدي", "loc": "جليز", "title": "الفاسية", "desc": "مطعم تسيره النساء بالكامل، شهير بكتف الخروف المحمر والبسطيلة." },
+        "moha": { "tag": "مطبخ فاخر", "loc": "رياض في المدينة", "title": "دار موحى", "desc": "مطبخ مغربي راقٍ يُقدم حول مسبح الفناء في القصر السابق للمصمم بيير بالمان." },
+        "bacha": { "tag": "مقهى وحلويات", "loc": "دار الباشا", "title": "باشا كوفي", "desc": "مقهى أسطوري من ثلاثينيات القرن الماضي يقدم أنواع القهوة النادرة والحلويات الفرنسية في قصر فاخر." },
+        "elfenn": { "tag": "سطح أنيق", "loc": "إطلالة على المدينة", "title": "الفيـن روفتوب", "desc": "صالة أنيقة على السطح تتميز بإطلالة بانورامية على الكتبية ومشروبات وأطباق خفيفة مبتكرة." }
       },
       "exp": {
         "badge": "رحلات وأنشطة",
