@@ -402,362 +402,841 @@
     </div>
 </section>
 
-        <!-- ==========================================
-             SECTION RÉPERTOIRE & FILTRES DES 60 HÉBERGEMENTS
-             ========================================== -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="filter-section">
-                <span class="text-xs font-bold text-sable uppercase tracking-wider">Directory & Database</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-vert mt-1 flex items-center gap-2">
-                    <svg class="w-7 h-7 text-sable" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                    Trouvez votre hébergement idéal à Marrakech
-                </h2>
-                <p class="text-sm text-sombre/70 mt-2">Utilisez les filtres ci-dessous pour trier instantanément les meilleures adresses selon vos critères de recherche.</p>
-                
-                <div class="filter-container">
-                    <!-- Filtre par Type d'établissement -->
-                    <div class="filter-group">
-                        <label for="filter-type">Type d'hébergement :</label>
-                        <select id="filter-type" onchange="filterAccommodations()">
-                            <option value="all">Tous les types</option>
-                            <option value="hotel">Hôtels & Resorts</option>
-                            <option value="riad">Riads traditionnels</option>
-                            <option value="maison">Maisons d'hôtes</option>
-                        </select>
-                    </div>
-
-                    <!-- Filtre par Quartier / Zone -->
-                    <div class="filter-group">
-                        <label for="filter-location">Quartier / Zone :</label>
-                        <select id="filter-location" onchange="filterAccommodations()">
-                            <option value="all">Toutes les zones</option>
-                            <option value="medina">Médina & Kasbah (Centre historique)</option>
-                            <option value="hivernage">L'Hivernage & Gueliz (Ville nouvelle)</option>
-                            <option value="palmeraie">La Palmeraie</option>
-                            <option value="peripherie">Périphérie & Routes de l'Atlas</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Compteur dynamique -->
-                <div class="filter-counter" id="accommodation-counter">60 établissements trouvés</div>
+<!-- ==========================================
+     SECTION RÉPERTOIRE & FILTRES DES 60 HÉBERGEMENTS
+     ========================================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="filter-section mb-8">
+        <span class="text-xs font-bold text-sable uppercase tracking-wider" data-i18n="marrakech_page.directory.badge">Directory & Database</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-vert mt-1 flex items-center gap-2">
+            <svg class="w-7 h-7 text-sable" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span data-i18n="marrakech_page.directory.title">Find Your Ideal Stay in Marrakech</span>
+        </h2>
+        <p class="text-sm text-sombre/70 mt-2" data-i18n="marrakech_page.directory.subtitle">Use the filters below to instantly sort the best places based on your search criteria.</p>
+        
+        <div class="filter-container mt-6 flex flex-wrap gap-4">
+            <!-- Filter by Accommodation Type -->
+            <div class="filter-group flex flex-col">
+                <label for="filter-type" class="text-xs font-semibold mb-1" data-i18n="marrakech_page.directory.filter_type_label">Accommodation Type:</label>
+                <select id="filter-type" onchange="filterAccommodations()" class="p-2 border rounded-md">
+                    <option value="all" data-i18n="marrakech_page.directory.type_all">All Types</option>
+                    <option value="hotel" data-i18n="marrakech_page.directory.type_hotel">Hotels & Resorts</option>
+                    <option value="riad" data-i18n="marrakech_page.directory.type_riad">Traditional Riads</option>
+                    <option value="maison" data-i18n="marrakech_page.directory.type_guesthouse">Guesthouses</option>
+                </select>
             </div>
 
-            <!-- Grille complète des 60 hébergements qualifiés -->
-            <div class="accommodation-grid" id="accommodation-list">
-                <!-- HÔTELS & RESORTS (20 adresses) -->
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>1. Hôtel La Mamounia</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Hôtel & Palace</p>
-                    <p class="acc-contact">Tél : +212 524 388 600 | <a href="https://www.mamounia.com" target="_blank">mamounia.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="peripherie">
-                    <h3>2. The Oberoi Marrakech</h3>
-                    <p class="acc-meta">Quartier : Route de Ouarzazate | Type : Hôtel & Palace</p>
-                    <p class="acc-contact">Tél : +212 525 081 500 | <a href="https://www.oberoihotels.com" target="_blank">oberoihotels.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="peripherie">
-                    <h3>3. Fairmont Royal Palm</h3>
-                    <p class="acc-meta">Quartier : Route d'Amizmiz | Type : Resort & Golf</p>
-                    <p class="acc-contact">Tél : +212 524 487 800 | <a href="https://www.fairmont.com/marrakech" target="_blank">fairmont.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="peripherie">
-                    <h3>4. Selman Marrakech</h3>
-                    <p class="acc-meta">Quartier : Route d'Amizmiz | Type : Hôtel de Luxe</p>
-                    <p class="acc-contact">Tél : +212 524 459 600 | <a href="https://www.selman-marrakech.com" target="_blank">selman-marrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="peripherie">
-                    <h3>5. Amanjena</h3>
-                    <p class="acc-meta">Quartier : Route de Ouarzazate | Type : Hôtel & Villas</p>
-                    <p class="acc-contact">Tél : +212 524 399 000 | <a href="https://www.aman.com" target="_blank">aman.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>6. Savoy Le Grand Hotel</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Grand Hôtel</p>
-                    <p class="acc-contact">Tél : +212 524 351 000 | <a href="https://www.savoylegrandhotelmarrakech.com" target="_blank">savoylegrandhotelmarrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>7. Four Seasons Resort</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Resort Familial</p>
-                    <p class="acc-contact">Tél : +212 524 359 200 | <a href="https://www.fourseasons.com/marrakech" target="_blank">fourseasons.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>8. Mövenpick Hotel Mansour Eddahbi</h3>
-                    <p class="acc-meta">Quartier : L'Hivernage | Type : Hôtel & Congrès</p>
-                    <p class="acc-contact">Tél : +212 524 339 100 | <a href="https://www.movenpick.com" target="_blank">movenpick.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="medina">
-                    <h3>9. Hotel Les Jardins de La Koutoubia</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Hôtel Traditionnel</p>
-                    <p class="acc-contact">Tél : +212 524 388 800 | <a href="https://www.lesjardinsdelakoutoubia.com" target="_blank">lesjardinsdelakoutoubia.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>10. Radisson Blu Hotel</h3>
-                    <p class="acc-meta">Quartier : Gueliz | Type : Hôtel Urbain</p>
-                    <p class="acc-contact">Tél : +212 525 077 000 | <a href="https://www.radissonhotels.com" target="_blank">radissonhotels.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>11. Sofitel Marrakech Palais Impérial</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Hôtel Luxe</p>
-                    <p class="acc-contact">Tél : +212 524 425 600 | <a href="https://sofitel.accor.com" target="_blank">sofitel.accor.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>12. Es Saadi Marrakech Resort</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Palace & Spa</p>
-                    <p class="acc-contact">Tél : +212 524 337 400 | <a href="https://www.essaadi.com" target="_blank">essaadi.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="palmeraie">
-                    <h3>13. Barceló Palmeraie</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Resort</p>
-                    <p class="acc-contact">Tél : +212 524 393 800 | <a href="https://www.barcelo.com" target="_blank">barcelo.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="medina">
-                    <h3>14. Hôtel Islane</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Hôtel Traditionnel</p>
-                    <p class="acc-contact">Tél : +212 524 440 081 | <a href="http://www.hotel-islane.com" target="_blank">hotel-islane.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>15. KENZI FARAH</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Hôtel 5 Étoiles</p>
-                    <p class="acc-contact">Tél : +212 524 447 400 | <a href="https://www.kenzi-hotels.com" target="_blank">kenzi-hotels.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="palmeraie">
-                    <h3>16. Tigmiza Boutique Hotel</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Hôtel-Palais</p>
-                    <p class="acc-contact">Tél : +212 524 393 700 | <a href="https://www.hotel-tigmiza.com" target="_blank">hotel-tigmiza.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>17. Hôtel Novotel Marrakech</h3>
-                    <p class="acc-meta">Quartier : Hivernage | Type : Hôtel Moderne</p>
-                    <p class="acc-contact">Tél : +212 524 424 500 | <a href="https://all.accor.com" target="_blank">all.accor.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>18. ibis Marrakech Centre Gare</h3>
-                    <p class="acc-meta">Quartier : Gueliz | Type : Hôtel Économique</p>
-                    <p class="acc-contact">Tél : +212 524 435 929 | <a href="https://all.accor.com" target="_blank">all.accor.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="hivernage">
-                    <h3>19. Pestana CR7 Marrakech</h3>
-                    <p class="acc-meta">Quartier : M Avenue | Type : Lifestyle Hotel</p>
-                    <p class="acc-contact">Tél : +212 525 072 730 | <a href="https://www.pestanacr7.com" target="_blank">pestanacr7.com</a></p>
-                </div>
-                <div class="acc-card" data-type="hotel" data-location="palmeraie">
-                    <h3>20. Palais Namaskar</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Luxury Palace</p>
-                    <p class="acc-contact">Tél : +212 524 299 800 | <a href="https://www.palaisnamaskar.com" target="_blank">palaisnamaskar.com</a></p>
-                </div>
-
-                <!-- RIADS TRADITIONNELS (20 adresses) -->
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>21. Royal Mansour Marrakech</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Riad d'Exception</p>
-                    <p class="acc-contact">Tél : +212 529 808 080 | <a href="https://www.royalmansour.com" target="_blank">royalmansour.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>22. Riad Yasmine</h3>
-                    <p class="acc-meta">Quartier : Bab Taghzout | Type : Boutique Riad</p>
-                    <p class="acc-contact">Tél : +212 524 377 012 | <a href="https://www.riad-yasmine.com" target="_blank">riad-yasmine.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>23. El Fenn</h3>
-                    <p class="acc-meta">Quartier : Mouassine | Type : Riad Bohème Chic</p>
-                    <p class="acc-contact">Tél : +212 524 441 220 | <a href="https://el-fenn.com" target="_blank">el-fenn.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>24. Riad Kniza</h3>
-                    <p class="acc-meta">Quartier : Bab Doukkala | Type : Riad Historique</p>
-                    <p class="acc-contact">Tél : +212 524 376 942 | <a href="http://www.riadkniza.com" target="_blank">riadkniza.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>25. L'Hôtel Marrakech</h3>
-                    <p class="acc-meta">Quartier : Bab Doukkala | Type : Riad de Luxe</p>
-                    <p class="acc-contact">Tél : +212 524 387 880 | <a href="https://l-hotelmarrakech.com" target="_blank">l-hotelmarrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>26. Riad Nyla Wellness and Spa</h3>
-                    <p class="acc-meta">Quartier : Dar El Bacha | Type : Riad & Spa</p>
-                    <p class="acc-contact">Tél : +212 615 232 469 | <a href="https://riadnyla.com" target="_blank">riadnyla.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>27. La Sultana Marrakech</h3>
-                    <p class="acc-meta">Quartier : Kasbah | Type : Riad-Hôtel Luxe</p>
-                    <p class="acc-contact">Tél : +212 524 388 008 | <a href="https://www.lasultanahotels.com" target="_blank">lasultanahotels.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>28. Riad Palais des Princesses</h3>
-                    <p class="acc-meta">Quartier : Riad Zitoun | Type : Riad Romantique</p>
-                    <p class="acc-contact">Tél : +212 524 375 340 | <a href="http://www.palaisdesprincesses.com" target="_blank">palaisdesprincesses.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>29. Riad Palais Sebban</h3>
-                    <p class="acc-meta">Quartier : Ksour | Type : Riad Historique</p>
-                    <p class="acc-contact">Tél : +212 524 440 225 | <a href="https://www.palais-sebban.com" target="_blank">palais-sebban.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>30. Riad Kheirredine</h3>
-                    <p class="acc-meta">Quartier : Sidi Ben Slimane | Type : Boutique Riad</p>
-                    <p class="acc-contact">Tél : +212 524 386 364 | <a href="http://www.riadkheirredine.com" target="_blank">riadkheirredine.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>31. Le Farnatchi</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Riad Haut de gamme</p>
-                    <p class="acc-contact">Tél : +212 524 384 910 | <a href="https://www.lefarnatchi.com" target="_blank">lefarnatchi.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>32. Riad Tarabel</h3>
-                    <p class="acc-meta">Quartier : Dar El Bacha | Type : Riad de Charme</p>
-                    <p class="acc-contact">Tél : +212 524 391 706 | <a href="https://riadtarabel.com" target="_blank">riadtarabel.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>33. Riad BE Marrakech</h3>
-                    <p class="acc-meta">Quartier : Bab Doukkala | Type : Graphic Riad</p>
-                    <p class="acc-contact">Tél : +212 524 384 511 | <a href="https://www.be-marrakech.com" target="_blank">be-marrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>34. Riad Sakkan</h3>
-                    <p class="acc-meta">Quartier : Sidi El Yamani | Type : Riad Art & Design</p>
-                    <p class="acc-contact">Tél : +212 662 670 290 | <a href="https://riad-sakkan.com" target="_blank">riad-sakkan.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>35. Riad Botanica</h3>
-                    <p class="acc-meta">Quartier : Bab Doukkala | Type : Art-Déco Riad</p>
-                    <p class="acc-contact">Tél : +212 466 619 631 | <a href="https://riadbotanica.com" target="_blank">riadbotanica.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>36. Riad Les Yeux Bleus</h3>
-                    <p class="acc-meta">Quartier : Bab Doukkala | Type : Pop Riad</p>
-                    <p class="acc-contact">Tél : +212 524 378 161 | <a href="https://riadlesyeuxbleus.com" target="_blank">riadlesyeuxbleus.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>37. Villa des Orangers</h3>
-                    <p class="acc-meta">Quartier : Sidi Mimoun | Type : Relais & Châteaux</p>
-                    <p class="acc-contact">Tél : +212 524 384 638 | <a href="http://www.villadesorangers.com" target="_blank">villadesorangers.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>38. Riad Danka Boutique Hôtel</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Boutique Riad</p>
-                    <p class="acc-contact">Tél : +212 524 386 230 | <a href="http://www.riaddanka.com" target="_blank">riaddanka.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>39. Riad Dar Anika</h3>
-                    <p class="acc-meta">Quartier : Riad Zitoun | Type : Riad Feutré</p>
-                    <p class="acc-contact">Tél : +212 524 391 751 | <a href="http://www.riadanika.com" target="_blank">riadanika.com</a></p>
-                </div>
-                <div class="acc-card" data-type="riad" data-location="medina">
-                    <h3>40. Riad Dar Sara</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Authentic Riad</p>
-                    <p class="acc-contact">Tél : +212 524 440 263 | <a href="https://www.riad-darsara.com" target="_blank">riad-darsara.com</a></p>
-                </div>
-
-                <!-- MAISONS D'HÔTES (20 adresses) -->
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>41. Riad Al Badia</h3>
-                    <p class="acc-meta">Quartier : Berrima | Type : Maison d'hôtes</p>
-                    <p class="acc-contact">Tél : +212 524 380 435 | <a href="https://riadalbadia-marrakech.com" target="_blank">riadalbadia-marrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>42. Riad Aya</h3>
-                    <p class="acc-meta">Quartier : Dar El Bacha | Type : Maison d'hôtes</p>
-                    <p class="acc-contact">Tél : +212 524 376 274 | <a href="http://www.riadaya.com" target="_blank">riadaya.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>43. Maison d'hôtes Chamade</h3>
-                    <p class="acc-meta">Quartier : Riad Laarouss | Type : Maison de Charme</p>
-                    <p class="acc-contact">Tél : +212 665 844 874 | <a href="http://riadchamadeluxury.com" target="_blank">riadchamadeluxury.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>44. Riad Jnan El Cadi</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Havre Historique</p>
-                    <p class="acc-contact">Tél : +212 524 391 035 | <a href="http://www.jnanelcadi.com" target="_blank">jnanelcadi.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>45. Riad Ayada</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Maison d'hôtes</p>
-                    <p class="acc-contact">Tél : +212 621 075 643 | <a href="http://www.ayada-marrakech.com" target="_blank">ayada-marrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>46. Manzil la Tortue</h3>
-                    <p class="acc-meta">Quartier : Banlieue | Type : Maison Champêtre</p>
-                    <p class="acc-contact">Tél : +212 524 403 463 | <a href="http://www.manzillatortue.com" target="_blank">manzillatortue.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="palmeraie">
-                    <h3>47. Lodge K</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Lodges de Charme</p>
-                    <p class="acc-contact">Tél : +212 524 329 036 | <a href="https://www.lodgek.com" target="_blank">lodgek.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>48. Le Palais Paysan</h3>
-                    <p class="acc-meta">Quartier : Route d'Amizmiz | Type : Lodge & Montagne</p>
-                    <p class="acc-contact">Tél : +212 661 178 770 | <a href="http://www.lepalaispaysan.com" target="_blank">lepalaispaysan.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>49. Berber Lodge</h3>
-                    <p class="acc-meta">Quartier : Oumnass | Type : Eco-Lodge Rustique</p>
-                    <p class="acc-contact">Tél : +212 524 435 342 | <a href="http://www.berberlodge.net" target="_blank">berberlodge.net</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>50. Kasbah Beldi</h3>
-                    <p class="acc-meta">Quartier : Barrage Lalla Takerkoust | Type : Kasbah d'Hôtes</p>
-                    <p class="acc-contact">Tél : +212 524 383 929 | <a href="http://www.kasbahbeldi.com" target="_blank">kasbahbeldi.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="palmeraie">
-                    <h3>51. Eden Lodges and Spa</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Éco-Lodges</p>
-                    <p class="acc-contact">Tél : +212 524 328 178 | <a href="https://www.edenlodgesmarrakech.com" target="_blank">edenlodgesmarrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>52. Riad Jnane Tihihit</h3>
-                    <p class="acc-meta">Quartier : Vallée de l'Ourika | Type : Ferme d'Hôtes Bio</p>
-                    <p class="acc-contact">Tél : +212 661 190 273 | <a href="http://www.jnanetihihit.com" target="_blank">jnanetihihit.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>53. Villa Katia</h3>
-                    <p class="acc-meta">Quartier : Route de l'Ourika | Type : Villa Familiale</p>
-                    <p class="acc-contact">Tél : +212 524 381 200 | <a href="http://www.villakatiamarrakech.com" target="_blank">villakatiamarrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="peripherie">
-                    <h3>54. Villa Atika</h3>
-                    <p class="acc-meta">Quartier : Route de Fès | Type : Propriété d'Hôtes</p>
-                    <p class="acc-contact">Tél : +212 703 012 803 | <a href="https://villaatikamarrakech.com" target="_blank">villaatikamarrakech.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>55. Dar Assiya</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Demeure Historique</p>
-                    <p class="acc-contact">Tél : +212 524 382 180 | <a href="http://www.dar-assiya.com" target="_blank">dar-assiya.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>56. Riad Adore</h3>
-                    <p class="acc-meta">Quartier : Dar El Bacha | Type : Maison Lumineuse</p>
-                    <p class="acc-contact">Tél : +212 524 377 737 | <a href="https://riadadore.com" target="_blank">riadadore.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>57. Dar Darma</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Suites Théâtrales</p>
-                    <p class="acc-contact">Tél : +212 616 868 866 | <a href="http://www.dardarma.com" target="_blank">dardarma.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="palmeraie">
-                    <h3>58. Dar Zemora</h3>
-                    <p class="acc-meta">Quartier : La Palmeraie | Type : Villa Confidentielle</p>
-                    <p class="acc-contact">Tél : +212 524 329 977 | <a href="http://www.darzemora.com" target="_blank">darzemora.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>59. Riad Spice by Marrakech Riad</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Maison d'Hôtes</p>
-                    <p class="acc-contact">Tél : +212 678 451 893 | <a href="https://marrakechriad.com" target="_blank">marrakechriad.com</a></p>
-                </div>
-                <div class="acc-card" data-type="maison" data-location="medina">
-                    <h3>60. Riad Al Rimal</h3>
-                    <p class="acc-meta">Quartier : Médina | Type : Maison Conviviale</p>
-                    <p class="acc-contact">Tél : +212 524 427 493 | <a href="http://www.riad-alrimal.com" target="_blank">riad-alrimal.com</a></p>
-                </div>
+            <!-- Filter by District / Area -->
+            <div class="filter-group flex flex-col">
+                <label for="filter-location" class="text-xs font-semibold mb-1" data-i18n="marrakech_page.directory.filter_location_label">District / Area:</label>
+                <select id="filter-location" onchange="filterAccommodations()" class="p-2 border rounded-md">
+                    <option value="all" data-i18n="marrakech_page.directory.location_all">All Areas</option>
+                    <option value="medina" data-i18n="marrakech_page.directory.location_medina">Medina & Kasbah (Historic Center)</option>
+                    <option value="hivernage" data-i18n="marrakech_page.directory.location_hivernage">Hivernage & Gueliz (New City)</option>
+                    <option value="palmeraie" data-i18n="marrakech_page.directory.location_palmeraie">La Palmeraie</option>
+                    <option value="peripherie" data-i18n="marrakech_page.directory.location_outskirts">Outskirts & Atlas Routes</option>
+                </select>
             </div>
+        </div>
+        
+        <!-- Dynamic Counter -->
+        <div class="filter-counter mt-4 font-bold text-sm text-vert" id="accommodation-counter" data-i18n="marrakech_page.directory.counter">60 accommodations found</div>
+    </div>
 
-            <!-- Message d'alerte si aucun filtre ne correspond -->
-            <div id="no-results" class="no-results-msg" style="display: none;">
-                Aucun hébergement ne correspond exactement à cette combinaison de filtres. Essayez d'élargir votre recherche.
+    <!-- Complete Grid of 60 Accommodations -->
+    <div class="accommodation-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="accommodation-list">
+        
+        <!-- HÔTELS & RESORTS (1 à 20) -->
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="La Mamounia" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">1. Hôtel La Mamounia</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Hotel & Palace 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 388 600 | <a href="https://www.mamounia.com" target="_blank" class="underline">mamounia.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=La+Mamounia+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
             </div>
-        </section>
+        </div>
 
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="The Oberoi Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">2. The Oberoi Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Ouarzazate Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Hotel & Palace 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 525 081 500 | <a href="https://www.oberoihotels.com" target="_blank" class="underline">oberoihotels.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=The+Oberoi+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Fairmont Royal Palm" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">3. Fairmont Royal Palm</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Amizmiz Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Resort & Golf 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 487 800 | <a href="https://www.fairmont.com/marrakech" target="_blank" class="underline">fairmont.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Fairmont+Royal+Palm+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Selman Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">4. Selman Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Amizmiz Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Luxury Hotel 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 459 600 | <a href="https://www.selman-marrakech.com" target="_blank" class="underline">selman-marrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Selman+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Amanjena" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">5. Amanjena</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Ouarzazate Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Hotel & Villas 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 399 000 | <a href="https://www.aman.com" target="_blank" class="underline">aman.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Amanjena+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Savoy Le Grand Hotel" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">6. Savoy Le Grand Hotel</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Grand Hotel 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 351 000 | <a href="https://www.savoylegrandhotelmarrakech.com" target="_blank" class="underline">savoylegrandhotelmarrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Savoy+Le+Grand+Hotel+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Four Seasons Resort" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">7. Four Seasons Resort</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Family Resort 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 359 200 | <a href="https://www.fourseasons.com/marrakech" target="_blank" class="underline">fourseasons.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Four+Seasons+Resort+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Mövenpick Mansour Eddahbi" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">8. Mövenpick Mansour Eddahbi</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Hotel & Convention 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 339 100 | <a href="https://www.movenpick.com" target="_blank" class="underline">movenpick.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Movenpick+Hotel+Mansour+Eddahbi+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Hotel Les Jardins de La Koutoubia" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">9. Les Jardins de La Koutoubia</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.9 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Traditional Hotel 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 388 800 | <a href="https://www.lesjardinsdelakoutoubia.com" target="_blank" class="underline">lesjardinsdelakoutoubia.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Les+Jardins+de+La+Koutoubia" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Radisson Blu Hotel" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">10. Radisson Blu Hotel</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Gueliz | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Urban Hotel 4*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 525 077 000 | <a href="https://www.radissonhotels.com" target="_blank" class="underline">radissonhotels.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Radisson+Blu+Hotel+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Sofitel Palais Impérial" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">11. Sofitel Palais Impérial</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.7 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Luxury Hotel 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 425 600 | <a href="https://sofitel.accor.com" target="_blank" class="underline">sofitel.accor.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Sofitel+Marrakech+Palais+Imperial" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Es Saadi Marrakech Resort" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">12. Es Saadi Resort</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Palace & Spa 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 337 400 | <a href="https://www.essaadi.com" target="_blank" class="underline">essaadi.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Es+Saadi+Marrakech+Resort" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Barceló Palmeraie" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">13. Barceló Palmeraie</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Resort 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 393 800 | <a href="https://www.barcelo.com" target="_blank" class="underline">barcelo.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Barcelo+Palmeraie+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Hôtel Islane" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">14. Hôtel Islane</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.0 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Traditional Hotel 3*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 440 081 | <a href="http://www.hotel-islane.com" target="_blank" class="underline">hotel-islane.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Hotel+Islane+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Kenzi Farah" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">15. KENZI FARAH</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 7.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: 5-Star Hotel</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 447 400 | <a href="https://www.kenzi-hotels.com" target="_blank" class="underline">kenzi-hotels.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Kenzi+Farah+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Tigmiza Boutique Hotel" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">16. Tigmiza Boutique Hotel</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.0 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Palace Hotel 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 393 700 | <a href="https://www.hotel-tigmiza.com" target="_blank" class="underline">hotel-tigmiza.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Tigmiza+Boutique+Hotel" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Hôtel Novotel Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">17. Novotel Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Hivernage | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Modern Hotel 4*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 424 500 | <a href="https://all.accor.com" target="_blank" class="underline">all.accor.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Novotel+Marrakech+Hivernage" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="ibis Marrakech Gare" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">18. ibis Centre Gare</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 7.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Gueliz | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Budget Hotel 3*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 435 929 | <a href="https://all.accor.com" target="_blank" class="underline">all.accor.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Ibis+Marrakech+Centre+Gare" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="hivernage">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Pestana CR7 Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">19. Pestana CR7 Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: M Avenue | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Lifestyle Hotel 4*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 525 072 730 | <a href="https://www.pestanacr7.com" target="_blank" class="underline">pestanacr7.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Pestana+CR7+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="hotel" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Palais Namaskar" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">20. Palais Namaskar</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Luxury Palace 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 299 800 | <a href="https://www.palaisnamaskar.com" target="_blank" class="underline">palaisnamaskar.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Palais+Namaskar+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <!-- TRADITIONAL RIADS (21 à 40) -->
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Royal Mansour Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">21. Royal Mansour</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.7 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Exceptional Riad 5*</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 529 808 080 | <a href="https://www.royalmansour.com" target="_blank" class="underline">royalmansour.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Royal+Mansour+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Riad Yasmine" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">22. Riad Yasmine</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Taghzout | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Boutique Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 377 012 | <a href="https://www.riad-yasmine.com" target="_blank" class="underline">riad-yasmine.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Yasmine+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="El Fenn" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">23. El Fenn</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Mouassine | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Boho-Chic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 441 220 | <a href="https://el-fenn.com" target="_blank" class="underline">el-fenn.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=El+Fenn+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Riad Kniza" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">24. Riad Kniza</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Doukkala | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Historic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 376 942 | <a href="http://www.riadkniza.com" target="_blank" class="underline">riadkniza.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Kniza+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="L'Hôtel Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">25. L'Hôtel Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Doukkala | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Luxury Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 387 880 | <a href="https://l-hotelmarrakech.com" target="_blank" class="underline">l-hotelmarrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=L%27Hotel+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Riad Nyla Wellness" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">26. Riad Nyla Wellness</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Dar El Bacha | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Riad & Spa</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 615 232 469 | <a href="https://riadnyla.com" target="_blank" class="underline">riadnyla.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Nyla+Wellness+and+Spa" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="La Sultana Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">27. La Sultana Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Kasbah | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Luxury Riad Hotel</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 388 008 | <a href="https://www.lasultanahotels.com" target="_blank" class="underline">lasultanahotels.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=La+Sultana+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Riad Palais des Princesses" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">28. Palais des Princesses</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.9 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Riad Zitoun | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Romantic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 375 340 | <a href="http://www.palaisdesprincesses.com" target="_blank" class="underline">palaisdesprincesses.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Palais+des+Princesses" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Riad Palais Sebban" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">29. Riad Palais Sebban</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Ksour | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Historic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 440 225 | <a href="https://www.palais-sebban.com" target="_blank" class="underline">palais-sebban.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Palais+Sebban" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Riad Kheirredine" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">30. Riad Kheirredine</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Sidi Ben Slimane | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Boutique Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 386 364 | <a href="http://www.riadkheirredine.com" target="_blank" class="underline">riadkheirredine.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Kheirredine" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Le Farnatchi" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">31. Le Farnatchi</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Upscale Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 384 910 | <a href="https://www.lefarnatchi.com" target="_blank" class="underline">lefarnatchi.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Le+Farnatchi" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Riad Tarabel" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">32. Riad Tarabel</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Dar El Bacha | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Charming Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 391 706 | <a href="https://riadtarabel.com" target="_blank" class="underline">riadtarabel.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Tarabel" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Riad BE Marrakech" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">33. Riad BE Marrakech</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Doukkala | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Graphic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 384 511 | <a href="https://www.be-marrakech.com" target="_blank" class="underline">be-marrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+BE+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Riad Sakkan" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">34. Riad Sakkan</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Sidi El Yamani | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Art & Design Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 662 670 290 | <a href="https://riad-sakkan.com" target="_blank" class="underline">riad-sakkan.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Sakkan" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Riad Botanica" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">35. Riad Botanica</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Doukkala | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Art-Deco Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 466 619 631 | <a href="https://riadbotanica.com" target="_blank" class="underline">riadbotanica.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Botanica+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Riad Les Yeux Bleus" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">36. Riad Les Yeux Bleus</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Bab Doukkala | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Pop Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 378 161 | <a href="https://riadlesyeuxbleus.com" target="_blank" class="underline">riadlesyeuxbleus.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Les+Yeux+Bleus" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Villa des Orangers" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">37. Villa des Orangers</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Sidi Mimoun | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Relais & Châteaux</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 384 638 | <a href="http://www.villadesorangers.com" target="_blank" class="underline">villadesorangers.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=La+Villa+des+Orangers" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Riad Danka" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">38. Riad Danka</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Boutique Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 386 230 | <a href="http://www.riaddanka.com" target="_blank" class="underline">riaddanka.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Danka" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Riad Dar Anika" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">39. Riad Dar Anika</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Riad Zitoun | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Cozy Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 391 751 | <a href="http://www.riadanika.com" target="_blank" class="underline">riadanika.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Dar+Anika" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="riad" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Riad Dar Sara" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">40. Riad Dar Sara</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Authentic Riad</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 440 263 | <a href="https://www.riad-darsara.com" target="_blank" class="underline">riad-darsara.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Dar+Sara" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <!-- MAISONS D'HÔTES (41 à 60) -->
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Riad Al Badia" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">41. Riad Al Badia</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.0 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Berrima | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 380 435 | <a href="https://riadalbadia-marrakech.com" target="_blank" class="underline">riadalbadia-marrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Al+Badia" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Riad Aya" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">42. Riad Aya</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Dar El Bacha | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 376 274 | <a href="http://www.riadaya.com" target="_blank" class="underline">riadaya.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Aya+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Maison d'hôtes Chamade" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">43. Maison Chamade</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Riad Laarouss | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Charming Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 665 844 874 | <a href="http://riadchamadeluxury.com" target="_blank" class="underline">riadchamadeluxury.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Maison+Chamade+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Riad Jnan El Cadi" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">44. Riad Jnan El Cadi</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Historic Haven</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 391 035 | <a href="http://www.jnanelcadi.com" target="_blank" class="underline">jnanelcadi.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Jnan+El+Cadi" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Riad Ayada" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">45. Riad Ayada</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.9 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 621 075 643 | <a href="http://www.ayada-marrakech.com" target="_blank" class="underline">ayada-marrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Ayada+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Manzil la Tortue" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">46. Manzil la Tortue</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.7 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Outskirts | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Country Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 403 463 | <a href="http://www.manzillatortue.com" target="_blank" class="underline">manzillatortue.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Manzil+la+Tortue" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Lodge K" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">47. Lodge K</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Charming Lodges</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 329 036 | <a href="https://www.lodgek.com" target="_blank" class="underline">lodgek.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Lodge+K+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Le Palais Paysan" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">48. Le Palais Paysan</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.0 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Amizmiz Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Lodge & Mountain</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 661 178 770 | <a href="http://www.lepalaispaysan.com" target="_blank" class="underline">lepalaispaysan.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Le+Palais+Paysan" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Berber Lodge" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">49. Berber Lodge</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Oumnass | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Rustic Eco-Lodge</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 435 342 | <a href="http://www.berberlodge.net" target="_blank" class="underline">berberlodge.net</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Berber+Lodge+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Kasbah Beldi" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">50. Kasbah Beldi</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Lalla Takerkoust Lake | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guesthouse Kasbah</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 383 929 | <a href="http://www.kasbahbeldi.com" target="_blank" class="underline">kasbahbeldi.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Kasbah+Beldi" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Eden Lodges and Spa" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">51. Eden Lodges & Spa</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.1 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Eco-Lodges</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 328 178 | <a href="https://www.edenlodgesmarrakech.com" target="_blank" class="underline">edenlodgesmarrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Eden+Lodges+and+Spa" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Jnane Tihihit" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">52. Riad Jnane Tihihit</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.9 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Ourika Valley | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Organic Farm Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 661 190 273 | <a href="http://www.jnanetihihit.com" target="_blank" class="underline">jnanetihihit.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Jnane+Tihihit" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Villa Katia" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">53. Villa Katia</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Ourika Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Family Villa</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 381 200 | <a href="http://www.villakatiamarrakech.com" target="_blank" class="underline">villakatiamarrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Villa+Katia+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="peripherie">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Villa Atika" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">54. Villa Atika</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.0 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Fez Road | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guest Property</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 703 012 803 | <a href="https://villaatikamarrakech.com" target="_blank" class="underline">villaatikamarrakech.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Villa+Atika+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Dar Assiya" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">55. Dar Assiya</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.2 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Historic Residence</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 382 180 | <a href="http://www.dar-assiya.com" target="_blank" class="underline">dar-assiya.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Dar+Assiya" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Riad Adore" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">56. Riad Adore</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.4 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Dar El Bacha | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Bright Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 377 737 | <a href="https://riadadore.com" target="_blank" class="underline">riadadore.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Adore" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Dar Darma" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">57. Dar Darma</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.5 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Theatrical Suites</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 616 868 866 | <a href="http://www.dardarma.com" target="_blank" class="underline">dardarma.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Dar+Darma" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="palmeraie">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Dar Zemora" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">58. Dar Zemora</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.6 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: La Palmeraie | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Private Villa</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 329 977 | <a href="http://www.darzemora.com" target="_blank" class="underline">darzemora.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Dar+Zemora" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Riad Spice" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">59. Riad Spice</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 9.3 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 678 451 893 | <a href="https://marrakechriad.com" target="_blank" class="underline">marrakechriad.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Spice+Marrakech" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+        <div class="acc-card border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition" data-type="maison" data-location="medina">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Riad Al Rimal" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-4">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="font-bold text-lg text-vert">60. Riad Al Rimal</h3>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">★ 8.8 (Booking)</span>
+                </div>
+                <p class="acc-meta text-xs text-gray-600 mb-2"><span data-i18n="marrakech_page.directory.district_label">District</span>: Medina | <span data-i18n="marrakech_page.directory.type_label">Type</span>: Friendly Guesthouse</p>
+                <p class="acc-contact text-xs text-gray-500 mb-3"><span data-i18n="marrakech_page.directory.tel_label">Tel</span>: +212 524 427 493 | <a href="http://www.riad-alrimal.com" target="_blank" class="underline">riad-alrimal.com</a></p>
+                <a href="https://www.booking.com/searchresults.html?ss=Riad+Al+Rimal" target="_blank" class="inline-block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-700 transition">Book on Booking.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Message d'alerte si aucun filtre ne correspond -->
+    <div id="no-results" class="no-results-msg mt-8 text-center text-gray-500 font-semibold" style="display: none;" data-i18n="marrakech_page.directory.no_results">
+        No accommodations match this filter combination. Try broadening your search.
+    </div>
+</section>
+        
         <!-- Where to Eat Section -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="mb-8">
