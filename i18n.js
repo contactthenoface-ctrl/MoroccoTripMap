@@ -36,8 +36,8 @@ if (document.readyState === 'loading') {
 
 async function switchLanguage(lang) {
     try {
-        // Chemin mis à jour vers le dossier data/
-        const response = await fetch('translations.json');
+        // Chemin mis à jour vers le dossier moroccotripmap/
+        const response = await fetch('/translations.json');
         const data = await response.json();
 
         if (!data[lang]) return;
