@@ -132,9 +132,29 @@
         "p2": "Whether you are wandering through Yves Saint Laurent's Jardin Majorelle, watching storytellers at Jemaa el-Fnaa as dusk falls, or heading into the nearby Agafay Desert for a night under the stars, Marrakech promises an unforgettable journey."
       },
       "itinerary": {
-        "badge": "Travel Plan",
+        "badge": "TRAVEL PLAN",
         "title": "Suggested 3-Day Itinerary",
-        "subtitle": "Make the most of your visit with this curated step-by-step 3-day travel plan."
+        "subtitle": "Make the most of your visit with this curated step-by-step 3-day travel plan.",
+        "days": {
+          "day1": {
+            "label": "DAY 1",
+            "title": "The Heart of the Medina",
+            "desc": "Explore the iconic Jemaa el-Fnaa square, get lost in the artisan souks, and visit the historical Ben Youssef Madrasa.",
+            "meta": "Full Day • Medina District"
+          },
+          "day2": {
+            "label": "DAY 2",
+            "title": "Palaces & Lush Gardens",
+            "desc": "Discover the majestic Bahia Palace, walk through the Saadian Tombs, and enjoy a peaceful afternoon at Jardin Majorelle.",
+            "meta": "Full Day • Kasbah & Gueliz"
+          },
+          "day3": {
+            "label": "DAY 3",
+            "title": "Modern City & Desert Excursions",
+            "desc": "Explore the modern city of Gueliz, then head out in the evening to the Agafay Desert for dinner under the stars.",
+            "meta": "Full Day • Gueliz & Agafay"
+          }
+        }
       },
       "places": {
         "badge": "Top Sightseeing",
@@ -152,9 +172,21 @@
       },
       "stays": {
         "badge": "Where to Stay",
+        "directory_badge": "DIRECTORY & DATABASE",
         "title": "Top Riads & Hotels in Marrakech",
         "subtitle": "Find Your Ideal Stay in Marrakech",
+        "search_subtitle": "Use the filters below to instantly sort the best places based on your search criteria.",
+        "filter_type_label": "Accommodation Type:",
+        "all_types": "All Types",
+        "filter_district_label": "District / Area:",
+        "all_districts": "All Areas",
+        "results_found": "accommodations found",
         "view_all": "View All Stays →",
+        "card": {
+          "district_label": "District:",
+          "type_label": "Type:",
+          "book_button": "Book on Booking.com"
+        },
         "mamounia": { "tag": "5-Star Luxury", "title": "La Mamounia", "desc": "World-famous legendary palace hotel." },
         "yasmine": { "tag": "Boutique Riad", "title": "Riad Yasmine", "desc": "Famous for its serene green tiled patio pool." },
         "royal": { "tag": "Ultra Luxury", "title": "Royal Mansour", "desc": "Private riads & Michelin-starred dining." },
@@ -402,9 +434,29 @@
         "p2": "Que vous flâniez au Jardin Majorelle d'Yves Saint Laurent, écoutiez les conteurs sur la place Jemaa el-Fnaa au coucher du soleil ou partiez dans le désert d'Agafay pour une nuit sous les étoiles, Marrakech vous promet un voyage inoubliable."
       },
       "itinerary": {
-        "badge": "Plan de Voyage",
+        "badge": "PLAN DE VOYAGE",
         "title": "Itinéraire suggéré de 3 jours",
-        "subtitle": "Profitez au maximum de votre séjour grâce à cet itinéraire sur mesure de 3 jours."
+        "subtitle": "Profitez au maximum de votre séjour grâce à cet itinéraire sur mesure de 3 jours.",
+        "days": {
+          "day1": {
+            "label": "JOUR 1",
+            "title": "Le cœur de la Médina",
+            "desc": "Explorez la célèbre place Jemaa el-Fnaa, perdez-vous dans les souks artisanaux et visitez l'historique médersa Ben Youssef.",
+            "meta": "Journée complète • Quartier Médina"
+          },
+          "day2": {
+            "label": "JOUR 2",
+            "title": "Palais & Jardins Luxuriants",
+            "desc": "Découvrez le majestueux Palais Bahia, arpentez les Tombeaux Saadiens et profitez d'une après-midi paisible au Jardin Majorelle.",
+            "meta": "Journée complète • Kasbah & Guéliz"
+          },
+          "day3": {
+            "label": "JOUR 3",
+            "title": "Ville Moderne & Excursions Désert",
+            "desc": "Parcourez la ville nouvelle de Guéliz, puis partez en soirée vers le désert d'Agafay pour un dîner sous les étoiles.",
+            "meta": "Journée complète • Guéliz & Agafay"
+          }
+        }
       },
       "places": {
         "badge": "Incontournables",
@@ -422,9 +474,21 @@
       },
       "stays": {
         "badge": "Où Dormir",
+        "directory_badge": "ANNUAIRE & BASE DE DONNÉES",
         "title": "Meilleurs Riads & Hôtels à Marrakech",
         "subtitle": "Trouvez votre hébergement idéal à Marrakech",
+        "search_subtitle": "Utilisez les filtres ci-dessous pour trier instantanément les meilleurs adresses selon vos critères de recherche.",
+        "filter_type_label": "Type d'hébergement :",
+        "all_types": "Tous les types",
+        "filter_district_label": "Quartier / Zone :",
+        "all_districts": "Toutes les zones",
+        "results_found": "hébergements trouvés",
         "view_all": "Voir tous les hébergements →",
+        "card": {
+          "district_label": "Quartier :",
+          "type_label": "Type :",
+          "book_button": "Réserver sur Booking.com"
+        },
         "mamounia": { "tag": "Luxe 5 Étoiles", "title": "La Mamounia", "desc": "Hôtel palace mythique de renommée mondiale." },
         "yasmine": { "tag": "Riad de Charme", "title": "Riad Yasmine", "desc": "Célèbre pour son patio intérieur avec piscine verte." },
         "royal": { "tag": "Ultra Luxe", "title": "Royal Mansour", "desc": "Riads privés et gastronomie étoilée." },
@@ -672,9 +736,29 @@
         "p2": "Ya sea paseando por el Jardín Majorelle de Yves Saint Laurent, escuchando a los cuentacuentos en Jemaa el-Fnaa o acampando bajo las estrellas en el desierto de Agafay, Marrakech promete un viaje inolvidable."
       },
       "itinerary": {
-        "badge": "Plan de Viaje",
+        "badge": "PLAN DE VIAJE",
         "title": "Itinerario sugerido de 3 días",
-        "subtitle": "Aprovecha al máximo tu visita con este itinerario personalizado de 3 días paso a paso."
+        "subtitle": "Aprovecha al máximo tu visita con este itinerario personalizado de 3 días paso a paso.",
+        "days": {
+          "day1": {
+            "label": "DÍA 1",
+            "title": "El corazón de la Medina",
+            "desc": "Explora la emblemática plaza Jemaa el-Fnaa, piérdete en los zocos artesanales y visita la histórica Madraza Ben Youssef.",
+            "meta": "Día completo • Barrio Medina"
+          },
+          "day2": {
+            "label": "DÍA 2",
+            "title": "Palacios y Jardines Frondosos",
+            "desc": "Descubre el majestuoso Palacio Bahía, recorre las Tumbas Saadíes y disfruta de una tarde tranquila en el Jardín Majorelle.",
+            "meta": "Día completo • Kasbah y Gueliz"
+          },
+          "day3": {
+            "label": "DÍA 3",
+            "title": "Ciudad Moderna y Excursiones al Desierto",
+            "desc": "Explora la ciudad moderna de Gueliz y dirígete por la noche al desierto de Agafay para cenar bajo las estrellas.",
+            "meta": "Día completo • Gueliz y Agafay"
+          }
+        }
       },
       "places": {
         "badge": "Lugares Imprescindibles",
@@ -692,9 +776,21 @@
       },
       "stays": {
         "badge": "Dónde Alojarse",
+        "directory_badge": "DIRECTORIO Y BASE DE DATOS",
         "title": "Mejores Riads y Hoteles en Marrakech",
         "subtitle": "Encuentra tu alojamiento ideal en Marrakech",
+        "search_subtitle": "Usa los siguientes filtros para clasificar al instante los mejores lugares según tus criterios de búsqueda.",
+        "filter_type_label": "Tipo de alojamiento:",
+        "all_types": "Todos los tipos",
+        "filter_district_label": "Barrio / Zona:",
+        "all_districts": "Todas las zonas",
+        "results_found": "alojamientos encontrados",
         "view_all": "Ver todos los alojamientos →",
+        "card": {
+          "district_label": "Barrio:",
+          "type_label": "Tipo:",
+          "book_button": "Reservar en Booking.com"
+        },
         "mamounia": { "tag": "Lujo 5 Estrellas", "title": "La Mamounia", "desc": "Mítico hotel palacio de fama mundial." },
         "yasmine": { "tag": "Riad con Encanto", "title": "Riad Yasmine", "desc": "Famoso por su sereno patio con piscina verde." },
         "royal": { "tag": "Ultra Lujo", "title": "Royal Mansour", "desc": "Riads privados y gastronomía con estrellas Michelin." },
@@ -944,7 +1040,27 @@
       "itinerary": {
         "badge": "خطة السفر",
         "title": "مسار مقترح لمدة 3 أيام",
-        "subtitle": "استمتع بوقتك إلى أقصى حد مع هذا المسار المخصص لمدة 3 أيام خطوة بخطوة."
+        "subtitle": "استمتع بوقتك إلى أقصى حد مع هذا المسار المخصص لمدة 3 أيام خطوة بخطوة.",
+        "days": {
+          "day1": {
+            "label": "اليوم 1",
+            "title": "قلب المدينة القديمة",
+            "desc": "استكشف ساحة جامع الفناء الشهيرة، وتجول في الأسواق الحرفية، وزر مدرسة ابن يوسف التاريخية.",
+            "meta": "يوم كامل • حي المدينة القديمة"
+          },
+          "day2": {
+            "label": "اليوم 2",
+            "title": "القصور والحدائق الغناء",
+            "desc": "اكتشف قصر الباهية المهيب، وتجول في قبور السعديين، واستمتع ببعد زوال هادئ في حديقة ماجوريل.",
+            "meta": "يوم كامل • القصبة وجليز"
+          },
+          "day3": {
+            "label": "اليوم 3",
+            "title": "المدينة الحديثة ورحلات الصحراء",
+            "desc": "استكشف حي جليز الحديث، ثم انطلق مساءً إلى صحراء أجباي لتناول العشاء تحت النجوم.",
+            "meta": "يوم كامل • جليز وأجباي"
+          }
+        }
       },
       "places": {
         "badge": "أبرز المعالم",
@@ -962,9 +1078,21 @@
       },
       "stays": {
         "badge": "أين تقيم",
+        "directory_badge": "الدليل وقاعدة البيانات",
         "title": "أفضل الرياضات والفنادق في مراكش",
         "subtitle": "اعثر على إقامتك المثالية في مراكش",
+        "search_subtitle": "استخدم الفلاتر أدناه لتصنيف أفضل الأماكن فوراً بناءً على معايير بحثك.",
+        "filter_type_label": "نوع الإقامة:",
+        "all_types": "جميع الأنواع",
+        "filter_district_label": "الحي / المنطقة:",
+        "all_districts": "جميع المناطق",
+        "results_found": "مكان إقامة تم العثور عليه",
         "view_all": "عرض جميع أماكن الإقامة ←",
+        "card": {
+          "district_label": "الحي:",
+          "type_label": "النوع:",
+          "book_button": "حجز عبر Booking.com"
+        },
         "mamounia": { "tag": "فخامة 5 نجوم", "title": "المأمونية", "desc": "فندق القصر الأسطوري الشهير عالمياً." },
         "yasmine": { "tag": "رياض مميز", "title": "رياض ياسمين", "desc": "شهير بمسبحه الجميل في الفناء الخارجي." },
         "royal": { "tag": "فخامة استثنائية", "title": "رويال منصور", "desc": "رياضات خاصة ومطاعم فاخرة." },
