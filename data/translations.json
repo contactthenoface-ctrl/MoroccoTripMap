@@ -225,7 +225,13 @@
         "district_label": "Quartier",
         "type_label": "Type",
         "tel_label": "Tél",
-        "no_results": "Aucun hébergement ne correspond à ces critères. Essayez d'élargir votre recherche."
+        "no_results": "Aucun hébergement ne correspond à ces critères. Essayez d'élargir votre recherche.",
+        "mamounia": {
+          "name": "Hôtel La Mamounia",
+          "rating": "★ 9.4 (Booking)",
+          "district": "Hivernage",
+          "type": "Hôtel & Palace 5*"
+        }
       },
       "eat": {
         "badge": "Gastronomie",
@@ -598,7 +604,13 @@
         "district_label": "Barrio",
         "type_label": "Tipo",
         "tel_label": "Tel",
-        "no_results": "Ningún alojamiento coincide con este filtro. Intenta ampliar tu búsqueda."
+        "no_results": "Ningún alojamiento coincide con este filtro. Intenta ampliar tu búsqueda.",
+        "mamounia": {
+          "name": "Hotel La Mamounia",
+          "rating": "★ 9.4 (Booking)",
+          "district": "Hivernage",
+          "type": "Hotel y Palacio 5*"
+        }
       },
       "eat": {
         "badge": "Gastronomía",
@@ -971,7 +983,13 @@
         "district_label": "الحي",
         "type_label": "النوع",
         "tel_label": "الهاتف",
-        "no_results": "لا توجد أماكن إقامة تطابق هذه الفلاتر. يرجى توسيع نطاق البحث."
+        "no_results": "لا توجد أماكن إقامة تطابق هذه الفلاتر. يرجى توسيع نطاق البحث.",
+        "mamounia": {
+          "name": "فندق المامونية",
+          "rating": "★ 9.4 (بوكينج)",
+          "district": "الشتوية",
+          "type": "فندق وقصر 5 نجوم"
+        }
       },
       "eat": {
         "badge": "فن الطبخ",
