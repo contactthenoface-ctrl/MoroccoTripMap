@@ -5,7 +5,7 @@ let translations = {};
 // Chargement initial du fichier JSON des traductions
 async function loadTranslations() {
     try {
-        const response = await fetch('assets/translations.json');
+        const response = await fetch('translations.json');
         if (!response.ok) {
             throw new Error('Erreur lors du chargement de translations.json');
         }
