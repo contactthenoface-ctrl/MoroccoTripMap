@@ -534,7 +534,7 @@ Search
             langDropdown.classList.add('hidden');
         }
 
-        fetch('data/translations.json')
+        fetch('assets/translations.json')
             .then(response => response.json())
             .then(translations => {
                 const data = translations[lang];
