@@ -1,4 +1,383 @@
 {
+  "en": {
+    "seo": {
+      "title": "MoroccoTripMap | Discover. Plan. Experience Morocco."
+    },
+    "nav": {
+      "destinations": "Destinations",
+      "stays": "Stays",
+      "restaurants": "Restaurants",
+      "experiences": "Experiences",
+      "guides": "Guides",
+      "interactive_map": "Interactive Map",
+      "cities": "Cities & Destinations",
+      "categories": "Categories",
+      "cat_stays": "Stays & Riads",
+      "cat_hotels": "Hotels & Riads",
+      "cat_gastronomy": "Gastronomy",
+      "cat_restaurants": "Restaurants & Cafés",
+      "cat_experiences": "Experiences",
+      "cat_tours": "Tours & Excursions",
+      "cat_attractions": "Attractions",
+      "cat_museums": "Monuments & Museums",
+      "cat_transport": "Transport",
+      "cat_rental": "Transfers & Rental",
+      "cat_itineraries": "Itineraries",
+      "cat_guides": "Travel Guides",
+      "history": "Morocco History",
+      "blog": "Blog",
+      "contact": "Contact",
+      "directory": "Directory & Database"
+    },
+    "mobile_menu": {
+      "language_title": "Language / Langue"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "destinations": "Destinations",
+      "stays": "Stays"
+    },
+    "hero": {
+      "badge": "Official Tourism Portal",
+      "directory_badge": "Directory & Database",
+      "title_line1": "Discover. Plan.",
+      "title_line2": "Experience Morocco.",
+      "description": "Your authentic directory and guide to hotels, riads, restaurants, desert adventures, and hidden gems across the Kingdom of Morocco.",
+      "search_placeholder": "Where do you want to go? (e.g. Marrakech, Riad, Desert)",
+      "search_button": "Search"
+    },
+    "categories": {
+      "section_title": "Explore by Category",
+      "stays_title": "Stays & Riads",
+      "stays_subtitle": "Hotels & Riads",
+      "gastronomy_title": "Gastronomy",
+      "gastronomy_subtitle": "Restaurants & Cafés",
+      "experiences_title": "Experiences",
+      "experiences_subtitle": "Tours & Excursions",
+      "attractions_title": "Attractions",
+      "attractions_subtitle": "Monuments & Museums",
+      "transport_title": "Transport",
+      "transport_subtitle": "Transfers & Rental",
+      "itineraries_title": "Itineraries",
+      "itineraries_subtitle": "Travel Guides"
+    },
+    "destinations": {
+      "badge": "Top Destinations",
+      "title": "Explore Iconic Cities",
+      "view_all": "View all destinations →",
+      "view_all_btn": "View all destinations",
+      "marrakech": {
+        "tag": "Imperial City",
+        "name": "Marrakech",
+        "desc": "Medina, Palaces & Desert Gates"
+      },
+      "chefchaouen": {
+        "tag": "Rif Mountains",
+        "name": "Chefchaouen",
+        "desc": "Morocco's Iconic Blue Pearl"
+      },
+      "fes": {
+        "tag": "Cultural Capital",
+        "name": "Fez",
+        "desc": "Ancient Medina & Spiritual Heritage"
+      },
+      "casablanca": {
+        "tag": "Economic Heart",
+        "name": "Casablanca",
+        "desc": "Morocco's Largest Metropolis"
+      },
+      "essaouira": {
+        "tag": "Atlantic Coast",
+        "name": "Essaouira",
+        "desc": "Windy City, Ramparts & Seafood"
+      },
+      "agadir": {
+        "tag": "Sun & Beach",
+        "name": "Agadir",
+        "desc": "Golden Beaches & Modern Resorts"
+      },
+      "tangier": {
+        "tag": "Strait of Gibraltar",
+        "name": "Tangier",
+        "desc": "The Gateway Between Europe & Africa"
+      },
+      "ouarzazate": {
+        "tag": "Desert Gate",
+        "name": "Ouarzazate",
+        "desc": "Cinematic Sets & Kasbahs"
+      },
+      "rabat": {
+        "tag": "Imperial Capital",
+        "name": "Rabat",
+        "desc": "Historic Gardens & Atlantic Breeze"
+      },
+      "merzouga": {
+        "tag": "Sahara Desert",
+        "name": "Merzouga",
+        "desc": "Erg Chebbi Dunes & Bivouacs"
+      }
+    },
+    "marrakech_page": {
+      "seo": {
+        "title": "Marrakech Travel Guide | Top Places, Riads & Experiences | MoroccoTripMap"
+      },
+      "hero_subtitle": "The Ochre City of Palaces, Bustling Souks, Secret Gardens & Desert Gateways.",
+      "info": {
+        "best_time_label": "Best Time to Visit",
+        "best_time_val": "Oct – May",
+        "stay_label": "Ideal Stay",
+        "stay_val": "3 – 5 Days",
+        "vibe_label": "Vibe",
+        "vibe_val": "Historical & Exotic",
+        "airport_label": "Nearest Airport",
+        "airport_val": "RAK (Menara)"
+      },
+      "overview": {
+        "title": "Welcome to the Ochre City",
+        "p1": "Marrakech is a captivating sensory feast. Framed by the snow-capped peaks of the Atlas Mountains, this imperial city elegantly blends ancient Berber heritage with refined contemporary luxury. From the lively labyrinth of the Medina souks to the peaceful courtyards of centuries-old riads, Marrakech is the ultimate cultural capital.",
+        "p2": "Whether you are strolling through Yves Saint Laurent's Majorelle Garden, listening to storytellers at Jemaa el-Fnaa square at sunset, or heading into the Agafay desert for a night under the stars, Marrakech promises an unforgettable journey."
+      },
+      "places": {
+        "badge": "Must-See",
+        "title": "Top Places to Visit in Marrakech",
+        "subtitle": "Iconic landmarks, royal palaces, and historic gardens you cannot miss during your stay.",
+        "explore": "Explore place →",
+        "jemaa": {
+          "tag": "Historic Square",
+          "title": "Jemaa el-Fnaa & Souks",
+          "desc": "The beating heart of Marrakech, an open-air theater and a labyrinth of artisan souks."
+        },
+        "majorelle": {
+          "tag": "Botanical Garden",
+          "title": "Jardin Majorelle & YSL",
+          "desc": "A tranquil botanical haven renowned for its iconic cobalt blue villa."
+        },
+        "bahia": {
+          "tag": "Royal Architecture",
+          "title": "Bahia Palace",
+          "desc": "A masterpiece of Moroccan architecture featuring painted ceilings and zellige courtyards."
+        },
+        "ben_youssef": {
+          "tag": "Islamic Heritage",
+          "title": "Ben Youssef Madrasa",
+          "desc": "Former Islamic college and a masterpiece of Arab-Andalusian art."
+        },
+        "saadian": {
+          "tag": "History",
+          "title": "Saadian Tombs",
+          "desc": "Sumptuously decorated mausoleums crafted from Carrara marble in the Kasbah district."
+        },
+        "elbadi": {
+          "tag": "Ancient Ruins",
+          "title": "El Badi Palace",
+          "desc": "The majestic ruins of a 16th-century palace, serving as a sanctuary for storks."
+        },
+        "jardin_secret": {
+          "tag": "Secret Garden",
+          "title": "Le Jardin Secret",
+          "desc": "Restored palatial complex in the Medina featuring a traditional Islamic garden."
+        },
+        "koutoubia": {
+          "tag": "Landmark",
+          "title": "Koutoubia Mosque",
+          "desc": "The minaret of this 12th-century mosque rises majestically 77 meters into the sky."
+        }
+      },
+      "itinerary": {
+        "badge": "Planning",
+        "title": "Suggested 3-Day Itinerary",
+        "subtitle": "A balanced schedule to discover the highlights without rushing your visit.",
+        "day1": {
+          "tag": "Day 1",
+          "title": "The Heart of the Medina",
+          "desc": "Explore the iconic Jemaa el-Fnaa square, get lost in the artisan souks, and visit the historical Ben Youssef Madrasa.",
+          "duration": "Full Day • Medina District"
+        },
+        "day2": {
+          "tag": "Day 2",
+          "title": "Palaces & Lush Gardens",
+          "desc": "Discover the majestic Bahia Palace, walk through the Saadian Tombs, and enjoy a peaceful afternoon at Jardin Majorelle.",
+          "duration": "Full Day • Kasbah & Gueliz"
+        },
+        "day3": {
+          "tag": "Day 3",
+          "title": "Modern City & Desert Excursions",
+          "desc": "Stroll around Gueliz district for art and modern dining, or head out for a sunset quad and camel tour in Agafay.",
+          "duration": "Full Day • Gueliz & Agafay"
+        }
+      },
+      "directory": {
+        "badge": "Directory & Database",
+        "title": "Find Your Ideal Stay in Marrakech",
+        "subtitle": "Use the filters below to instantly sort the best places based on your search criteria.",
+        "filter_type_label": "Accommodation Type:",
+        "type_all": "All Types",
+        "type_hotel": "Hotels & Resorts",
+        "type_riad": "Traditional Riads",
+        "type_guesthouse": "Guesthouses",
+        "filter_location_label": "District / Area:",
+        "location_all": "All Areas",
+        "location_medina": "Medina & Kasbah (Historic Center)",
+        "location_hivernage": "Hivernage & Gueliz (New Town)",
+        "location_palmeraie": "The Palmeraie",
+        "location_outskirts": "Outskirts & Atlas Road",
+        "counter": "60 accommodations found",
+        "district_label": "District",
+        "type_label": "Type",
+        "tel_label": "Tel",
+        "no_results": "No accommodations match these filters. Try broadening your search.",
+        "mamounia": {
+          "name": "Hotel La Mamounia",
+          "rating": "★ 9.4 (Booking)",
+          "district": "Hivernage",
+          "type": "Hotel & Palace 5*"
+        }
+      },
+      "eat": {
+        "badge": "Gastronomy",
+        "title": "Best Restaurants & Rooftops",
+        "subtitle": "Curated culinary experiences with top visitor ratings",
+        "nomad": {
+          "tag": "Modern Moroccan",
+          "loc": "Medina Rooftop",
+          "title": "Nomad Marrakech",
+          "desc": "Trendy rooftop overlooking Spice Square, offering a reimagined local menu."
+        },
+        "jardin": {
+          "tag": "Garden Dining",
+          "loc": "Medina Oasis",
+          "title": "Le Jardin",
+          "desc": "16th-century verdant courtyard surrounded by banana trees, ideal for savoring a tagine."
+        },
+        "fassia": {
+          "tag": "Traditional Cuisine",
+          "loc": "Gueliz",
+          "title": "Al Fassia",
+          "desc": "Run exclusively by women, famous for its shoulder of lamb and pastilla."
+        },
+        "moha": {
+          "tag": "Fine Dining",
+          "loc": "Medina Riad",
+          "title": "Dar Moha",
+          "desc": "Refined Moroccan gastronomy served around the pool of Pierre Balmain's former palace."
+        },
+        "bacha": {
+          "tag": "Cafe & Patisserie",
+          "loc": "Dar El Bacha",
+          "title": "Bacha Coffee",
+          "desc": "Legendary 1930s coffee room offering rare coffees and pastries in a lavish palace."
+        },
+        "elfenn": {
+          "tag": "Chic Rooftop",
+          "loc": "Medina Views",
+          "title": "El Fenn Rooftop",
+          "desc": "Stylish rooftop lounge offering panoramic views of the Koutoubia, creative cocktails, and tapas."
+        }
+      },
+      "tips": {
+        "title": "Practical Tips for Visiting Marrakech",
+        "transport": {
+          "title": "Getting Around",
+          "desc": "Walking is best inside the Medina. For longer distances, take yellow Petit Taxis and always check the meter before starting."
+        },
+        "bargain": {
+          "title": "Bargaining at Souks",
+          "desc": "Haggling is part of the culture! Offer around 50% of the initial price and always keep negotiations friendly."
+        },
+        "water": {
+          "title": "Stay Hydrated",
+          "desc": "Marrakech can get very hot. Drink bottled water and enjoy the fresh orange juice at Jemaa el-Fnaa square."
+        }
+      }
+    },
+    "riad_kasbah_page": {
+      "seo": {
+        "title": "Riad Kasbah - Luxury Riad in Marrakech Medina | MoroccoTripMap"
+      },
+      "title_name": "Riad Kasbah",
+      "badge_premium": "Premium Listing",
+      "badge_riad": "Riad",
+      "address_full": "101, derb Harbil, Quartier Kasbah - Médina Marrakech",
+      "about_title": "About this riad",
+      "about_p1": "Tucked away in the lively alleys of Marrakech's Medina, <strong>Riad Kasbah</strong> offers a tranquil sanctuary away from the hustle and bustle of the souks. Originally built in the 18th century and meticulously restored by local artisans, this authentic Moroccan home blends traditional Moorish architecture with modern luxury.",
+      "about_p2": "At the heart of the riad lies a stunning central patio, anchored around a refreshing plunge pool bordered by hand-cut emerald zellige tiles. The scent of orange blossoms and fresh mint tea welcomes you upon arrival.",
+      "about_p3": "Each of our 6 suites is uniquely decorated, featuring carved cedarwood ceilings, tadelakt walls, and locally sourced textiles. Start your day with a traditional Moroccan breakfast served on the panoramic rooftop terrace.",
+      "amenities_title": "What this place offers",
+      "amenities": {
+        "pool": "Courtyard Plunge Pool",
+        "breakfast": "Free Traditional Breakfast",
+        "wifi": "High-Speed WiFi",
+        "ac": "Air Conditioning",
+        "terrace": "Rooftop Terrace",
+        "spa": "Hammam & Spa (Extra)"
+      },
+      "sidebar": {
+        "cta_text": "Contact the property directly for the best rates and availability.",
+        "website_btn": "Visit Official Website",
+        "address_label": "Address",
+        "address_val": "101, derb Harbil, Quartier Kasbah - Marrakech",
+        "phone_label": "Phone",
+        "map_btn": "View on Map"
+      }
+    },
+    "stays_page": {
+      "seo": {
+        "title": "Stays & Riads in Morocco | MoroccoTripMap"
+      },
+      "title": "Exceptional Stays in Morocco",
+      "description": "Discover authentic riads hidden in ancient medinas, luxury desert camps under Saharan stars, and boutique hotels by the Atlantic Ocean.",
+      "filters": {
+        "title": "Filters",
+        "clear": "Clear all",
+        "destination_title": "Destination",
+        "dest_marrakech": "Marrakech",
+        "dest_fes": "Fez",
+        "dest_chefchaouen": "Chefchaouen",
+        "dest_sahara": "Sahara Desert",
+        "type_title": "Property Type",
+        "type_riad": "Riad",
+        "type_hotel": "Hotel",
+        "type_camp": "Desert Camp",
+        "apply_btn": "Apply Filters"
+      },
+      "results_found": "properties found",
+      "view_details_btn": "View Details",
+      "card1": {
+        "badge": "Premium",
+        "title": "Riad Al Kasbah",
+        "location": "Medina, Marrakech",
+        "desc": "Experience the magic of an authentic 18th-century riad located in the heart of Marrakech's bustling medina, featuring a serene courtyard pool.",
+        "tag1": "Pool",
+        "tag2": "Rooftop",
+        "tag3": "Breakfast"
+      },
+      "card2": {
+        "badge": "Featured",
+        "title": "Sahara Dunes Camp",
+        "location": "Erg Chebbi, Merzouga",
+        "desc": "Sleep under the stars in a luxury tent deep within the golden dunes of Erg Chebbi. Includes camel ride and traditional dinner.",
+        "tag1": "Private Bathroom",
+        "tag2": "Camel Ride"
+      }
+    },
+    "footer": {
+      "about_text": "Discover. Plan. Experience Morocco.\nThe premier tourism directory and cultural travel guide for visitors exploring Morocco.",
+      "destinations_title": "Destinations",
+      "link_marrakech": "Marrakech Travel Guide",
+      "link_chefchaouen": "Chefchaouen Highlights",
+      "link_fes": "Fez Medina Guide",
+      "link_merzouga": "Merzouga Desert Tours",
+      "link_all_destinations": "All destinations",
+      "categories_title": "Categories",
+      "link_stays": "Authentic Riads & Hotels",
+      "link_restaurants": "Moroccan Restaurants",
+      "link_experiences": "Adventures & Cultural Experiences",
+      "link_transport": "Transport & Private Drivers",
+      "connect_title": "Connect",
+      "youtube_text": "Follow our YouTube channel for video travel guides:",
+      "copyright": "© MoroccoTripMap. All rights reserved."
+    }
+  },
   "fr": {
     "seo": {
       "title": "MoroccoTripMap | Découvrez. Planifiez. Vivez le Maroc."
@@ -1137,4 +1516,3 @@
     }
   }
 }
-
