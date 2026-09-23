@@ -1,7 +1,8 @@
 {
   "en": {
     "seo": {
-      "title": "MoroccoTripMap | Discover. Plan. Experience Morocco."
+      "title": "MoroccoTripMap | Discover. Plan. Experience Morocco.",
+      "destinations_title": "All Destinations in Morocco | MoroccoTripMap"
     },
     "nav": {
       "destinations": "Destinations",
@@ -46,35 +47,21 @@
       "search_placeholder": "Where do you want to go? (e.g. Marrakech, Riad, Desert)",
       "search_button": "Search"
     },
-    "categories": {
-      "section_title": "Explore by Category",
-      "stays_title": "Stays & Riads",
-      "stays_subtitle": "Hotels & Riads",
-      "gastronomy_title": "Gastronomy",
-      "gastronomy_subtitle": "Restaurants & Cafés",
-      "experiences_title": "Experiences",
-      "experiences_subtitle": "Tours & Excursions",
-      "attractions_title": "Attractions",
-      "attractions_subtitle": "Monuments & Museums",
-      "transport_title": "Transport",
-      "transport_subtitle": "Transfers & Rental",
-      "itineraries_title": "Itineraries",
-      "itineraries_subtitle": "Travel Guides"
+    "destinations_page": {
+      "title": "Explore All Destinations",
+      "description": "From vibrant imperial medinas and blue mountain villages to Atlantic coastal gems and golden desert dunes, find your next Moroccan escape.",
+      "search_placeholder": "Search destinations (e.g. Marrakech, Desert, Blue)..."
     },
-    "destinations": {
-      "badge": "Top Destinations",
-      "title": "Explore Iconic Cities",
-      "view_all": "View all destinations →",
-      "view_all_btn": "View all destinations",
+    "cities": {
       "marrakech": {
         "tag": "Imperial City",
         "name": "Marrakech",
-        "desc": "Medina, Palaces & Desert Gates"
+        "desc": "Medina, Palaces & Desert Gateways"
       },
       "chefchaouen": {
         "tag": "Rif Mountains",
         "name": "Chefchaouen",
-        "desc": "Morocco's Iconic Blue Pearl"
+        "desc": "The Iconic Blue Pearl of Morocco"
       },
       "fes": {
         "tag": "Cultural Capital",
@@ -84,12 +71,12 @@
       "casablanca": {
         "tag": "Economic Heart",
         "name": "Casablanca",
-        "desc": "Morocco's Largest Metropolis"
+        "desc": "The largest city in Morocco"
       },
       "essaouira": {
         "tag": "Atlantic Coast",
         "name": "Essaouira",
-        "desc": "Windy City, Ramparts & Seafood"
+        "desc": "Windy City, Ramparts & Fresh Seafood"
       },
       "agadir": {
         "tag": "Sun & Beach",
@@ -99,22 +86,77 @@
       "tangier": {
         "tag": "Strait of Gibraltar",
         "name": "Tangier",
-        "desc": "The Gateway Between Europe & Africa"
+        "desc": "The Gateway Between Europe and Africa"
       },
       "ouarzazate": {
-        "tag": "Desert Gate",
+        "tag": "Desert Gateway",
         "name": "Ouarzazate",
-        "desc": "Cinematic Sets & Kasbahs"
+        "desc": "Cinematic Landscapes & Ancient Kasbahs"
       },
       "rabat": {
         "tag": "Imperial Capital",
         "name": "Rabat",
-        "desc": "Historic Gardens & Atlantic Breeze"
+        "desc": "Historic Gardens & Atlantic Breezes"
+      },
+      "meknes": {
+        "tag": "Imperial City",
+        "name": "Meknes",
+        "desc": "Monumental Gates & Roman Ruins"
+      },
+      "tetouan": {
+        "tag": "Mediterranean Coast",
+        "name": "Tetouan",
+        "desc": "Andalusian Heritage & Rif Mountains"
+      },
+      "ifrane": {
+        "tag": "Middle Atlas",
+        "name": "Ifrane",
+        "desc": "Alpine Architecture & Cedar Forests"
+      },
+      "el_jadida": {
+        "tag": "Atlantic Coast",
+        "name": "El Jadida",
+        "desc": "Portuguese Cistern & Ocean Forts"
+      },
+      "taroudant": {
+        "tag": "Souss Valley",
+        "name": "Taroudant",
+        "desc": "Massive Ramparts & Authentic Souks"
+      },
+      "dakhla": {
+        "tag": "Deep South",
+        "name": "Dakhla",
+        "desc": "Stunning Lagoons & Kitesurf Paradise"
+      },
+      "al_hoceima": {
+        "tag": "Mediterranean Coast",
+        "name": "Al Hoceima",
+        "desc": "Turquoise Waters & Rif Cliffs"
+      },
+      "nador": {
+        "tag": "Mediterranean Lagoon",
+        "name": "Nador",
+        "desc": "Mar Chica Lagoon & Coastal Breezes"
+      },
+      "zagora": {
+        "tag": "Drâa Valley",
+        "name": "Zagora",
+        "desc": "Lush Palm Groves & Sahara Doors"
+      },
+      "safi": {
+        "tag": "Atlantic Coast",
+        "name": "Safi",
+        "desc": "Pottery Capital & Sea Fortress"
+      },
+      "laayoune": {
+        "tag": "Sahara Gateway",
+        "name": "Laayoune",
+        "desc": "Sahrawi Culture & Atlantic Horizon"
       },
       "merzouga": {
         "tag": "Sahara Desert",
         "name": "Merzouga",
-        "desc": "Erg Chebbi Dunes & Bivouacs"
+        "desc": "Erg Chebbi Dunes & Desert Camps"
       }
     },
     "marrakech_page": {
@@ -134,7 +176,7 @@
       },
       "overview": {
         "title": "Welcome to the Ochre City",
-        "p1": "Marrakech is a captivating sensory feast. Framed by the snow-capped peaks of the Atlas Mountains, this imperial city elegantly blends ancient Berber heritage with refined contemporary luxury. From the lively labyrinth of the Medina souks to the peaceful courtyards of centuries-old riads, Marrakech is the ultimate cultural capital.",
+        "p1": "Marrakech is a captivating sensory feast. Framed by the snow-capped peaks of the Atlas Mountains, this imperial city elegantly blends ancient Berber heritage with refined contemporary luxury.",
         "p2": "Whether you are strolling through Yves Saint Laurent's Majorelle Garden, listening to storytellers at Jemaa el-Fnaa square at sunset, or heading into the Agafay desert for a night under the stars, Marrakech promises an unforgettable journey."
       },
       "places": {
@@ -290,89 +332,14 @@
         }
       }
     },
-    "riad_kasbah_page": {
-      "seo": {
-        "title": "Riad Kasbah - Luxury Riad in Marrakech Medina | MoroccoTripMap"
-      },
-      "title_name": "Riad Kasbah",
-      "badge_premium": "Premium Listing",
-      "badge_riad": "Riad",
-      "address_full": "101, derb Harbil, Quartier Kasbah - Médina Marrakech",
-      "about_title": "About this riad",
-      "about_p1": "Tucked away in the lively alleys of Marrakech's Medina, <strong>Riad Kasbah</strong> offers a tranquil sanctuary away from the hustle and bustle of the souks. Originally built in the 18th century and meticulously restored by local artisans, this authentic Moroccan home blends traditional Moorish architecture with modern luxury.",
-      "about_p2": "At the heart of the riad lies a stunning central patio, anchored around a refreshing plunge pool bordered by hand-cut emerald zellige tiles. The scent of orange blossoms and fresh mint tea welcomes you upon arrival.",
-      "about_p3": "Each of our 6 suites is uniquely decorated, featuring carved cedarwood ceilings, tadelakt walls, and locally sourced textiles. Start your day with a traditional Moroccan breakfast served on the panoramic rooftop terrace.",
-      "amenities_title": "What this place offers",
-      "amenities": {
-        "pool": "Courtyard Plunge Pool",
-        "breakfast": "Free Traditional Breakfast",
-        "wifi": "High-Speed WiFi",
-        "ac": "Air Conditioning",
-        "terrace": "Rooftop Terrace",
-        "spa": "Hammam & Spa (Extra)"
-      },
-      "sidebar": {
-        "cta_text": "Contact the property directly for the best rates and availability.",
-        "website_btn": "Visit Official Website",
-        "address_label": "Address",
-        "address_val": "101, derb Harbil, Quartier Kasbah - Marrakech",
-        "phone_label": "Phone",
-        "map_btn": "View on Map"
-      }
-    },
-    "stays_page": {
-      "seo": {
-        "title": "Stays & Riads in Morocco | MoroccoTripMap"
-      },
-      "title": "Exceptional Stays in Morocco",
-      "description": "Discover authentic riads hidden in ancient medinas, luxury desert camps under Saharan stars, and boutique hotels by the Atlantic Ocean.",
-      "filters": {
-        "title": "Filters",
-        "clear": "Clear all",
-        "destination_title": "Destination",
-        "dest_marrakech": "Marrakech",
-        "dest_fes": "Fez",
-        "dest_chefchaouen": "Chefchaouen",
-        "dest_sahara": "Sahara Desert",
-        "type_title": "Property Type",
-        "type_riad": "Riad",
-        "type_hotel": "Hotel",
-        "type_camp": "Desert Camp",
-        "apply_btn": "Apply Filters"
-      },
-      "results_found": "properties found",
-      "view_details_btn": "View Details",
-      "card1": {
-        "badge": "Premium",
-        "title": "Riad Al Kasbah",
-        "location": "Medina, Marrakech",
-        "desc": "Experience the magic of an authentic 18th-century riad located in the heart of Marrakech's bustling medina, featuring a serene courtyard pool.",
-        "tag1": "Pool",
-        "tag2": "Rooftop",
-        "tag3": "Breakfast"
-      },
-      "card2": {
-        "badge": "Featured",
-        "title": "Sahara Dunes Camp",
-        "location": "Erg Chebbi, Merzouga",
-        "desc": "Sleep under the stars in a luxury tent deep within the golden dunes of Erg Chebbi. Includes camel ride and traditional dinner.",
-        "tag1": "Private Bathroom",
-        "tag2": "Camel Ride"
-      }
-    },
     "footer": {
       "about_text": "Discover. Plan. Experience Morocco.\nThe premier tourism directory and cultural travel guide for visitors exploring Morocco.",
       "destinations_title": "Destinations",
       "link_marrakech": "Marrakech Travel Guide",
-      "link_chefchaouen": "Chefchaouen Highlights",
-      "link_fes": "Fez Medina Guide",
-      "link_merzouga": "Merzouga Desert Tours",
       "link_all_destinations": "All destinations",
       "categories_title": "Categories",
       "link_stays": "Authentic Riads & Hotels",
       "link_restaurants": "Moroccan Restaurants",
-      "link_experiences": "Adventures & Cultural Experiences",
-      "link_transport": "Transport & Private Drivers",
       "connect_title": "Connect",
       "youtube_text": "Follow our YouTube channel for video travel guides:",
       "copyright": "© MoroccoTripMap. All rights reserved."
@@ -380,7 +347,8 @@
   },
   "fr": {
     "seo": {
-      "title": "MoroccoTripMap | Découvrez. Planifiez. Vivez le Maroc."
+      "title": "MoroccoTripMap | Découvrez. Planifiez. Vivez le Maroc.",
+      "destinations_title": "Toutes les Destinations au Maroc | MoroccoTripMap"
     },
     "nav": {
       "destinations": "Destinations",
@@ -425,26 +393,12 @@
       "search_placeholder": "Où voulez-vous aller ? (ex. Marrakech, Riad, Désert)",
       "search_button": "Rechercher"
     },
-    "categories": {
-      "section_title": "Explorer par Catégorie",
-      "stays_title": "Hébergements & Riads",
-      "stays_subtitle": "Hôtels & Riads",
-      "gastronomy_title": "Gastronomie",
-      "gastronomy_subtitle": "Restaurants & Cafés",
-      "experiences_title": "Expériences",
-      "experiences_subtitle": "Excursions & Circuits",
-      "attractions_title": "Attractions",
-      "attractions_subtitle": "Monuments & Musées",
-      "transport_title": "Transport",
-      "transport_subtitle": "Transferts & Location",
-      "itineraries_title": "Itinéraires",
-      "itineraries_subtitle": "Guides de Voyage"
+    "destinations_page": {
+      "title": "Explorez Toutes les Destinations",
+      "description": "Des médinas impériales animées aux villages bleus des montagnes, en passant par les joyaux de la côte atlantique et les dunes dorées du désert, trouvez votre prochaine escapade marocaine.",
+      "search_placeholder": "Rechercher une destination (ex. Marrakech, Désert, Bleu)..."
     },
-    "destinations": {
-      "badge": "Meilleures Destinations",
-      "title": "Explorez des Villes Emblématiques",
-      "view_all": "Voir toutes les destinations →",
-      "view_all_btn": "Voir toutes les destinations",
+    "cities": {
       "marrakech": {
         "tag": "Ville Impériale",
         "name": "Marrakech",
@@ -490,6 +444,61 @@
         "name": "Rabat",
         "desc": "Jardins Historiques & Brise Atlantique"
       },
+      "meknes": {
+        "tag": "Ville Impériale",
+        "name": "Meknès",
+        "desc": "Portes Monumentales & Ruines Romaines"
+      },
+      "tetouan": {
+        "tag": "Côte Méditerranéenne",
+        "name": "Tétouan",
+        "desc": "Héritage Andalou & Montagnes du Rif"
+      },
+      "ifrane": {
+        "tag": "Moyen Atlas",
+        "name": "Ifrane",
+        "desc": "Architecture Alpine & Forêts de Cèdres"
+      },
+      "el_jadida": {
+        "tag": "Côte Atlantique",
+        "name": "El Jadida",
+        "desc": "Citerne Portugaise & Forts Maritimes"
+      },
+      "taroudant": {
+        "tag": "Vallée du Souss",
+        "name": "Taroudant",
+        "desc": "Remparts Majestueux & Souks Authentiques"
+      },
+      "dakhla": {
+        "tag": "Grand Sud",
+        "name": "Dakhla",
+        "desc": "Lagunes Somptueuses & Paradis du Kitesurf"
+      },
+      "al_hoceima": {
+        "tag": "Côte Méditerranéenne",
+        "name": "Al Hoceïma",
+        "desc": "Eaux Turquoises & Falaises du Rif"
+      },
+      "nador": {
+        "tag": "Lagune Méditerranéenne",
+        "name": "Nador",
+        "desc": "Lagune de Mar Chica & Brises Marines"
+      },
+      "zagora": {
+        "tag": "Vallée du Drâa",
+        "name": "Zagora",
+        "desc": "Palmeraies Verdoyantes & Portes du Sahara"
+      },
+      "safi": {
+        "tag": "Côte Atlantique",
+        "name": "Safi",
+        "desc": "Capitale de la Poterie & Forteresse de Mer"
+      },
+      "laayoune": {
+        "tag": "Porte du Sahara",
+        "name": "Laâyoune",
+        "desc": "Culture Sahraouie & Horizon Atlantique"
+      },
       "merzouga": {
         "tag": "Désert du Sahara",
         "name": "Merzouga",
@@ -513,7 +522,7 @@
       },
       "overview": {
         "title": "Bienvenue dans la Ville Ocre",
-        "p1": "Marrakech est un festin sensoriel envoûtant. Encadrée par les sommets enneigés de l'Atlas, cette ville impériale mêle avec élégance héritage berbère antique et luxe contemporain raffiné. Du labyrinthe animé des souks de la Médina aux patios paisibles des riads centenaires, Marrakech est la capitale culturelle par excellence.",
+        "p1": "Marrakech est un festin sensoriel envoûtant. Encadrée par les sommets enneigés de l'Atlas, cette ville impériale mêle avec élégance héritage berbère antique et luxe contemporain raffiné.",
         "p2": "Que vous flâniez au Jardin Majorelle d'Yves Saint Laurent, écoutiez les conteurs sur la place Jemaa el-Fnaa au coucher du soleil ou partiez dans le désert d'Agafay pour une nuit sous les étoiles, Marrakech vous promet un voyage inoubliable."
       },
       "places": {
@@ -669,89 +678,14 @@
         }
       }
     },
-    "riad_kasbah_page": {
-      "seo": {
-        "title": "Riad Kasbah - Riad de Luxe dans la Médina de Marrakech | MoroccoTripMap"
-      },
-      "title_name": "Riad Kasbah",
-      "badge_premium": "Annonce Premium",
-      "badge_riad": "Riad",
-      "address_full": "101, derb Harbil, Quartier Kasbah - Médina Marrakech",
-      "about_title": "À propos de ce riad",
-      "about_p1": "Niché au cœur des ruelles animées de la Médina de Marrakech, le <strong>Riad Kasbah</strong> offre un havre de paix loin de l'agitation des souks. Construit à l'origine au XVIIIe siècle et méticuleusement restauré par des artisans locaux, cette demeure marocaine authentique associe architecture mauresque traditionnelle et luxe moderne.",
-      "about_p2": "Au cœur du riad se trouve un superbe patio central, articulé autour d'une piscine rafraîchissante bordée de zelliges émeraude taillés à la main. Le parfum des fleurs d'oranger et le thé à la menthe frais vous accueillent dès votre arrivée.",
-      "about_p3": "Chacune de nos 6 suites est décorée de manière unique, avec des plafonds en bois de cèdre sculpté, des murs en tadelakt et des textiles locaux. Commencez votre journée par un petit-déjeuner marocain traditionnel servi sur la terrasse panoramique sur le toit.",
-      "amenities_title": "Ce que propose ce lieu",
-      "amenities": {
-        "pool": "Piscine de Cour",
-        "breakfast": "Petit-déjeuner Traditionnel Inclus",
-        "wifi": "WiFi Haut Débit",
-        "ac": "Climatisation",
-        "terrace": "Terrasse sur le Toit",
-        "spa": "Hammam & Spa (En supplément)"
-      },
-      "sidebar": {
-        "cta_text": "Contactez directement l'établissement pour obtenir les meilleurs tarifs et disponibilités.",
-        "website_btn": "Visiter le Site Officiel",
-        "address_label": "Adresse",
-        "address_val": "101, derb Harbil, Quartier Kasbah - Marrakech",
-        "phone_label": "Téléphone",
-        "map_btn": "Voir sur la carte"
-      }
-    },
-    "stays_page": {
-      "seo": {
-        "title": "Hébergements & Riads au Maroc | MoroccoTripMap"
-      },
-      "title": "Séjours Exceptionnels au Maroc",
-      "description": "Découvrez des riads authentiques cachés dans des médinas anciennes, des camps de luxe dans le désert sous les étoiles sahariennes et des hôtels de charme au bord de l'océan Atlantique.",
-      "filters": {
-        "title": "Filtres",
-        "clear": "Tout effacer",
-        "destination_title": "Destination",
-        "dest_marrakech": "Marrakech",
-        "dest_fes": "Fès",
-        "dest_chefchaouen": "Chefchaouen",
-        "dest_sahara": "Désert du Sahara",
-        "type_title": "Type de Propriété",
-        "type_riad": "Riad",
-        "type_hotel": "Hôtel",
-        "type_camp": "Camp Désertique",
-        "apply_btn": "Appliquer les filtres"
-      },
-      "results_found": "établissements trouvés",
-      "view_details_btn": "Voir les détails",
-      "card1": {
-        "badge": "Premium",
-        "title": "Riad Al Kasbah",
-        "location": "Médina, Marrakech",
-        "desc": "Découvrez la magie d'un riad authentique du XVIIIe siècle situé au cœur de la médina animée de Marrakech, doté d'une piscine de patio paisible.",
-        "tag1": "Piscine",
-        "tag2": "Rooftop",
-        "tag3": "Petit-déjeuner"
-      },
-      "card2": {
-        "badge": "En vedette",
-        "title": "Sahara Dunes Camp",
-        "location": "Erg Chebbi, Merzouga",
-        "desc": "Dormez sous les étoiles dans une tente de luxe au cœur des dunes dorées de l'Erg Chebbi. Comprend une balade à dos de chameau et un dîner traditionnel.",
-        "tag1": "Salle de bain privée",
-        "tag2": "Balade à chameau"
-      }
-    },
     "footer": {
       "about_text": "Découvrez. Planifiez. Vivez le Maroc.\nLe premier annuaire touristique et guide de voyage culturel pour les visiteurs explorant le Maroc.",
       "destinations_title": "Destinations",
       "link_marrakech": "Guide de Voyage Marrakech",
-      "link_chefchaouen": "Incontournables de Chefchaouen",
-      "link_fes": "Guide de la Médina de Fès",
-      "link_merzouga": "Excursions Désert Merzouga",
       "link_all_destinations": "Toutes les destinations",
       "categories_title": "Catégories",
       "link_stays": "Riads & Hôtels Authentiques",
       "link_restaurants": "Restaurants Marocains",
-      "link_experiences": "Aventures & Expériences Culturelles",
-      "link_transport": "Transport & Chauffeurs Privés",
       "connect_title": "Suivez-nous",
       "youtube_text": "Suivez notre chaîne YouTube pour nos guides vidéo :",
       "copyright": "© MoroccoTripMap. Tous droits réservés."
@@ -759,7 +693,8 @@
   },
   "es": {
     "seo": {
-      "title": "MoroccoTripMap | Descubre. Planifica. Vive Marruecos."
+      "title": "MoroccoTripMap | Descubre. Planifica. Vive Marruecos.",
+      "destinations_title": "Todos los Destinos en Marruecos | MoroccoTripMap"
     },
     "nav": {
       "destinations": "Destinos",
@@ -804,26 +739,12 @@
       "search_placeholder": "¿A dónde quieres ir? (ej. Marrakech, Riad, Desierto)",
       "search_button": "Buscar"
     },
-    "categories": {
-      "section_title": "Explorar por Categoría",
-      "stays_title": "Estancias y Riads",
-      "stays_subtitle": "Hoteles y Riads",
-      "gastronomy_title": "Gastronomía",
-      "gastronomy_subtitle": "Restaurantes y Cafés",
-      "experiences_title": "Experiencias",
-      "experiences_subtitle": "Excursiones y Tours",
-      "attractions_title": "Atracciones",
-      "attractions_subtitle": "Monumentos y Museos",
-      "transport_title": "Transporte",
-      "transport_subtitle": "Traslados y Alquiler",
-      "itineraries_title": "Itinerarios",
-      "itineraries_subtitle": "Guías de Viaje"
+    "destinations_page": {
+      "title": "Explora Todos los Destinos",
+      "description": "Desde animadas medinas imperiales y pueblos azules en las montañas hasta joyas de la costa atlántica y doradas dunas del desierto, encuentra tu próxima escapada en Marruecos.",
+      "search_placeholder": "Buscar destinos (ej. Marrakech, Desierto, Azul)..."
     },
-    "destinations": {
-      "badge": "Mejores Destinos",
-      "title": "Explora Ciudades Emblemáticas",
-      "view_all": "Ver todos los destinos →",
-      "view_all_btn": "Ver todos los destinos",
+    "cities": {
       "marrakech": {
         "tag": "Ciudad Imperial",
         "name": "Marrakech",
@@ -869,6 +790,61 @@
         "name": "Rabat",
         "desc": "Jardines Históricos y Brisa Atlántica"
       },
+      "meknes": {
+        "tag": "Ciudad Imperial",
+        "name": "Mequínez",
+        "desc": "Puertas Monumentales y Ruinas Romanas"
+      },
+      "tetouan": {
+        "tag": "Costa Mediterránea",
+        "name": "Tetuán",
+        "desc": "Herencia Andaluza y Montañas del Rif"
+      },
+      "ifrane": {
+        "tag": "Medio Atlas",
+        "name": "Ifrane",
+        "desc": "Arquitectura Alpina y Bosques de Cedros"
+      },
+      "el_jadida": {
+        "tag": "Costa Atlántica",
+        "name": "El Yadida",
+        "desc": "Cisterna Portuguesa y Fortalezas del Océano"
+      },
+      "taroudant": {
+        "tag": "Valle del Souss",
+        "name": "Tarudant",
+        "desc": "Murallas Grandes y Zocos Auténticos"
+      },
+      "dakhla": {
+        "tag": "Gran Sur",
+        "name": "Dajla",
+        "desc": "Lagunas Impresionantes y Paraíso del Kitesurf"
+      },
+      "al_hoceima": {
+        "tag": "Costa Mediterránea",
+        "name": "Alhucemas",
+        "desc": "Aguas Turquesas y Acantilados del Rif"
+      },
+      "nador": {
+        "tag": "Laguna Mediterránea",
+        "name": "Nador",
+        "desc": "Laguna Mar Chica y Brisas Costeras"
+      },
+      "zagora": {
+        "tag": "Valle del Draa",
+        "name": "Zagora",
+        "desc": "Palmerales Frondosos y Puertas del Sáhara"
+      },
+      "safi": {
+        "tag": "Costa Atlántica",
+        "name": "Safi",
+        "desc": "Capital de la Cerámica y Fortaleza Marina"
+      },
+      "laayoune": {
+        "tag": "Puerta del Sáhara",
+        "name": "El Aaiún",
+        "desc": "Cultura Saharaui y Horizonte Atlántico"
+      },
       "merzouga": {
         "tag": "Desierto del Sáhara",
         "name": "Merzouga",
@@ -892,7 +868,7 @@
       },
       "overview": {
         "title": "Bienvenido a la Ciudad Ocre",
-        "p1": "Marrakech es un festín sensorial cautivador. Enmarcada por las cumbres nevadas del Atlas, esta ciudad imperial combina la herencia bereber con el lujo contemporáneo. Desde los animados zocos de la Medina hasta los tranquilos patios de sus riads centenarios, es la capital cultural de Marruecos.",
+        "p1": "Marrakech es un festín sensorial cautivador. Enmarcada por las cumbres nevadas del Atlas, esta ciudad imperial combina la herencia bereber con el lujo contemporáneo.",
         "p2": "Ya sea paseando por el Jardín Majorelle de Yves Saint Laurent, escuchando a los cuentacuentos en Jemaa el-Fnaa o acampando bajo las estrellas en el desierto de Agafay, Marrakech promete un viaje inolvidable."
       },
       "places": {
@@ -1048,89 +1024,14 @@
         }
       }
     },
-    "riad_kasbah_page": {
-      "seo": {
-        "title": "Riad Kasbah - Riad de Lujo en la Medina de Marrakech | MoroccoTripMap"
-      },
-      "title_name": "Riad Kasbah",
-      "badge_premium": "Anuncio Premium",
-      "badge_riad": "Riad",
-      "address_full": "101, derb Harbil, Quartier Kasbah - Médina Marrakech",
-      "about_title": "Acerca de este riad",
-      "about_p1": "Ubicado en las animadas callejuelas de la Medina de Marrakech, <strong>Riad Kasbah</strong> ofrece un santuario tranquilo lejos del bullicio de los zocos. Construido originalmente en el siglo XVIII y meticulosamente restaurado por artesanos locales, este auténtico hogar marroquí combina la arquitectura morisca tradicional con el lujo moderno.",
-      "about_p2": "En el corazón del riad se encuentra un impresionante patio central, organizado alrededor de una refrescante piscina rodeada de azulejos zellij esmeralda cortados a mano. El aroma de las flores de azahar y el té de menta fresco le dan la bienvenida.",
-      "about_p3": "Cada una de nuestras 6 suites está decorada de forma única, con techos de madera de cedro tallada, paredes de tadelakt y textiles locales. Comienza tu día con un desayuno tradicional marroquí servido en la terraza panorámica en la azotea.",
-      "amenities_title": "Lo que ofrece este lugar",
-      "amenities": {
-        "pool": "Piscina en el Patio",
-        "breakfast": "Desayuno Tradicional Gratis",
-        "wifi": "WiFi de Alta Velocidad",
-        "ac": "Aire Acondicionado",
-        "terrace": "Terraza en la Azotea",
-        "spa": "Hammam y Spa (Extra)"
-      },
-      "sidebar": {
-        "cta_text": "Contacta directamente con la propiedad para obtener las mejores tarifas y disponibilidad.",
-        "website_btn": "Visitar Sitio Web Oficial",
-        "address_label": "Dirección",
-        "address_val": "101, derb Harbil, Quartier Kasbah - Marrakech",
-        "phone_label": "Teléfono",
-        "map_btn": "Ver en el Mapa"
-      }
-    },
-    "stays_page": {
-      "seo": {
-        "title": "Alojamientos y Riads en Marruecos | MoroccoTripMap"
-      },
-      "title": "Estancias Excepcionales en Marruecos",
-      "description": "Descubre riads auténticos ocultos en medinas antiguas, campamentos de lujo en el desierto bajo las estrellas del Sáhara y hoteles boutique junto al océano Atlántico.",
-      "filters": {
-        "title": "Filtros",
-        "clear": "Borrar todo",
-        "destination_title": "Destino",
-        "dest_marrakech": "Marrakech",
-        "dest_fes": "Fez",
-        "dest_chefchaouen": "Chefchaouen",
-        "dest_sahara": "Desierto del Sáhara",
-        "type_title": "Tipo de Propiedad",
-        "type_riad": "Riad",
-        "type_hotel": "Hotel",
-        "type_camp": "Campamento en el Desierto",
-        "apply_btn": "Aplicar Filtros"
-      },
-      "results_found": "propiedades encontradas",
-      "view_details_btn": "Ver Detalles",
-      "card1": {
-        "badge": "Premium",
-        "title": "Riad Al Kasbah",
-        "location": "Medina, Marrakech",
-        "desc": "Experimenta la magia de un auténtico riad del siglo XVIII ubicado en el corazón de la animada medina de Marrakech, con una serena piscina en el patio.",
-        "tag1": "Piscina",
-        "tag2": "Azotea",
-        "tag3": "Desayuno"
-      },
-      "card2": {
-        "badge": "Destacado",
-        "title": "Sahara Dunes Camp",
-        "location": "Erg Chebbi, Merzouga",
-        "desc": "Duerme bajo las estrellas en una tienda de lujo en lo profundo de las dunas doradas de Erg Chebbi. Incluye paseo en camello y cena tradicional.",
-        "tag1": "Baño Privado",
-        "tag2": "Paseo en Camello"
-      }
-    },
     "footer": {
       "about_text": "Descubre. Planifica. Vive Marruecos.\nEl directorio turístico y guía cultural principal para los visitantes que exploran Marruecos.",
       "destinations_title": "Destinos",
       "link_marrakech": "Guía de Viaje a Marrakech",
-      "link_chefchaouen": "Lo mejor de Chefchaouen",
-      "link_fes": "Guía de la Medina de Fez",
-      "link_merzouga": "Excursiones al Desierto de Merzouga",
       "link_all_destinations": "Todos los destinos",
       "categories_title": "Categorías",
       "link_stays": "Riads y Hoteles Auténticos",
       "link_restaurants": "Restaurantes Marroquíes",
-      "link_experiences": "Aventuras y Experiencias Culturales",
-      "link_transport": "Transporte y Chóferes Privados",
       "connect_title": "Conecta",
       "youtube_text": "Sigue nuestro canal de YouTube para guías en vídeo:",
       "copyright": "© MoroccoTripMap. Todos los derechos reservados."
@@ -1138,7 +1039,8 @@
   },
   "ar": {
     "seo": {
-      "title": "MoroccoTripMap | اكتشف. خطط. عِش تجربة المغرب."
+      "title": "MoroccoTripMap | اكتشف. خطط. عِش تجربة المغرب.",
+      "destinations_title": "جميع الوجهات في المغرب | MoroccoTripMap"
     },
     "nav": {
       "destinations": "الوجهات",
@@ -1183,26 +1085,12 @@
       "search_placeholder": "إلى أين تريد الذهاب؟ (مثل: مراكش، رياض، الصحراء)",
       "search_button": "بحث"
     },
-    "categories": {
-      "section_title": "استكشف حسب الفئة",
-      "stays_title": "الإقامة والرياضات",
-      "stays_subtitle": "فنادق ورياضات",
-      "gastronomy_title": "فن الطبخ",
-      "gastronomy_subtitle": "مطاعم ومقاهي",
-      "experiences_title": "التجارب",
-      "experiences_subtitle": "رحلات وجولات",
-      "attractions_title": "المعالم السياحية",
-      "attractions_subtitle": "مآثر تاريخية ومتاحف",
-      "transport_title": "المواصلات",
-      "transport_subtitle": "تنقلات وتأجير السيارات",
-      "itineraries_title": "مسارات السفر",
-      "itineraries_subtitle": "أدلة السفر"
+    "destinations_page": {
+      "title": "استكشف جميع الوجهات",
+      "description": "من المدن القديمة الإمبراطورية والقرى الزرقاء الجبلية إلى درر الساحل الأطلسي وكثبان الصحراء الذهبية، اعثر على وجهتك القادمة في المغرب.",
+      "search_placeholder": "البحث عن الوجهات (مثل مراكش، الصحراء، الأزرق)..."
     },
-    "destinations": {
-      "badge": "أفضل الوجهات",
-      "title": "استكشف المدن العريقة",
-      "view_all": "عرض جميع الوجهات ←",
-      "view_all_btn": "عرض جميع الوجهات",
+    "cities": {
       "marrakech": {
         "tag": "المدينة الإمبراطورية",
         "name": "مراكش",
@@ -1248,10 +1136,65 @@
         "name": "الرباط",
         "desc": "الحدائق التاريخية ونسيم الأطلسي"
       },
+      "meknes": {
+        "tag": "المدينة الإمبراطورية",
+        "name": "مكناس",
+        "desc": "الأبواب الضخمة والآثار الرومانية"
+      },
+      "tetouan": {
+        "tag": "الساحل المتوسطي",
+        "name": "تطوان",
+        "desc": "التراث الأندلسي وجبال الريف"
+      },
+      "ifrane": {
+        "tag": "الأطلس المتوسط",
+        "name": "إفران",
+        "desc": "المعمار الألبي وغابات الأرز"
+      },
+      "el_jadida": {
+        "tag": "الساحل الأطلسي",
+        "name": "الجديدة",
+        "desc": "الصهريج البرتغالي والحصون البحرية"
+      },
+      "taroudant": {
+        "tag": "واحة سوس",
+        "name": "تارودانت",
+        "desc": "الأسوار الضخمة والأسواق الأصيلة"
+      },
+      "dakhla": {
+        "tag": "أقصى الجنوب",
+        "name": "الداخلة",
+        "desc": "الخليج الساحر وجنة الكايت سيرف"
+      },
+      "al_hoceima": {
+        "tag": "الساحل المتوسطي",
+        "name": "الحسيمة",
+        "desc": "المياه الفيروزية ومنحدرات الريف"
+      },
+      "nador": {
+        "tag": "بحيرة المتوسط",
+        "name": "الناظور",
+        "desc": "بحيرة مارتشيكا والنسيم الساحلي"
+      },
+      "zagora": {
+        "tag": "واحة درعة",
+        "name": "زاكورة",
+        "desc": "واحات النخيل الخضراء وبوابات الصحراء"
+      },
+      "safi": {
+        "tag": "الساحل الأطلسي",
+        "name": "أسفي",
+        "desc": "عاصمة الخزف والحصن البحري"
+      },
+      "laayoune": {
+        "tag": "بوابة الصحراء",
+        "name": "العيون",
+        "desc": "الثقافة الصحراوية والأفق الأطلسي"
+      },
       "merzouga": {
         "tag": "الصحراء الكبرى",
         "name": "مرزوكة",
-        "desc": "كثبان عرق الشبي المخيمات الصحراوية"
+        "desc": "كثبان عرق الشبي والمخيمات الصحراوية"
       }
     },
     "marrakech_page": {
@@ -1271,7 +1214,7 @@
       },
       "overview": {
         "title": "مرحباً بكم في المدينة الحمراء",
-        "p1": "مراكش رحلة ساحرة للحواس. تقع عند أقدام جبال الأطلس الثلجية، وتجمع بين التراث الأمازيغي العريق والفخامة الحديثة. من أسواق المدينة القديمة إلى رياضاتها الهادئة، تعد مراكش العاصمة الثقافية والسياحية الأولى للمغرب.",
+        "p1": "مراكش رحلة ساحرة للحواس. تقع عند أقدام جبال الأطلس الثلجية، وتجمع بين التراث الأمازيغي العريق والفخامة الحديثة.",
         "p2": "سواء كنت تتجول في حديقة ماجوريل، أو تستمع للحكواتية في ساحة جامع الفناء عند الغروب، أو تخوض مغامرة في صحراء أجباي تحت النجوم، فإن مراكش تعدك برحلة لا تُنسى."
       },
       "places": {
@@ -1427,89 +1370,14 @@
         }
       }
     },
-    "riad_kasbah_page": {
-      "seo": {
-        "title": "رياض كسبة - رياض فاخر في مدينة مراكش القديمة | MoroccoTripMap"
-      },
-      "title_name": "رياض كسبة",
-      "badge_premium": "إعلان مميز",
-      "badge_riad": "رياض",
-      "address_full": "101، درب حربيل، حي القصبة - مدينة مراكش القديمة",
-      "about_title": "حول هذا الرياض",
-      "about_p1": "يقع <strong>رياض كسبة</strong> في الأزقة النابضة بالحياة لمدينة مراكش القديمة، ويفر ملاذاً هادئاً بعيداً عن صخب الأسواق. بُني في الأصل في القرن الثامن عشر وتم ترميمه بدقة على يد حرفيين محليين، يجمع هذا المنزل المغربي الأصيل بين العمارة المغربية التقليدية والفخامة الحديثة.",
-      "about_p2": "في قلب الرياض يوجد فناء مركزي مذهل، يلتف حول مسبح منعش مبطن ببلاط الزليج الأخضر المنحوت يدويًا. تغمرك رائحة زهر البرتقال والشاي بالنعناع الطازج عند الوصول.",
-      "about_p3": "تتميز كل غرفة من أجنحتنا الستة بديكور فريد من نوعه، وتضم أسقفًا خشبية من خشب الأرز المنقوش، وجدران تادلاكت، ومنسوجات محلية المصدر. ابدأ يومك بإفطار مغربي تقليدي يُقدم على التراس بانورامي على السطح.",
-      "amenities_title": "ما يقدمه هذا المكان",
-      "amenities": {
-        "pool": "مسبح في الفناء",
-        "breakfast": "إفطار تقليدي مجاني",
-        "wifi": "إنترنت عالي السرعة",
-        "ac": "تكييف هواء",
-        "terrace": "تراس على السطح",
-        "spa": "حمام وسپا (مقابل رسوم إضافية)"
-      },
-      "sidebar": {
-        "cta_text": "اتصل بالعقار مباشرة للحصول على أفضل الأسعار وتوفر الغرف.",
-        "website_btn": "زيارة الموقع الرسمي",
-        "address_label": "العنوان",
-        "address_val": "101، درب حربيل، حي القصبة - مراكش",
-        "phone_label": "الهاتف",
-        "map_btn": "عرض على الخريطة"
-      }
-    },
-    "stays_page": {
-      "seo": {
-        "title": "الإقامة والرياضات في المغرب | MoroccoTripMap"
-      },
-      "title": "إقامات استثنائية في المغرب",
-      "description": "اكتشف الرياضات الأصيلة المخفية في المدن القديمة، المخيمات الصحراوية الفاخرة تحت نجوم الصحراء، والفنادق البوتيكية بجانب المحيط الأطلسي.",
-      "filters": {
-        "title": "الفلاتر",
-        "clear": "مسح الكل",
-        "destination_title": "الوجهة",
-        "dest_marrakech": "مراكش",
-        "dest_fes": "فاس",
-        "dest_chefchaouen": "شفشاون",
-        "dest_sahara": "الصحراء الكبرى",
-        "type_title": "نوع العقار",
-        "type_riad": "رياض",
-        "type_hotel": "فندق",
-        "type_camp": "مخيم صحراوي",
-        "apply_btn": "تطبيق الفلاتر"
-      },
-      "results_found": "مكان إقامة تم العثور عليه",
-      "view_details_btn": "عرض التفاصيل",
-      "card1": {
-        "badge": "مميز",
-        "title": "رياض آل كسبة",
-        "location": "المدينة القديمة، مراكش",
-        "desc": "جرب سحر رياض أصيل يعود للقرن الثامن عشر يقع في قلب مدينة مراكش النابضة بالحياة، ويضم مسبحاً فناء هادئاً.",
-        "tag1": "مسبح",
-        "tag2": "تراس السطح",
-        "tag3": "إفطار"
-      },
-      "card2": {
-        "badge": "بارز",
-        "title": "مخيم صحراء الكثبان",
-        "location": "عرق الشبي، مرزوكة",
-        "desc": "نم تحت النجوم في خيمة فاخرة في عمق الكثبان الذهبية لعرق الشبي. يتضمن رحلة ركب الجمال وعشاءً تقليدياً.",
-        "tag1": "حمام خاص",
-        "tag2": "ركوب الجمال"
-      }
-    },
     "footer": {
       "about_text": "اكتشف. خطط. عِش تجربة المغرب.\nالدليل السياحي والثقافي الأول للزوار الذين يستكشفون المغرب.",
       "destinations_title": "الوجهات",
       "link_marrakech": "دليل السفر إلى مراكش",
-      "link_chefchaouen": "أبرز معالم شفشاون",
-      "link_fes": "دليل مدينة فاس القديمة",
-      "link_merzouga": "رحلات صحراء مرزوكة",
       "link_all_destinations": "جميع الوجهات",
       "categories_title": "الفئات",
       "link_stays": "رياضات وفنادق أصيلة",
       "link_restaurants": "مطاعم مغربية",
-      "link_experiences": "مغامرات وتجارب ثقافية",
-      "link_transport": "وسائل النقل وسائقون خاصون",
       "connect_title": "تواصل معنا",
       "youtube_text": "تابع قناتنا على يوتيوب لمشاهدة أدلة السفر بالفيديو:",
       "copyright": "© MoroccoTripMap. جميع الحقوق محفوظة."
