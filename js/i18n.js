@@ -1,7 +1,8 @@
 // Variable globale pour stocker les traductions chargées
 let currentTranslations = {};
+let allTranslations = {}; // cache du fichier complet
 
-// 1. Fonction utilitaire pour lire les clés imbriquées (ex: "destinations.marrakech.title")
+// 1. Fonction utilitaire pour lire les clés imbriquées (ex: "nav.destinations")
 function getNestedTranslation(obj, path) {
   return path.split('.').reduce((prev, curr) => (prev ? prev[curr] : null), obj);
 }
@@ -10,7 +11,6 @@ function getNestedTranslation(obj, path) {
 function updateLanguage(langData) {
   currentTranslations = langData;
 
-  // Traduction du texte des éléments
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     const translation = getNestedTranslation(langData, key);
@@ -19,7 +19,6 @@ function updateLanguage(langData) {
     }
   });
 
-  // Traduction des placeholders (champs de recherche / formulaires)
   document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
     const key = element.getAttribute('data-i18n-placeholder');
     const translation = getNestedTranslation(langData, key);
@@ -29,41 +28,38 @@ function updateLanguage(langData) {
   });
 }
 
-// 3. Charger le fichier JSON de la langue demandée
+// 3. Charger (une seule fois) le fichier JSON complet, puis appliquer la langue
 async function loadLanguage(lang) {
   try {
-    // Vérifiez que le chemin correspond à l'emplacement de vos fichiers JSON
-    const response = await fetch('js/translations.json'); 
-    const langData = await response.json();
-    
-    // Mettre à jour la direction d'affichage (RTL pour l'arabe, LTR pour le reste)
+    // On ne re-télécharge le fichier que s'il n'est pas déjà en cache
+    if (Object.keys(allTranslations).length === 0) {
+      const response = await fetch('js/translations.json');
+      allTranslations = await response.json();
+    }
+
+    const langData = allTranslations[lang]; // ✅ on descend au niveau de la langue
+    if (!langData) {
+      console.error(`Langue "${lang}" introuvable dans translations.json`);
+      return;
+    }
+
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = lang;
-
-    // Sauvegarder la langue dans le navigateur du visiteur
     localStorage.setItem('preferred_lang', lang);
 
-    // Appliquer les traductions sur tout le document
     updateLanguage(langData);
   } catch (error) {
     console.error(`Erreur de chargement de la langue ${lang}:`, error);
   }
 }
 
-// 4. Initialisation et association des clics du menu déroulant
+// 4. Fonction appelée par ton HTML (onclick="switchLanguage('fr')")
+function changeLanguage(lang) {
+  loadLanguage(lang);
+}
+
+// 5. Initialisation au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-  // Charger la langue sauvegardée ou 'fr' par défaut au démarrage
   const savedLang = localStorage.getItem('preferred_lang') || 'fr';
   loadLanguage(savedLang);
-
-  // Attacher l'événement de changement de langue sur les boutons du menu
-  document.querySelectorAll('[data-lang]').forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      const selectedLang = button.getAttribute('data-lang');
-      if (selectedLang) {
-        loadLanguage(selectedLang);
-      }
-    });
-  });
 });
