@@ -427,6 +427,92 @@
       "title": "Explore Marrakech & Morocco",
       "subtitle": "Discover top attractions, traditional riads, and authentic spots directly on the map.",
       "explore_marrakech": "Explore Marrakech Directory"
+    },
+    "stats": {
+      "cities": "Cities Covered",
+      "stays": "Riads & Stays",
+      "experiences": "Curated Experiences",
+      "languages": "Languages Supported"
+    },
+    "spotlight": {
+      "badge": "Signature Experiences",
+      "title": "Four Ways to Feel Morocco",
+      "subtitle": "From sand seas to snow-capped peaks, pick the landscape that speaks to you and we'll help you plan around it.",
+      "desert": {
+        "title": "Sahara Desert Camps",
+        "desc": "Camel trekking, starlit bivouacs, and sunrise over the dunes of Merzouga and Zagora."
+      },
+      "medina": {
+        "title": "Timeless Medinas",
+        "desc": "Lose yourself in the souks, riads, and artisan workshops of Fes and Marrakech."
+      },
+      "coast": {
+        "title": "Atlantic Coastline",
+        "desc": "Surf, fresh seafood, and sea breezes along Essaouira and Agadir's shores."
+      },
+      "mountains": {
+        "title": "Atlas Mountain Villages",
+        "desc": "Hike Berber trails, visit kasbahs, and stay in mountain guesthouses near Ifrane."
+      }
+    },
+    "testimonials": {
+      "badge": "Traveler Stories",
+      "title": "What Visitors Say About Morocco",
+      "review1": {
+        "text": "\"The riad recommendations were spot on, and the itinerary saved us so much guesswork. Marrakech felt easy to navigate from day one.\"",
+        "author": "— Claire, France"
+      },
+      "review2": {
+        "text": "\"We used the interactive map to find hidden cafés in the medina. The desert camp suggestion for Merzouga was the highlight of our trip.\"",
+        "author": "— Daniel, Germany"
+      },
+      "review3": {
+        "text": "\"Chefchaouen's blue streets were even more beautiful in person. Having a guide in Spanish made everything so much smoother.\"",
+        "author": "— Sofía, Spain"
+      }
+    },
+    "blog_preview": {
+      "badge": "From the Blog",
+      "title": "Travel Guides & Local Tips",
+      "view_all": "Read All Articles →",
+      "article1": {
+        "tag": "Culture",
+        "title": "A First-Timer's Guide to Moroccan Tea Culture"
+      },
+      "article2": {
+        "tag": "Planning",
+        "title": "What to Pack for a Sahara Desert Excursion"
+      },
+      "article3": {
+        "tag": "Food",
+        "title": "Souk Shopping: Spices, Bargaining & What to Buy"
+      }
+    },
+    "faq": {
+      "badge": "Good to Know",
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "When is the best time to visit Morocco?",
+        "answer": "Spring (March-May) and autumn (September-November) offer the mildest temperatures across most regions, ideal for both city visits and desert trips."
+      },
+      "q2": {
+        "question": "Do I need a visa to travel to Morocco?",
+        "answer": "Many nationalities, including EU, UK, and US citizens, can enter visa-free for stays up to 90 days. Always check current requirements for your specific nationality."
+      },
+      "q3": {
+        "question": "How many days should I spend in Marrakech?",
+        "answer": "3 to 5 days is ideal to explore the medina, palaces, and gardens at a relaxed pace, with time left for a day trip into the Atlas Mountains or Agafay desert."
+      },
+      "q4": {
+        "question": "Is it safe to travel around Morocco independently?",
+        "answer": "Yes, Morocco is a popular and generally safe destination for independent travelers. As anywhere, stay aware in crowded souks and agree on taxi fares before departing."
+      }
+    },
+    "newsletter": {
+      "title": "Get Morocco Travel Tips in Your Inbox",
+      "subtitle": "New destinations, seasonal itineraries, and hand-picked riads — no spam, unsubscribe anytime.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
     }
   },
   "fr": {
@@ -857,6 +943,92 @@
       "title": "Explorez Marrakech & le Maroc",
       "subtitle": "Découvrez les meilleures attractions, riads traditionnels et adresses authentiques directement sur la carte.",
       "explore_marrakech": "Explorer l'Annuaire de Marrakech"
+    },
+    "stats": {
+      "cities": "Villes Couvertes",
+      "stays": "Riads & Hébergements",
+      "experiences": "Expériences Sélectionnées",
+      "languages": "Langues Disponibles"
+    },
+    "spotlight": {
+      "badge": "Expériences Signature",
+      "title": "Quatre Façons de Vivre le Maroc",
+      "subtitle": "Des mers de sable aux sommets enneigés, choisissez le paysage qui vous inspire et nous vous aidons à organiser votre séjour autour.",
+      "desert": {
+        "title": "Bivouacs dans le Sahara",
+        "desc": "Randonnée à dos de chameau, nuits sous les étoiles et lever de soleil sur les dunes de Merzouga et Zagora."
+      },
+      "medina": {
+        "title": "Médinas Intemporelles",
+        "desc": "Perdez-vous dans les souks, riads et ateliers d'artisans de Fès et Marrakech."
+      },
+      "coast": {
+        "title": "Côte Atlantique",
+        "desc": "Surf, fruits de mer frais et brises marines le long des côtes d'Essaouira et d'Agadir."
+      },
+      "mountains": {
+        "title": "Villages de l'Atlas",
+        "desc": "Randonnez sur des sentiers berbères, visitez des kasbahs et séjournez dans des maisons d'hôtes de montagne près d'Ifrane."
+      }
+    },
+    "testimonials": {
+      "badge": "Récits de Voyageurs",
+      "title": "Ce que Disent les Visiteurs du Maroc",
+      "review1": {
+        "text": "« Les recommandations de riads étaient parfaites, et l'itinéraire nous a évité beaucoup d'hésitations. Marrakech a été facile à découvrir dès le premier jour. »",
+        "author": "— Claire, France"
+      },
+      "review2": {
+        "text": "« Nous avons utilisé la carte interactive pour trouver des cafés cachés dans la médina. Le bivouac dans le désert de Merzouga a été le point fort du voyage. »",
+        "author": "— Daniel, Allemagne"
+      },
+      "review3": {
+        "text": "« Les ruelles bleues de Chefchaouen étaient encore plus belles en vrai. Avoir un guide en espagnol a rendu tout beaucoup plus simple. »",
+        "author": "— Sofía, Espagne"
+      }
+    },
+    "blog_preview": {
+      "badge": "Depuis le Blog",
+      "title": "Guides de Voyage & Astuces Locales",
+      "view_all": "Lire Tous les Articles →",
+      "article1": {
+        "tag": "Culture",
+        "title": "Guide du Thé Marocain pour les Débutants"
+      },
+      "article2": {
+        "tag": "Préparation",
+        "title": "Que Mettre dans sa Valise pour une Excursion dans le Sahara"
+      },
+      "article3": {
+        "tag": "Gastronomie",
+        "title": "Shopping aux Souks : Épices, Négociation & Achats Incontournables"
+      }
+    },
+    "faq": {
+      "badge": "Bon à Savoir",
+      "title": "Questions Fréquentes",
+      "q1": {
+        "question": "Quelle est la meilleure période pour visiter le Maroc ?",
+        "answer": "Le printemps (mars-mai) et l'automne (septembre-novembre) offrent les températures les plus douces dans la plupart des régions, idéales pour les visites de villes comme pour les excursions dans le désert."
+      },
+      "q2": {
+        "question": "Ai-je besoin d'un visa pour voyager au Maroc ?",
+        "answer": "De nombreuses nationalités, dont les citoyens de l'UE, du Royaume-Uni et des États-Unis, peuvent entrer sans visa pour des séjours allant jusqu'à 90 jours. Vérifiez toujours les exigences actuelles pour votre nationalité."
+      },
+      "q3": {
+        "question": "Combien de jours faut-il passer à Marrakech ?",
+        "answer": "3 à 5 jours sont idéaux pour explorer la médina, les palais et les jardins à un rythme tranquille, avec du temps pour une excursion dans l'Atlas ou le désert d'Agafay."
+      },
+      "q4": {
+        "question": "Est-il sûr de voyager seul au Maroc ?",
+        "answer": "Oui, le Maroc est une destination populaire et généralement sûre pour les voyageurs indépendants. Comme partout, restez vigilant dans les souks animés et négociez le prix des taxis avant le départ."
+      }
+    },
+    "newsletter": {
+      "title": "Recevez des Conseils de Voyage sur le Maroc",
+      "subtitle": "Nouvelles destinations, itinéraires saisonniers et riads sélectionnés — pas de spam, désabonnement à tout moment.",
+      "placeholder": "Votre adresse e-mail",
+      "button": "S'abonner"
     }
   },
   "es": {
@@ -1287,6 +1459,92 @@
       "title": "Explora Marrakech y Marruecos",
       "subtitle": "Descubre las mejores atracciones, riads tradicionales y lugares auténticos directamente en el mapa.",
       "explore_marrakech": "Explorar el Directorio de Marrakech"
+    },
+    "stats": {
+      "cities": "Ciudades Cubiertas",
+      "stays": "Riads y Alojamientos",
+      "experiences": "Experiencias Seleccionadas",
+      "languages": "Idiomas Disponibles"
+    },
+    "spotlight": {
+      "badge": "Experiencias Insignia",
+      "title": "Cuatro Formas de Sentir Marruecos",
+      "subtitle": "De los mares de arena a las cumbres nevadas, elige el paisaje que te inspire y te ayudamos a planificar en torno a él.",
+      "desert": {
+        "title": "Campamentos en el Sáhara",
+        "desc": "Paseos en camello, noches bajo las estrellas y amaneceres sobre las dunas de Merzouga y Zagora."
+      },
+      "medina": {
+        "title": "Medinas Atemporales",
+        "desc": "Piérdete en los zocos, riads y talleres artesanales de Fez y Marrakech."
+      },
+      "coast": {
+        "title": "Costa Atlántica",
+        "desc": "Surf, mariscos frescos y brisas marinas junto a las costas de Essaouira y Agadir."
+      },
+      "mountains": {
+        "title": "Pueblos del Atlas",
+        "desc": "Recorre senderos bereberes, visita kasbahs y aloja en casas de montaña cerca de Ifrane."
+      }
+    },
+    "testimonials": {
+      "badge": "Historias de Viajeros",
+      "title": "Lo Que Dicen los Visitantes sobre Marruecos",
+      "review1": {
+        "text": "\"Las recomendaciones de riads fueron perfectas, y el itinerario nos ahorró muchas dudas. Marrakech fue fácil de recorrer desde el primer día.\"",
+        "author": "— Claire, Francia"
+      },
+      "review2": {
+        "text": "\"Usamos el mapa interactivo para encontrar cafés escondidos en la medina. El campamento en el desierto de Merzouga fue lo mejor del viaje.\"",
+        "author": "— Daniel, Alemania"
+      },
+      "review3": {
+        "text": "\"Las calles azules de Chefchaouen eran aún más bonitas en persona. Tener una guía en español lo hizo todo mucho más fácil.\"",
+        "author": "— Sofía, España"
+      }
+    },
+    "blog_preview": {
+      "badge": "Desde el Blog",
+      "title": "Guías de Viaje y Consejos Locales",
+      "view_all": "Leer Todos los Artículos →",
+      "article1": {
+        "tag": "Cultura",
+        "title": "Guía para Principiantes sobre la Cultura del Té Marroquí"
+      },
+      "article2": {
+        "tag": "Planificación",
+        "title": "Qué Empacar para una Excursión al Desierto del Sáhara"
+      },
+      "article3": {
+        "tag": "Gastronomía",
+        "title": "Compras en los Zocos: Especias, Regateo y Qué Comprar"
+      }
+    },
+    "faq": {
+      "badge": "Bueno Saberlo",
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Cuál es la mejor época para visitar Marruecos?",
+        "answer": "La primavera (marzo-mayo) y el otoño (septiembre-noviembre) ofrecen las temperaturas más suaves en la mayoría de las regiones, ideales tanto para visitas urbanas como para excursiones al desierto."
+      },
+      "q2": {
+        "question": "¿Necesito visado para viajar a Marruecos?",
+        "answer": "Muchas nacionalidades, incluidos ciudadanos de la UE, Reino Unido y Estados Unidos, pueden entrar sin visado por estancias de hasta 90 días. Consulta siempre los requisitos actuales para tu nacionalidad."
+      },
+      "q3": {
+        "question": "¿Cuántos días debo pasar en Marrakech?",
+        "answer": "De 3 a 5 días es ideal para explorar la medina, los palacios y los jardines con calma, dejando tiempo para una excursión a las montañas del Atlas o al desierto de Agafay."
+      },
+      "q4": {
+        "question": "¿Es seguro viajar por Marruecos de forma independiente?",
+        "answer": "Sí, Marruecos es un destino popular y generalmente seguro para viajeros independientes. Como en cualquier lugar, mantente atento en los zocos concurridos y acuerda las tarifas de taxi antes de partir."
+      }
+    },
+    "newsletter": {
+      "title": "Recibe Consejos de Viaje sobre Marruecos",
+      "subtitle": "Nuevos destinos, itinerarios de temporada y riads seleccionados — sin spam, cancela cuando quieras.",
+      "placeholder": "Tu correo electrónico",
+      "button": "Suscribirse"
     }
   },
   "ar": {
@@ -1717,6 +1975,92 @@
       "title": "استكشف مراكش والمغرب",
       "subtitle": "اكتشف أفضل المعالم والرياضات التقليدية والأماكن الأصيلة مباشرة على الخريطة.",
       "explore_marrakech": "استكشف دليل مراكش"
+    },
+    "stats": {
+      "cities": "مدينة مغطاة",
+      "stays": "رياض وأماكن إقامة",
+      "experiences": "تجارب مختارة",
+      "languages": "لغات متاحة"
+    },
+    "spotlight": {
+      "badge": "تجارب مميزة",
+      "title": "أربع طرق لعيش المغرب",
+      "subtitle": "من بحار الرمال إلى القمم المغطاة بالثلوج، اختر المشهد الذي يلهمك وسنساعدك على التخطيط حوله.",
+      "desert": {
+        "title": "مخيمات الصحراء الكبرى",
+        "desc": "ركوب الجمال، والمبيت تحت النجوم، وشروق الشمس فوق كثبان مرزوكة وزاكورة."
+      },
+      "medina": {
+        "title": "مدن قديمة خالدة",
+        "desc": "تجول في الأسواق والرياضات وورش الحرفيين في فاس ومراكش."
+      },
+      "coast": {
+        "title": "الساحل الأطلسي",
+        "desc": "ركوب الأمواج والمأكولات البحرية الطازجة ونسيم البحر على طول شواطئ الصويرة وأكادير."
+      },
+      "mountains": {
+        "title": "قرى جبال الأطلس",
+        "desc": "تجول في مسارات أمازيغية، وزر القصبات، وأقم في دور ضيافة جبلية قرب إفران."
+      }
+    },
+    "testimonials": {
+      "badge": "قصص المسافرين",
+      "title": "ماذا يقول الزوار عن المغرب",
+      "review1": {
+        "text": "«كانت توصيات الرياضات دقيقة جداً، ووفر لنا المسار الكثير من التردد. شعرنا أن التنقل في مراكش سهل منذ اليوم الأول.»",
+        "author": "— كلير، فرنسا"
+      },
+      "review2": {
+        "text": "«استخدمنا الخريطة التفاعلية للعثور على مقاهي خفية في المدينة القديمة. كانت رحلة المخيم الصحراوي في مرزوكة أبرز لحظات الرحلة.»",
+        "author": "— دانيال، ألمانيا"
+      },
+      "review3": {
+        "text": "«كانت أزقة شفشاون الزرقاء أجمل بكثير في الواقع. وجود مرشد يتحدث الإسبانية جعل كل شيء أسهل بكثير.»",
+        "author": "— صوفيا، إسبانيا"
+      }
+    },
+    "blog_preview": {
+      "badge": "من المدونة",
+      "title": "أدلة السفر ونصائح محلية",
+      "view_all": "اقرأ جميع المقالات ←",
+      "article1": {
+        "tag": "الثقافة",
+        "title": "دليل المبتدئين لثقافة الشاي المغربي"
+      },
+      "article2": {
+        "tag": "التخطيط",
+        "title": "ماذا تحزم لرحلة إلى صحراء الساحرة"
+      },
+      "article3": {
+        "tag": "الطعام",
+        "title": "التسوق في الأسواق: التوابل والمساومة وما يجب شراؤه"
+      }
+    },
+    "faq": {
+      "badge": "معلومات مفيدة",
+      "title": "الأسئلة الشائعة",
+      "q1": {
+        "question": "ما هو أفضل وقت لزيارة المغرب؟",
+        "answer": "يوفر الربيع (مارس-مايو) والخريف (سبتمبر-نوفمبر) درجات حرارة معتدلة في معظم المناطق، مثالية لزيارات المدن ورحلات الصحراء على حد سواء."
+      },
+      "q2": {
+        "question": "هل أحتاج إلى تأشيرة للسفر إلى المغرب؟",
+        "answer": "يمكن للعديد من الجنسيات، بما في ذلك مواطني الاتحاد الأوروبي والمملكة المتحدة والولايات المتحدة، الدخول دون تأشيرة لإقامات تصل إلى 90 يوماً. تحقق دائماً من المتطلبات الحالية لجنسيتك."
+      },
+      "q3": {
+        "question": "كم يوماً يجب أن أقضي في مراكش؟",
+        "answer": "من 3 إلى 5 أيام مثالية لاستكشاف المدينة القديمة والقصور والحدائق بوتيرة هادئة، مع وقت متبقٍ لرحلة يوم واحد إلى جبال الأطلس أو صحراء أجباي."
+      },
+      "q4": {
+        "question": "هل من الآمن السفر في المغرب بشكل مستقل؟",
+        "answer": "نعم، يعد المغرب وجهة شائعة وآمنة بشكل عام للمسافرين المستقلين. كما هو الحال في أي مكان، ابق يقظاً في الأسواق المزدحمة واتفق على أجرة سيارات الأجرة قبل الانطلاق."
+      }
+    },
+    "newsletter": {
+      "title": "احصل على نصائح السفر إلى المغرب في بريدك",
+      "subtitle": "وجهات جديدة، مسارات موسمية ورياضات مختارة بعناية — بدون رسائل مزعجة، ويمكنك إلغاء الاشتراك في أي وقت.",
+      "placeholder": "بريدك الإلكتروني",
+      "button": "اشترك"
     }
   }
-    }
+  }
