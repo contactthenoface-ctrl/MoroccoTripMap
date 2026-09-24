@@ -72,11 +72,22 @@ function syncLanguageSwitcherUI(lang) {
     }
 }
 
+// 4bis. Dossier réel où se trouve ce script (déduit de sa propre balise <script src="...">),
+//       pour construire le chemin vers translations.json quelle que soit la profondeur de la
+//       page qui charge i18n.js (racine, places/, restaurants/, etc.).
+const I18N_BASE_URL = (function () {
+    const current = document.currentScript;
+    if (current && current.src) {
+        return current.src.replace(/i18n\.js(\?.*)?$/, '');
+    }
+    return 'js/'; // repli si document.currentScript n'est pas disponible
+})();
+
 // 4. Charger (une seule fois) le fichier JSON complet, puis appliquer la langue
 async function loadLanguage(lang) {
     try {
         if (Object.keys(allTranslations).length === 0) {
-            const response = await fetch('js/translations.json');
+            const response = await fetch(I18N_BASE_URL + 'translations.json');
             allTranslations = await response.json();
         }
 
