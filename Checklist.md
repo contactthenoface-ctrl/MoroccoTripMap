@@ -4,3 +4,27 @@
 - [ ] Vérifier canonical + hreflang pointent bien vers moroccotripmap.com
 - [ ] Configurer le domaine personnalisé dans Settings > Pages
 - [ ] Ajouter le site à Google Search Console
+
+
+Notes : Comment avoir du traffic et Monétiser le site
+
+À terme, MoroccoTripMap peut obtenir des visiteurs grâce à :
+Google/SEO
+YouTube
+Pinterest
+Instagram/TikTok
+recherches de destinations
+recherches d'hôtels/riads
+recherches d'activités
+guides et itinéraires
+trafic direct
+4. Il peut être monétisé de plusieurs façons.
+Par exemple :
+fiches premium pour riads/hôtels
+mise en avant d'activités
+leads pour agences et guides
+affiliation hôtels
+affiliation activités/excursions
+publicité
+partenariats touristiques
+contenu sponsorisé
