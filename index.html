@@ -237,6 +237,7 @@
 
 <!-- Main Content -->
 <main class="flex-grow">
+
 <!-- Hero Section -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
 <div class="relative h-[65vh] min-h-[480px] rounded-3xl shadow-xl">
@@ -268,28 +269,6 @@ Search
 </div>
 </div>
 </div>
-</section>
-
-<!-- Trust / Stats Bar -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-  <div class="bg-vert rounded-3xl px-6 sm:px-10 py-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-creme shadow-lg">
-    <div>
-      <p class="text-2xl sm:text-4xl font-bold text-sable">20+</p>
-      <p class="text-[11px] sm:text-xs uppercase tracking-wider text-creme/80 mt-1" data-i18n="stats.cities">Cities Covered</p>
-    </div>
-    <div>
-      <p class="text-2xl sm:text-4xl font-bold text-sable">300+</p>
-      <p class="text-[11px] sm:text-xs uppercase tracking-wider text-creme/80 mt-1" data-i18n="stats.stays">Riads &amp; Stays</p>
-    </div>
-    <div>
-      <p class="text-2xl sm:text-4xl font-bold text-sable">120+</p>
-      <p class="text-[11px] sm:text-xs uppercase tracking-wider text-creme/80 mt-1" data-i18n="stats.experiences">Curated Experiences</p>
-    </div>
-    <div>
-      <p class="text-2xl sm:text-4xl font-bold text-sable">4</p>
-      <p class="text-[11px] sm:text-xs uppercase tracking-wider text-creme/80 mt-1" data-i18n="stats.languages">Languages Supported</p>
-    </div>
-  </div>
 </section>
 
 <!-- Categories Grid avec SVG -->
@@ -535,28 +514,25 @@ Search
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="mb-8 text-center">
-    <span class="text-xs font-bold uppercase tracking-widest text-sable" data-i18n="testimonials.badge">Traveler Stories</span>
-    <h2 class="text-2xl sm:text-3xl font-bold text-sombre mt-1" data-i18n="testimonials.title">What Visitors Say About Morocco</h2>
+<!-- Intro / Trust Text (Remplace la section Témoignages) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="bg-vert rounded-3xl px-6 sm:px-12 py-10 sm:py-12 text-creme shadow-lg">
+    <span class="inline-block text-xs font-bold uppercase tracking-widest text-sable mb-3" data-i18n="intro.badge">Built from experience, not guesswork</span>
+    <p class="text-lg sm:text-2xl font-medium leading-relaxed max-w-3xl" data-i18n="intro.text">MoroccoTripMap started because too many "best of Morocco" lists were clearly written by people who never left their desk. Everything here — from riads to desert camps — comes from actual time spent in more than 20 Moroccan cities, checked and rechecked so the details still hold up when you get there. It's all here in English, French, Spanish and Arabic, because a good recommendation shouldn't depend on which language you happen to speak.</p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded-2xl border border-sable/10 shadow-sm">
-      <div class="flex gap-1 text-sable mb-3">★★★★★</div>
-      <p class="text-sm text-sombre/80 leading-relaxed" data-i18n="testimonials.review1.text">"The riad recommendations were spot on, and the itinerary saved us so much guesswork. Marrakech felt easy to navigate from day one."</p>
-      <p class="text-sm font-semibold text-sombre mt-4" data-i18n="testimonials.review1.author">— Claire, France</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl border border-sable/10 shadow-sm">
-      <div class="flex gap-1 text-sable mb-3">★★★★★</div>
-      <p class="text-sm text-sombre/80 leading-relaxed" data-i18n="testimonials.review2.text">"We used the interactive map to find hidden cafés in the medina. The desert camp suggestion for Merzouga was the highlight of our trip."</p>
-      <p class="text-sm font-semibold text-sombre mt-4" data-i18n="testimonials.review2.author">— Daniel, Germany</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl border border-sable/10 shadow-sm">
-      <div class="flex gap-1 text-sable mb-3">★★★★★</div>
-      <p class="text-sm text-sombre/80 leading-relaxed" data-i18n="testimonials.review3.text">"Chefchaouen's blue streets were even more beautiful in person. Having a guide in Spanish made everything so much smoother."</p>
-      <p class="text-sm font-semibold text-sombre mt-4" data-i18n="testimonials.review3.author">— Sofía, Spain</p>
-    </div>
+</section>
+
+<!-- Video Presentation (Placée juste en dessous du texte Trust/Intro) -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+  <div class="text-center mb-5">
+    <span class="text-xs font-bold uppercase tracking-widest text-sable" data-i18n="video.badge">Watch Before You Go</span>
+    <h2 class="text-2xl sm:text-3xl font-bold text-sombre mt-1" data-i18n="video.title">Morocco, in Motion</h2>
+  </div>
+  <div class="relative w-full rounded-3xl overflow-hidden shadow-xl bg-sombre" style="aspect-ratio: 16 / 9;">
+    <video class="w-full h-full object-cover" controls preload="metadata">
+      <source src="images/moroccotripmap.mp4" type="video/mp4">
+      Votre navigateur ne prend pas en charge la lecture de vidéos HTML5.
+    </video>
   </div>
 </section>
 
@@ -609,31 +585,31 @@ Search
   <div class="space-y-3">
     <details class="bg-white rounded-2xl border border-sable/10 p-5 group">
       <summary class="flex items-center justify-between cursor-pointer font-semibold text-sombre text-sm sm:text-base">
-        <span data-i18n="faq.q1.question">When is the best time to visit Morocco?</span>
+        <span data-i18n="faq.q1.question">When's the best time to go?</span>
         <svg class="w-4 h-4 text-sable shrink-0 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
       </summary>
-      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q1.answer">Spring (March-May) and autumn (September-November) offer the mildest temperatures across most regions, ideal for both city visits and desert trips.</p>
+      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q1.answer">Honestly, spring and autumn win almost every time — March to May or September to November, warm enough for the desert without being brutal in the cities. Summer works fine on the coast; it's really the interior and the south that get punishing.</p>
     </details>
     <details class="bg-white rounded-2xl border border-sable/10 p-5 group">
       <summary class="flex items-center justify-between cursor-pointer font-semibold text-sombre text-sm sm:text-base">
-        <span data-i18n="faq.q2.question">Do I need a visa to travel to Morocco?</span>
+        <span data-i18n="faq.q2.question">Will I need a visa?</span>
         <svg class="w-4 h-4 text-sable shrink-0 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
       </summary>
-      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q2.answer">Many nationalities, including EU, UK, and US citizens, can enter visa-free for stays up to 90 days. Always check current requirements for your specific nationality.</p>
+      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q2.answer">If you're coming from the EU, UK, US, Canada or most of Latin America, no — you get 90 days visa-free on arrival. Rules do shift though, so it's worth a quick check for your passport before booking flights.</p>
     </details>
     <details class="bg-white rounded-2xl border border-sable/10 p-5 group">
       <summary class="flex items-center justify-between cursor-pointer font-semibold text-sombre text-sm sm:text-base">
-        <span data-i18n="faq.q3.question">How many days should I spend in Marrakech?</span>
+        <span data-i18n="faq.q3.question">How long should I actually spend in Marrakech?</span>
         <svg class="w-4 h-4 text-sable shrink-0 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
       </summary>
-      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q3.answer">3 to 5 days is ideal to explore the medina, palaces, and gardens at a relaxed pace, with time left for a day trip into the Atlas Mountains or Agafay desert.</p>
+      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q3.answer">Three or four full days is the sweet spot — enough for the medina, a palace or two, and a slower morning without feeling like you're racing the clock. Add a day trip into the Atlas or the Agafay desert if you've got the time.</p>
     </details>
     <details class="bg-white rounded-2xl border border-sable/10 p-5 group">
       <summary class="flex items-center justify-between cursor-pointer font-semibold text-sombre text-sm sm:text-base">
-        <span data-i18n="faq.q4.question">Is it safe to travel around Morocco independently?</span>
+        <span data-i18n="faq.q4.question">Is it safe to explore on your own?</span>
         <svg class="w-4 h-4 text-sable shrink-0 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
       </summary>
-      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q4.answer">Yes, Morocco is a popular and generally safe destination for independent travelers. As anywhere, stay aware in crowded souks and agree on taxi fares before departing.</p>
+      <p class="text-sm text-sombre/70 mt-3 leading-relaxed" data-i18n="faq.q4.answer">Yes — most people travel around Morocco independently without any issues. Use the same common sense you would in any busy city: keep an eye on your bag in the souks, and settle the taxi fare before you get in, not after.</p>
     </details>
   </div>
 </section>
