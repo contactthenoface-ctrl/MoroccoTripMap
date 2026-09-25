@@ -1237,6 +1237,195 @@
         "desc": "Dunes d'Erg Chebbi & Bivouacs"
       }
     },
+    "chefchaouen_page": {
+  "seo": {
+    "title": "Guide de Voyage Chefchaouen | La Perle Bleue du Maroc | MoroccoTripMap",
+    "description": "Préparez votre séjour à Chefchaouen : incontournables (Outa el Hammam, Ras El Maa, Mosquée Espagnole), meilleurs dars et riads, restaurants locaux, randonnée aux cascades d'Akchour et conseils pratiques.",
+    "og_title": "Guide de Voyage Chefchaouen | Incontournables, Dars & Randonnée Akchour | MoroccoTripMap",
+    "og_description": "Découvrez la perle bleue du Maroc : attractions phares, maisons d'hôtes authentiques, cascades d'Akchour et conseils de voyage."
+  },
+  "hero_subtitle": "L'Emblématique Perle Bleue du Maroc Nichée au Cœur des Montagnes du Rif.",
+  "info": {
+    "best_time_label": "Meilleure Période",
+    "best_time_val": "Mars – Mai & Sept – Nov",
+    "stay_label": "Durée Idéale",
+    "stay_val": "2 – 3 Jours",
+    "vibe_label": "Ambiance",
+    "vibe_val": "Paisible & Photogénique",
+    "airport_label": "Aéroport Proche",
+    "airport_val": "TNG (Tanger) ou FES (Fès)"
+  },
+  "overview": {
+    "title": "Bienvenue dans la Perle Bleue",
+    "p1": "Chefchaouen est mondialement connue pour ses ruelles aux nuances d'azur et de bleu, nichées au pied des sommets majestueux du Rif. Fondée en 1471 comme forteresse, cette cité de montagne offre une parenthèse paisible loin de la frénésie des villes impériales.",
+    "p2": "Flânez dans ses ruelles pavées, dégustez un thé à la menthe sur ses places animées, admirez le coucher de soleil depuis la Mosquée Espagnole ou partez en randonnée au cœur du Parc National de Talassemtane."
+  },
+  "places": {
+    "badge": "Incontournables",
+    "title": "Lieux à Visiter Absolument à Chefchaouen",
+    "subtitle": "Ruelles bleues pittoresques, kasbah historique et panoramas sur la vallée.",
+    "explore": "Explorer le lieu →",
+    "outa_hammam": {
+      "tag": "Place Principale",
+      "title": "Place Outa el Hammam",
+      "desc": "La grande place centrale bordée de cafés, dominée par les murs ocre de la Kasbah et la Grande Mosquée."
+    },
+    "kasbah": {
+      "tag": "Histoire & Musée",
+      "title": "Kasbah de Chefchaouen",
+      "desc": "Forteresse du XVe siècle abritant de verdoyants jardins andalous, un musée ethnographique et une vue panoramique depuis sa tour."
+    },
+    "ras_el_maa": {
+      "tag": "Source Naturelle",
+      "title": "Source Ras El Maa",
+      "desc": "Source d'eau fraîche à la sortie de la médina où les habitants se retrouvent et lavent traditionnellement les tapis."
+    },
+    "spanish_mosque": {
+      "tag": "Panorama",
+      "title": "Mosquée Espagnole (Bouzafar)",
+      "desc": "Mosquée nichée sur la colline offrant le plus beau coucher de soleil sur toute la médina bleue."
+    },
+    "akchour": {
+      "tag": "Excursion Nature",
+      "title": "Cascades d'Akchour & Pont de Dieu",
+      "desc": "Randonnée le long de la rivière, bassins émeraudes et arche naturelle rocheuse dans le Parc National de Talassemtane."
+    }
+  },
+  "itinerary": {
+    "badge": "Planification",
+    "title": "Itinéraire Suggéré de 2 Jours",
+    "subtitle": "Un programme détendu pour immortaliser les plus beaux spots photo et profiter des montagnes.",
+    "day1": {
+      "tag": "Jour 1",
+      "title": "Flânerie dans la Médina & Coucher de Soleil",
+      "desc": "Parcourez les ruelles bleues, visitez la Kasbah, savourez un thé Place Outa el Hammam et montez à la Mosquée Espagnole pour le coucher du soleil.",
+      "duration": "Journée complète • Médina & Colline"
+    },
+    "day2": {
+      "tag": "Jour 2",
+      "title": "Cascades d'Akchour & Saveurs Locales",
+      "desc": "Prenez un grand taxi vers Akchour pour une randonnée rafraîchissante, puis rentrez déguster du fromage de chèvre local en terrasse.",
+      "duration": "Journée complète • Akchour & Médina"
+    }
+  },
+  "directory": {
+    "badge": "Annuaire & Base de données",
+    "title": "Trouvez Votre Hébergement Idéal à Chefchaouen",
+    "subtitle": "Découvrez de charmants Dars traditionnels, des Riads authentiques et des maisons d'hôtes de montagne.",
+    "filter_type_label": "Type d'hébergement :",
+    "type_all": "Tous les types",
+    "type_hotel": "Hôtels",
+    "type_riad": "Riads & Dars",
+    "type_guesthouse": "Maisons d'hôtes",
+    "filter_location_label": "Quartier / Zone :",
+    "location_all": "Toutes les zones",
+    "location_medina": "Médina Bleue (Centre historique)",
+    "location_raselmaa": "Ras El Maa & Haute Médina",
+    "location_outskirts": "Vallée & Nature environnante",
+    "counter": "24 hébergements trouvés",
+    "district_label": "Quartier",
+    "type_label": "Type",
+    "tel_label": "Tél",
+    "no_results": "Aucun hébergement ne correspond à ces critères. Essayez d'élargir votre recherche."
+  },
+  "eat": {
+    "badge": "Gastronomie",
+    "title": "Meilleurs Restaurants & Cafés",
+    "subtitle": "Cuisine du Nord, fromage de chèvre artisanal et panoramas sur les toits",
+    "bab_ssour": {
+      "tag": "Cuisine Traditionnelle",
+      "loc": "Ruelle de la Médina",
+      "title": "Bab Ssour",
+      "desc": "Restaurant chaleureux sur plusieurs étages proposant tajines faits maison, salades fraîches et spécialités locales."
+    },
+    "sofia": {
+      "tag": "Cuisine Familiale",
+      "loc": "Près d'Outa el Hammam",
+      "title": "Restaurant Sofia",
+      "desc": "Petite adresse familiale réputée pour ses pastillas savoureuses, ses tajines et son accueil chaleureux."
+    },
+    "clock": {
+      "tag": "Café Culturel",
+      "loc": "Rooftop Médina",
+      "title": "Café Clock Chefchaouen",
+      "desc": "Lieu culturel vivant proposant burgers de chameau, cours de cuisine, contes et vue panoramique."
+    },
+    "morisco": {
+      "tag": "Café de la Place",
+      "loc": "Place Outa el Hammam",
+      "title": "Restaurant Morisco",
+      "desc": "Emplacement idéal sur la place principale pour boire un thé à la menthe et observer la vie locale."
+    }
+  },
+  "tips": {
+    "title": "Conseils Pratiques pour Visiter Chefchaouen",
+    "transport": {
+      "title": "Accès & Déplacements",
+      "desc": "Accédez à Chefchaouen en bus CTM ou chauffeur privé depuis Tanger (2h) ou Fès (4h). La médina est entièrement piétonne."
+    },
+    "walking": {
+      "title": "Ruelles & Chaussures",
+      "desc": "Prévoyez des chaussures de marche confortables — les ruelles et escaliers pavés peuvent être pentus et glissants."
+    },
+    "photos": {
+      "title": "Respect de la Photographie",
+      "desc": "Demandez toujours la permission avant de photographier de près les habitants, notamment les personnes âgées."
+    }
+  },
+  "daytrips": {
+    "badge": "Autour de la Cité Bleue",
+    "title": "Meilleures Excursions depuis Chefchaouen",
+    "subtitle": "Parcs nationaux, cascades et routes panoramiques dans le Rif.",
+    "akchour": {
+      "title": "Cascades d'Akchour & Pont de Dieu",
+      "desc": "Bassins turquoises, randonnée le long de l'eau et arche naturelle (45 min de route)."
+    },
+    "talassemtane": {
+      "title": "Parc National de Talassemtane",
+      "desc": "Sentiers de randonnée entre forêts de sapins, sommets et villages rifains authentiques."
+    },
+    "tetouan": {
+      "title": "Médina de Tétouan",
+      "desc": "Médina d'inspiration andalouse classée à l'UNESCO au riche patrimoine artisanal (1h30 de route)."
+    }
+  },
+  "testimonials": {
+    "badge": "Récits de Voyageurs",
+    "title": "Ce que Disent les Visiteurs de Chefchaouen",
+    "review1": {
+      "text": "« Le coucher de soleil depuis la Mosquée Espagnole sur la médina bleue était féerique. Une pause tellement paisible ! »",
+      "author": "— Emma, Royaume-Uni"
+    },
+    "review2": {
+      "text": "« Loger dans un Dar traditionnel de la haute médina a été merveilleux. Fromage de chèvre frais et thé sur la terrasse chaque matin. »",
+      "author": "— Marco, Italie"
+    },
+    "review3": {
+      "text": "« La randonnée aux cascades d'Akchour a été le moment fort de notre voyage dans le Nord du Maroc ! Une nature préservée. »",
+      "author": "— Carlos, Espagne"
+    }
+  },
+  "faq": {
+    "badge": "Bon à Savoir",
+    "title": "FAQ Voyage à Chefchaouen",
+    "q1": {
+      "question": "Combien de jours faut-il passer à Chefchaouen ?",
+      "answer": "2 à 3 jours suffisent pour explorer la médina, admirer le coucher de soleil à la Mosquée Espagnole et faire une randonnée aux cascades d'Akchour."
+    },
+    "q2": {
+      "question": "Chefchaouen est-elle accessible en train ?",
+      "answer": "Non, Chefchaouen ne possède pas de gare ferroviaire. Le plus simple est de prendre un bus CTM, un grand taxi ou un transfert privé depuis Tanger, Tétouan ou Fès."
+    },
+    "q3": {
+      "question": "Pourquoi la ville est-elle peinte en bleu ?",
+      "answer": "Plusieurs hypothèses existent : introduite par les réfugiés juifs dans les années 1930 en symbole du ciel, répulsif naturel contre les moustiques, ou simplement pour maintenir la fraîcheur et charmer les visiteurs."
+    },
+    "q4": {
+      "question": "Peut-on payer par carte bancaire à Chefchaouen ?",
+      "answer": "La plupart des commerces, cafés et Dars n'acceptent que les espèces (Dirhams MAD). Des distributeurs automatiques sont disponibles près de la Place Outa el Hammam."
+    }
+  }
+    },
     "marrakech_page": {
       "seo": {
         "title": "Guide de Voyage Marrakech | Incontournables, Riads & Expériences | MoroccoTripMap",
