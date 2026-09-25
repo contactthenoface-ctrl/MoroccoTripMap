@@ -316,6 +316,195 @@
         "desc": "Erg Chebbi Dunes & Desert Camps"
       }
     },
+    "chefchaouen_page": {
+  "seo": {
+    "title": "Chefchaouen Travel Guide | The Blue Pearl of Morocco | MoroccoTripMap",
+    "description": "Plan your trip to Chefchaouen: top attractions (Outa el Hammam, Ras El Maa, Spanish Mosque), best riads and dars, local restaurants, Akchour waterfalls day trip, and practical travel tips.",
+    "og_title": "Chefchaouen Travel Guide | Things to Do, Dars & Akchour Hikes | MoroccoTripMap",
+    "og_description": "Discover Morocco's Blue Pearl: top sights, authentic guesthouses, Akchour waterfalls, and travel advice."
+  },
+  "hero_subtitle": "The Iconic Blue Pearl of Morocco Nested in the Scenic Rif Mountains.",
+  "info": {
+    "best_time_label": "Best Time to Visit",
+    "best_time_val": "Mar – May & Sep – Nov",
+    "stay_label": "Ideal Stay",
+    "stay_val": "2 – 3 Days",
+    "vibe_label": "Vibe",
+    "vibe_val": "Relaxed & Photogenic",
+    "airport_label": "Nearest Airport",
+    "airport_val": "TNG (Tangier) or FES (Fez)"
+  },
+  "overview": {
+    "title": "Welcome to the Blue Pearl",
+    "p1": "Chefchaouen is world-famous for its striking palette of blue-washed buildings tucked into the dramatic peaks of the Rif Mountains. Founded in 1471 as a fortress, this tranquil mountain town offers a peaceful retreat from Morocco's bustling imperial cities.",
+    "p2": "Wander through winding cobblestone alleys, relax in vibrant squares with mint tea, watch the sunset over the valley from the Spanish Mosque, or trek through the lush natural trails of Talassemtane National Park."
+  },
+  "places": {
+    "badge": "Must-See",
+    "title": "Top Places to Visit in Chefchaouen",
+    "subtitle": "Iconic blue alleyways, historic kasbahs, and scenic mountain viewpoints.",
+    "explore": "Explore place →",
+    "outa_hammam": {
+      "tag": "Main Square",
+      "title": "Place Outa el Hammam",
+      "desc": "The vibrant central square lined with outdoor cafés, dominated by the red-walled Kasbah and Grand Mosque."
+    },
+    "kasbah": {
+      "tag": "History & Museum",
+      "title": "Chefchaouen Kasbah",
+      "desc": "A 15th-century fortress featuring lush Andalusian gardens, an ethnographic museum, and panoramic tower views."
+    },
+    "ras_el_maa": {
+      "tag": "Natural Spring",
+      "title": "Ras El Maa Spring",
+      "desc": "Fresh mountain water spring outside the east medina gate where locals gather and wash rugs."
+    },
+    "spanish_mosque": {
+      "tag": "Panoramas",
+      "title": "Spanish Mosque (Bouzafar)",
+      "desc": "A hilltop mosque offering the ultimate sunset view over the entire blue medina and surrounding valley."
+    },
+    "akchour": {
+      "tag": "Nature Excursion",
+      "title": "Akchour Waterfalls & God's Bridge",
+      "desc": "Stunning river hikes, emerald pools, and natural rock arches in Talassemtane National Park."
+    }
+  },
+  "itinerary": {
+    "badge": "Planning",
+    "title": "Suggested 2-Day Itinerary",
+    "subtitle": "A relaxed schedule to capture the best photography spots and mountain landscapes.",
+    "day1": {
+      "tag": "Day 1",
+      "title": "Exploring the Blue Medina & Sunset View",
+      "desc": "Stroll through the blue alleys, visit the Kasbah, enjoy tea at Place Outa el Hammam, and hike up to the Spanish Mosque for sunset.",
+      "duration": "Full Day • Medina & Hilltop"
+    },
+    "day2": {
+      "tag": "Day 2",
+      "title": "Akchour Waterfalls & Local Flavors",
+      "desc": "Take a morning grand taxi to Akchour for a scenic river hike, return for a traditional goat cheese tasting and rooftop dinner.",
+      "duration": "Full Day • Akchour & Medina"
+    }
+  },
+  "directory": {
+    "badge": "Directory & Database",
+    "title": "Find Your Ideal Stay in Chefchaouen",
+    "subtitle": "Discover charming traditional Dars, authentic Riads, and scenic mountain guesthouses.",
+    "filter_type_label": "Accommodation Type:",
+    "type_all": "All Types",
+    "type_hotel": "Hotels",
+    "type_riad": "Riads & Dars",
+    "type_guesthouse": "Guesthouses",
+    "filter_location_label": "Area:",
+    "location_all": "All Areas",
+    "location_medina": "Blue Medina (Historic Center)",
+    "location_raselmaa": "Ras El Maa & High Medina",
+    "location_outskirts": "Valley & Surrounding Nature",
+    "counter": "24 accommodations found",
+    "district_label": "District",
+    "type_label": "Type",
+    "tel_label": "Tel",
+    "no_results": "No accommodations match these filters. Try broadening your search."
+  },
+  "eat": {
+    "badge": "Gastronomy",
+    "title": "Best Restaurants & Cafés",
+    "subtitle": "Authentic Northern Moroccan dishes, goat cheese, and rooftop views",
+    "bab_ssour": {
+      "tag": "Traditional Moroccan",
+      "loc": "Medina Alleyway",
+      "title": "Bab Ssour",
+      "desc": "Cozy multi-story restaurant serving home-cooked Tagines, fresh salads, and local specialties."
+    },
+    "sofia": {
+      "tag": "Home Cooking",
+      "loc": "Near Outa el Hammam",
+      "title": "Restaurant Sofia",
+      "desc": "Family-run eatery known for heartwarming pastillas, tajines, and friendly hospitality."
+    },
+    "clock": {
+      "tag": "Cultural Café",
+      "loc": "Medina Rooftop",
+      "title": "Café Clock Chefchaouen",
+      "desc": "Vibrant cultural hub offering camel burgers, cooking classes, storytelling, and panoramic rooftop views."
+    },
+    "morisco": {
+      "tag": "Square Café",
+      "loc": "Place Outa el Hammam",
+      "title": "Restaurant Morisco",
+      "desc": "Prime spot on the main square for mint tea, breakfast, and people-watching."
+    }
+  },
+  "tips": {
+    "title": "Practical Tips for Visiting Chefchaouen",
+    "transport": {
+      "title": "Getting Here & Around",
+      "desc": "Reach Chefchaouen via CTM bus or private driver from Tangier (2h) or Fez (4h). The medina is car-free and best explored on foot."
+    },
+    "walking": {
+      "title": "Steep Alleyways & Shoes",
+      "desc": "Wear comfortable walking shoes with good grip — the cobblestone steps and blue streets can be steep and slippery."
+    },
+    "photos": {
+      "title": "Photography Etiquette",
+      "desc": "Always ask permission before taking close-up photos of locals, especially elders and children in the medina."
+    }
+  },
+  "daytrips": {
+    "badge": "Beyond the Blue Streets",
+    "title": "Best Day Trips from Chefchaouen",
+    "subtitle": "Discover waterfalls, national parks, and coastal mountain roads nearby.",
+    "akchour": {
+      "title": "Akchour Waterfalls & Bridge",
+      "desc": "Emerald pools, river hikes, and the natural rock arch of God's Bridge (45 min drive)."
+    },
+    "talassemtane": {
+      "title": "Talassemtane National Park",
+      "desc": "Trekking trails through fir forests, mountain peaks, and remote Rif villages."
+    },
+    "tetouan": {
+      "title": "Tetouan Medina",
+      "desc": "UNESCO-listed Andalusian medina with rich artisan heritage (1h30 drive)."
+    }
+  },
+  "testimonials": {
+    "badge": "Traveler Stories",
+    "title": "What Visitors Say About Chefchaouen",
+    "review1": {
+      "text": "\"The shades of blue at sunset from the Spanish Mosque were pure magic. A truly tranquil break from big cities.\"",
+      "author": "— Emma, UK"
+    },
+    "review2": {
+      "text": "\"Staying in a local Dar in the high medina was wonderful. Fresh mountain goat cheese and tea on the rooftop every morning.\"",
+      "author": "— Marco, Italy"
+    },
+    "review3": {
+      "text": "\"The hike to Akchour waterfalls was the highlight of our trip to Northern Morocco! Unspoiled green nature.\"",
+      "author": "— Carlos, Spain"
+    }
+  },
+  "faq": {
+    "badge": "Good to Know",
+    "title": "Chefchaouen Travel FAQ",
+    "q1": {
+      "question": "How many days should I spend in Chefchaouen?",
+      "answer": "2 to 3 days is ideal to wander the medina, catch the sunset at the Spanish Mosque, and take a day trip to the Akchour waterfalls."
+    },
+    "q2": {
+      "question": "Is Chefchaouen easy to reach by train?",
+      "answer": "No, Chefchaouen has no train station. The easiest options are CTM buses, grand taxis, or private transfers from Tangier, Tetouan, or Fez."
+    },
+    "q3": {
+      "question": "Why is Chefchaouen painted blue?",
+      "answer": "Several theories exist: introduced by Jewish refugees in the 1930s symbolizing heaven, kept as a natural mosquito repellent, or maintained to keep homes cool and attract visitors."
+    },
+    "q4": {
+      "question": "Are cards accepted in Chefchaouen?",
+      "answer": "Most small shops, cafés, and local Dars only accept cash (Moroccan Dirham MAD). ATMs are available near Place Outa el Hammam."
+    }
+  }
+    },
     "marrakech_page": {
       "seo": {
         "title": "Marrakech Travel Guide | Top Places, Riads & Experiences | MoroccoTripMap",
