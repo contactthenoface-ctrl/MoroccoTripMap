@@ -2158,6 +2158,195 @@
         "desc": "Dunas de Erg Chebbi y Campamentos"
       }
     },
+    "chefchaouen_page": {
+  "seo": {
+    "title": "Guía de Viaje a Chefchaouen | La Perla Azul de Marruecos | MoroccoTripMap",
+    "description": "Planifica tu viaje a Chefchaouen: imprescindibles (Outa el Hammam, Ras El Maa, Mezquita Española), mejores dars y riads, restaurantes locales, excursión a las cascadas de Akchour y consejos prácticos.",
+    "og_title": "Guía de Viaje a Chefchaouen | Imprescindibles, Dars y Senderismo en Akchour | MoroccoTripMap",
+    "og_description": "Descubre la Perla Azul de Marruecos: atracciones principales, casas de huéspedes auténticas, cascadas de Akchour y consejos de viaje."
+  },
+  "hero_subtitle": "La Emblemática Perla Azul de Marruecos Enclavada en las Montañas del Rif.",
+  "info": {
+    "best_time_label": "Mejor Época",
+    "best_time_val": "Mar – May y Sep – Nov",
+    "stay_label": "Estancia Ideal",
+    "stay_val": "2 – 3 Días",
+    "vibe_label": "Ambiente",
+    "vibe_val": "Relajado y Fotogénico",
+    "airport_label": "Aeropuerto Cercano",
+    "airport_val": "TNG (Tánger) o FES (Fez)"
+  },
+  "overview": {
+    "title": "Bienvenido a la Perla Azul",
+    "p1": "Chefchaouen es mundialmente famosa por sus fachadas pintadas en tonos azules, situadas a los pies de las cumbres del Rif. Fundada en 1471 como fortaleza, esta tranquila ciudad de montaña ofrece un respiro lejos del ajetreo de las ciudades imperiales.",
+    "p2": "Pasea por sus callejuelas empedradas, disfruta de un té de menta en sus animadas plazas, contempla el atardecer sobre el valle desde la Mezquita Española o recorre los senderos naturales del Parque Nacional de Talassemtane."
+  },
+  "places": {
+    "badge": "Lugares Imprescindibles",
+    "title": "Atracciones Principales en Chefchaouen",
+    "subtitle": "Callejones azules icónicos, kasbah histórica y miradores panorámicos.",
+    "explore": "Explorar lugar →",
+    "outa_hammam": {
+      "tag": "Plaza Principal",
+      "title": "Plaza Outa el Hammam",
+      "desc": "La animada plaza central rodeada de cafeterías, dominada por los muros ocres de la Kasbah y la Gran Mezquita."
+    },
+    "kasbah": {
+      "tag": "Historia y Museo",
+      "title": "Kasbah de Chefchaouen",
+      "desc": "Fortaleza del siglo XV con frondosos jardines andaluces, un museo etnográfico y vistas panorámicas desde su torre."
+    },
+    "ras_el_maa": {
+      "tag": "Manantial Natural",
+      "title": "Manantial Ras El Maa",
+      "desc": "Fuente de agua fresca a la salida de la medina donde los vecinos se reúnen y lavan alfombras de forma tradicional."
+    },
+    "spanish_mosque": {
+      "tag": "Mirador",
+      "title": "Mezquita Española (Bouzafar)",
+      "desc": "Mezquita situada en la colina que ofrece el mejor atardecer sobre toda la medina azul."
+    },
+    "akchour": {
+      "tag": "Naturaleza",
+      "title": "Cascadas de Akchour y Puente de Dios",
+      "desc": "Ruta junto al río, pozas esmeralda y un puente natural de roca en el Parque Nacional de Talassemtane."
+    }
+  },
+  "itinerary": {
+    "badge": "Planificación",
+    "title": "Itinerario Sugerido de 2 Días",
+    "subtitle": "Un programa relajado para capturar las mejores fotos y disfrutar de la montaña.",
+    "day1": {
+      "tag": "Día 1",
+      "title": "Paseo por la Medina Azul y Atardecer",
+      "desc": "Recorre las calles azules, visita la Kasbah, toma un té en la Plaza Outa el Hammam y sube a la Mezquita Española para ver el atardecer.",
+      "duration": "Día completo • Medina y Colina"
+    },
+    "day2": {
+      "tag": "Día 2",
+      "title": "Cascadas de Akchour y Sabores Locales",
+      "desc": "Toma un gran taxi a Akchour para hacer senderismo junto al río, vuelve para probar el queso de cabra local y cenar en la terraza.",
+      "duration": "Día completo • Akchour y Medina"
+    }
+  },
+  "directory": {
+    "badge": "Directorio y Base de datos",
+    "title": "Encuentra tu Alojamiento Ideal en Chefchaouen",
+    "subtitle": "Descubre encantadores Dars tradicionales, Riads auténticos y casas de montaña.",
+    "filter_type_label": "Tipo de alojamiento:",
+    "type_all": "Todos los tipos",
+    "type_hotel": "Hoteles",
+    "type_riad": "Riads y Dars",
+    "type_guesthouse": "Casas de huéspedes",
+    "filter_location_label": "Zona:",
+    "location_all": "Todas las zonas",
+    "location_medina": "Medina Azul (Centro histórico)",
+    "location_raselmaa": "Ras El Maa y Alta Medina",
+    "location_outskirts": "Valle y Naturaleza",
+    "counter": "24 alojamientos encontrados",
+    "district_label": "Barrio",
+    "type_label": "Tipo",
+    "tel_label": "Tel",
+    "no_results": "Ningún alojamiento coincide con este filtro. Intenta ampliar tu búsqueda."
+  },
+  "eat": {
+    "badge": "Gastronomía",
+    "title": "Mejores Restaurantes y Cafés",
+    "subtitle": "Cocina del Norte de Marruecos, queso de cabra artesanal y vistas desde las terrazas",
+    "bab_ssour": {
+      "tag": "Cocina Tradicional",
+      "loc": "Callejón de la Medina",
+      "title": "Bab Ssour",
+      "desc": "Acogedor restaurante de varios pisos que sirve tajines caseros, ensaladas frescas y especialidades locales."
+    },
+    "sofia": {
+      "tag": "Comida Casera",
+      "loc": "Cerca de Outa el Hammam",
+      "title": "Restaurante Sofia",
+      "desc": "Pequeño local familiar famoso por sus pastillas, tajines sabrosos y trato cercano."
+    },
+    "clock": {
+      "tag": "Café Cultural",
+      "loc": "Terraza Medina",
+      "title": "Café Clock Chefchaouen",
+      "desc": "Punto cultural animado con hamburguesas de camello, talleres de cocina, cuentacuentos y terraza panorámica."
+    },
+    "morisco": {
+      "tag": "Café de la Plaza",
+      "loc": "Plaza Outa el Hammam",
+      "title": "Restaurante Morisco",
+      "desc": "Lugar ideal en la plaza principal para tomar té de menta y observar el ambiente."
+    }
+  },
+  "tips": {
+    "title": "Consejos Prácticos para Visitar Chefchaouen",
+    "transport": {
+      "title": "Llegar y Moverse",
+      "desc": "Llega a Chefchaouen en autobús CTM o chófer privado desde Tánger (2h) o Fez (4h). La medina es peatonal."
+    },
+    "walking": {
+      "title": "Calles Empinadas y Calzado",
+      "desc": "Lleva calzado cómodo para caminar — los escalones de piedra y calles azules pueden ser empinados y resbaladizos."
+    },
+    "photos": {
+      "title": "Respeto a las Fotografías",
+      "desc": "Pide siempre permiso antes de fotografiar de cerca a los residentes locales, especialmente a personas mayores."
+    }
+  },
+  "daytrips": {
+    "badge": "Más Allá de la Ciudad Azul",
+    "title": "Mejores Excursiones desde Chefchaouen",
+    "subtitle": "Parques nacionales, cascadas y carreteras de montaña cercanas.",
+    "akchour": {
+      "title": "Cascadas de Akchour y Puente de Dios",
+      "desc": "Pozas turquesas, senderismo junto al agua y puente natural de roca (45 min en coche)."
+    },
+    "talassemtane": {
+      "title": "Parque Nacional de Talassemtane",
+      "desc": "Senderos entre bosques de abetos, cumbres y pueblos tradicionales del Rif."
+    },
+    "tetouan": {
+      "title": "Medina de Tetuán",
+      "desc": "Medina de herencia andalusí declarada Patrimonio de la Humanidad por la UNESCO (1h30 en coche)."
+    }
+  },
+  "testimonials": {
+    "badge": "Historias de Viajeros",
+    "title": "Lo Que Dicen los Visitantes sobre Chefchaouen",
+    "review1": {
+      "text": "\"La puesta de sol sobre la medina azul desde la Mezquita Española fue pura magia. ¡Una pausa llena de paz!\"",
+      "author": "— Emma, Reino Unido"
+    },
+    "review2": {
+      "text": "\"Alojarse en un Dar tradicional de la alta medina fue maravilloso. Queso fresco de cabra y té en la terraza cada mañana.\"",
+      "author": "— Marco, Italia"
+    },
+    "review3": {
+      "text": "\"¡La ruta por las cascadas de Akchour fue lo mejor de nuestro viaje al norte de Marruecos! Naturaleza virgen.\"",
+      "author": "— Carlos, España"
+    }
+  },
+  "faq": {
+    "badge": "Bueno Saberlo",
+    "title": "Preguntas Frecuentes sobre Chefchaouen",
+    "q1": {
+      "question": "¿Cuántos días se recomiendan en Chefchaouen?",
+      "answer": "De 2 a 3 días es lo ideal para explorar la medina, ver el atardecer desde la Mezquita Española y hacer una excursión a Akchour."
+    },
+    "q2": {
+      "question": "¿Se puede llegar a Chefchaouen en tren?",
+      "answer": "No, Chefchaouen no tiene estación de tren. La mejor opción son los autobuses CTM, taxis compartidos o traslados privados desde Tánger, Tetuán o Fez."
+    },
+    "q3": {
+      "question": "¿Por qué las casas están pintadas de azul?",
+      "answer": "Existen varias explicaciones: introducido por refugiados judíos en los años 30 como símbolo del cielo, para repeler mosquitos o para mantener las casas frescas y atraer viajeros."
+    },
+    "q4": {
+      "question": "¿Se acepta tarjeta de crédito en Chefchaouen?",
+      "answer": "La mayoría de tiendas, cafés y Dars solo aceptan efectivo (Dirhams MAD). Hay cajeros automáticos cerca de la Plaza Outa el Hammam."
+    }
+  }
+    },
     "marrakech_page": {
       "seo": {
         "title": "Guía de Viaje a Marrakech | Mejores Lugares, Riads y Experiencias | MoroccoTripMap",
