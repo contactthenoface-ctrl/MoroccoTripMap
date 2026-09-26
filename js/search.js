@@ -23,10 +23,7 @@
         { name: "Laayoune", arabicName: "العيون", type: "Ville", url: "laayoune.html", tags: ["laayoune", "sahara", "atlantic", "sahrawi", "العيون"] },
         { name: "Merzouga", arabicName: "مرزوقة", type: "Ville", url: "merzouga.html", tags: ["merzouga", "desert", "dunes", "sahara", "erg chebbi", "camp", "مرزوقة"] },
 
-        // --- 2. RIADS & HÉBERGEMENTS (STAYS) ---
-        { name: "Riad Kasbah", arabicName: "رياض القصبة", type: "Riad", url: "riads/riad-kasbah.html", tags: ["riad kasbah", "kasbah", "marrakech", "medina", "hotel", "stay", "pool", "riad al kasbah", "رياض القصبة", "رياض", "فندق", "إقامة", "مراكش"] },
-        { name: "Sahara Dunes Camp", arabicName: "مخيم كثبان الصحراء", type: "Desert Camp", url: "riads/stays.html", tags: ["sahara dunes camp", "merzouga", "desert", "camp", "erg chebbi", "مخيم", "مرزوقة", "صحراء"] }
-    ];
+        ];
 
     // --- Logique de recherche globale ---
     document.addEventListener('DOMContentLoaded', function () {
